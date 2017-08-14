@@ -1,0 +1,436 @@
+@keyframes dash {
+  from {
+    stroke-dashoffset: -0;
+    stroke-dasharray: -1300; }
+  to {
+    stroke-dashoffset: -1300;
+    stroke-dasharray: -1300; } }
+#svg01 {
+  stroke-dasharray: 1300;
+  stroke-dashoffset: 1300;
+  animation: dash 10s linear; }
+
+@-webkit-keyframes move {}
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(180deg);
+    transform: perspective(400px) rotateY(180deg); }
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0);
+    transform: perspective(400px) rotateY(0); } }
+@-webkit-keyframes rotatBack {
+  0% {
+    transform: rotateY(0); }
+  100% {
+    transform: rotateY(-90deg) scale(0.9); } }
+* {
+  touch-action: none; }
+
+#myCanve {
+  position: absolute;
+  z-index: 1000; }
+
+em {
+  font-style: normal; }
+
+body {
+  position: relative;
+  z-index: 0; }
+
+.border-1 {
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #f3f5f7;
+  width: 100%;
+  content: ''; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both; }
+
+.red {
+  background: red;
+  position: absolute;
+  z-index: 1001; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+.border-1px {
+  position: relative; }
+
+.border-1px::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 1px solid #A941E3;
+  width: 100%;
+  content: ''; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.7);
+    transform: scaleX(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+.border-left {
+  position: relative; }
+
+.border-left::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: 1px solid #A941E3;
+  height: 100%;
+  content: ''; }
+
+.bg {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  background: none no-repeat; }
+
+.ranking-head {
+  display: none;
+  position: absolute;
+  left: 0.37333rem;
+  top: 9.5%;
+  z-index: 10;
+  width: 9.26667rem;
+  height: 14.88rem;
+  background: none no-repeat; }
+  .ranking-head .rank-bg {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 9.26667rem;
+    height: 14.88rem;
+    background: none no-repeat; }
+  .ranking-head .close {
+    position: absolute;
+    right: -0.4rem;
+    top: 1.33333rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: none no-repeat; }
+  .ranking-head .ranking-title {
+    position: absolute;
+    left: 5.6%;
+    top: 2.78667rem;
+    width: 8rem;
+    height: 0.64rem;
+    background: none no-repeat;
+    padding: 0.08rem 0.09333rem 0.08rem 0.09333rem; }
+    .ranking-head .ranking-title .title {
+      position: relative;
+      z-index: 3;
+      width: 2.66667rem;
+      height: 0.64rem;
+      background: none no-repeat;
+      color: #fff;
+      text-align: center; }
+      .ranking-head .ranking-title .title em {
+        font-size: 0.32rem;
+        line-height: 0.64rem;
+        width: 2.66667rem;
+        height: 0.64rem;
+        background: none no-repeat; }
+    .ranking-head .ranking-title .rank-head {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 8.18667rem;
+      height: 0.8rem;
+      background: none no-repeat; }
+  .ranking-head .ranking-content {
+    position: absolute;
+    top: 4rem;
+    left: 0.22667rem;
+    width: 8.8rem;
+    height: auto; }
+    .ranking-head .ranking-content .ranking-detail {
+      position: relative;
+      width: 8.8rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      margin-bottom: 0.2rem; }
+      .ranking-head .ranking-content .ranking-detail .rank-img {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 8.8rem;
+        height: 1.4rem;
+        background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail .text {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.41333rem;
+        margin-left: 0.32rem;
+        margin-right: 0.16rem;
+        font-size: 0.32rem;
+        line-height: 0.52rem;
+        width: 0.52rem;
+        height: 0.52rem;
+        background: #fff no-repeat;
+        text-align: center;
+        color: #44154E;
+        opacity: .4; }
+      .ranking-head .ranking-content .ranking-detail .rank-order {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.33333rem;
+        margin-left: 0.16rem;
+        width: 0.82667rem;
+        height: 0.66667rem;
+        background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail .head-pic {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.13333rem;
+        margin-left: 0.21333rem;
+        width: 1.06667rem;
+        height: 1.06667rem;
+        background: none no-repeat;
+        border-radius: 50%; }
+        .ranking-head .ranking-content .ranking-detail .head-pic img {
+          position: absolute;
+          top: 0rem;
+          left: 0rem;
+          width: 1.06667rem;
+          height: 1.06667rem;
+          background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail em {
+        position: relative;
+        z-index: 1;
+        margin-top: 0rem;
+        margin-left: 0.30667rem;
+        font-size: 0.32rem;
+        line-height: 1.33333rem;
+        width: 2.16rem;
+        height: 1.25333rem;
+        background: none no-repeat;
+        color: #fff; }
+      .ranking-head .ranking-content .ranking-detail .gold {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.46667rem;
+        margin-left: 0rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail i {
+        position: relative;
+        z-index: 1;
+        margin-top: 0rem;
+        margin-left: 0.12rem;
+        font-size: 0.32rem;
+        line-height: 1.33333rem;
+        width: 1.94667rem;
+        height: 1.25333rem;
+        background: none no-repeat;
+        color: #F8D271; }
+      .ranking-head .ranking-content .ranking-detail .card {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.4rem;
+        margin-left: 0rem;
+        width: 1.14667rem;
+        height: 0.66667rem;
+        background: none no-repeat; }
+
+header {
+  width: 10rem;
+  height: 1.33333rem;
+  background: none no-repeat; }
+  header p {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    z-index: -4;
+    width: 10rem;
+    height: 1.33333rem;
+    background: #fff no-repeat;
+    opacity: .1; }
+  header .gold-group {
+    position: absolute;
+    top: 0.29333rem;
+    left: 0.33333rem;
+    width: 3.76rem;
+    height: 0.66667rem;
+    background: none no-repeat; }
+    header .gold-group p {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 3.6rem;
+      height: 0.66667rem;
+      background: #fff no-repeat;
+      border-radius: 0.33333rem;
+      opacity: .2; }
+    header .gold-group .gold-m {
+      width: 0.46667rem;
+      height: 0.46667rem;
+      background: none no-repeat;
+      margin-top: 0.10667rem;
+      margin-left: 0.14667rem; }
+    header .gold-group b {
+      margin-top: 0rem;
+      margin-left: 0.10667rem;
+      width: 2.30667rem;
+      height: 0.66667rem;
+      background: none no-repeat;
+      font-size: 0.34667rem;
+      line-height: 0.66667rem; }
+    header .gold-group .more {
+      position: absolute;
+      right: 0rem;
+      top: -0.04rem;
+      z-index: 4;
+      width: 0.73333rem;
+      height: 0.73333rem;
+      background: none no-repeat; }
+  header .right-con {
+    padding-top: 0.25333rem;
+    padding-left: 0.17333rem; }
+    header .right-con a {
+      margin-right: 0.08rem; }
+      header .right-con a img {
+        width: 1.77333rem;
+        height: 0.82667rem;
+        background: none no-repeat; }
+
+section {
+  position: relative;
+  width: 100%;
+  height: 13.04rem;
+  background: none no-repeat;
+  /*.poker-area01::after {
+  	display:block;
+  	content:'';
+  	position:absolute;
+  	right:0;
+  	top:0;
+  	width:100%;
+  	height:100%;
+  	/*background:red;*/
+  /*}*/
+  /*$('#svg01').css({*/
+  	/*position:'absolute',
+  // 	top:'8%',
+  // 	left:0,
+  // 	width:'100%',
+  // 	height:'70%'
+  // })*/ }
+  section .con-head {
+    width: 100%;
+    height: 23.72%; }
+  section #svg01 {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  section .bottom-txt {
+    font-size: 0.00267rem;
+    line-height: 0.00867rem; }
+  section .middle {
+    width: 100%; }
+  section .last {
+    margin-right: 0; }
+  section .middle-con .porker {
+    -webkit-backface-visibility: visible;
+    /*-webkit-transform: rotateY(180deg);  Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
+    backface-visibility: visible;
+    /*					animation: 2s ease 500ms rotating none 1;
+    					transform-origin:center;
+    */ }
+  section .area {
+    background: #331145;
+    box-sizing: border-box;
+    border: 0.01rem dashed #5D2C77;
+    position: relative;
+    z-index: 3; }
+  section .left {
+    width: 100%;
+    height: 50%;
+    background: none no-repeat; }
+
+.time-clear {
+  position: absolute;
+  /*left:0%;*/
+  top: 52%;
+  z-index: 6;
+  text-align: center;
+  font-size: 1.33333rem;
+  line-height: 5.33333rem;
+  font-family: 'Arial';
+  color: yellow;
+  /*text-shadow:.2rem .2rem .2rem #000 ;*/
+  width: 2.66667rem;
+  height: 2rem;
+  background: none no-repeat; }
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10rem;
+  height: 1.70667rem;
+  background: none no-repeat; }
+  footer .bg-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10rem;
+    height: 1.70667rem;
+    background: #fff no-repeat;
+    opacity: .1; }
+  footer .bottom-btn {
+    position: relative;
+    z-index: 8;
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: none no-repeat;
+    margin-top: 0.30667rem;
+    margin-left: 0.29333rem;
+    margin-right: 0.29333rem; }
+    footer .bottom-btn img {
+      width: 1.06667rem;
+      height: 1.06667rem;
+      background: none no-repeat; }
+  footer .select {
+    transform: scale(1.4);
+    WebkitTransform: scale(1.4);
+    -webkit-transform-origin: center;
+    transition: 2s; }
+  footer .last {
+    margin-right: 0; }
+
+/*# sourceMappingURL=poker.css.map */

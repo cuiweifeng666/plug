@@ -1,0 +1,329 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>商城</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="../css/shop.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/SaveDatas.js"></script>
+    <!-- <script type="text/javascript" src="../js/iscroll.js"></script> -->
+    <script>
+
+    $(document).ready(function($){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+
+    })
+    </script>
+  </head>
+  <body id="">
+  <!-- <div id="wrapper">
+    <div id="scroller"> -->
+    
+    <div class="swiper-container">
+       <div class="swiper-wrapper">
+           <div class="swiper-slide">
+              <!-- <div class="pt"> -->
+              <img src="../images/bg-shop.png" id="" class="bg-shop" />
+              <header class="head-first-text">
+                  <span class="head-back">
+                    <span class="back"></span>
+                  </span>
+                  商城
+              </header>
+              <section>
+                <header class="clearfix">
+                    <div class="fl head-group">
+                        <span class="head-pic fl">
+                          <img src="../images/head-pi.png" id="" class="" />
+                        </span>
+                        <em class="fl">彩票我最牛</em>
+                    </div>
+                    <div class="fr head-money">
+                      <span class="fl head-circle" ></span>
+                      <img class="fl head-gold" src="../images/Bitmap-Copy.png">
+                      <em class="fl ">123000</em>
+                      <img id="" class="fr fill"  src="../images/fill.png" />
+                    </div>
+                </header>
+                <div class="shop-content">
+                  <img src="../images/count.png" id="" class="shop-bg" />
+                  <div class="content-title">
+                      <div class="img-border01 ">
+                          <img src="../images/chang-btn.png" id="" class="prop-1 " />
+                          <b>道具场</b>
+                      </div>
+                      <div class="img-border02">
+                          <img src="../images/chang-btn.png" id="" class="prop-2" />
+                          <b>兑换场</b>
+                      </div>
+                  </div>
+                  
+                  <div class="shop-exchange-01">
+                      <ul class="clearfix">
+                        <li class="shop-list fl">
+                            <div class="list-1 fl">
+                              <div class="shopping-title">龙涎香</div>
+                              <img src="../images/dragon.png" id="" class="dragon" />
+                               <div class="goods-info clearfix">
+                                  <span class="text fl">送</span>
+                                 <img class="sign fl" src="../images/gold2.png">
+                                 <span class="text fl count">10,000</span>
+                                 <span class="text fl">个</span>
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn fl" >
+                                 <b>10元宝</b>
+                               </a>
+                               
+                            </div>
+                            <div class="list-1 shopping fl">
+                              <div class="shopping-title fl">许愿蜡烛</div>
+                              <img src="../images/wish.png" id="" class="dragon wish" />
+                              <div class="goods-info">
+                              <span class="text fl">送</span>
+                               <img class="sign fl" src="../images/gold2.png">
+                               <span class="text fl">30,000</span>
+                               <span class="text fl">个</span>
+                               </div>
+                                <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn fl" >
+                                 <b>10元宝</b>
+                               </a>
+                            </div>
+                        </li>
+                        <li class="shop-list shop-bottom fl">
+                            <div class="list-1 fl">
+                              <div class="shopping-title fl">文财神</div>
+                              <img src="../images/writing.png" id="" class="writing dragon" />
+                               <div class="goods-info">
+                              <span class="text fl">送</span>
+                               <img class="sign fl" src="../images/gold2.png">
+                               <span class="text fl">100,000</span>
+                               <span class="text fl">个</span>
+                               </div>
+                                <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn fl" >
+                                 <b>100元宝</b>
+                               </a>
+                            </div>
+                            <div class="list-1 fl">
+                              <div class="shopping-title fl">武财神</div>
+                              <img src="../images/move.png" id="" class="move dragon" />
+                               <div class="goods-info">
+                              <span class="text fl">送</span>
+                               <img class="sign fl" src="../images/gold2.png">
+                               <span class="text fl">500,000</span>
+                               <span class="text fl">个</span>
+                               </div>
+                                <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn fl" >
+                                 <b>500元宝</b>
+                               </a>
+                            </div>
+                        </li>
+                         <li class="shop-list shop-bottom fl">
+                            <div class="list-1 fl">
+                              <div class="shopping-title fl">五路财神</div>
+                              <img src="../images/five-load.png" id="" class="five-load dragon" />
+                               <div class="goods-info">
+                              <span class="text fl">送</span>
+                               <img class="sign fl" src="../images/gold2.png">
+                               <span class="text fl">1,000,000</span>
+                               <span class="text fl">个</span>
+                               </div>
+                                <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn fl" >
+                                 <b>1000元宝</b>
+                               </a>
+                            </div>
+                            <div class="list-1 shopping fl">
+                              <div class="shopping-title fl">弥勒财神</div>
+                              <img src="../images/buddhism.png" id="" class="buddhism dragon" />
+                             <div class="goods-info">
+                              <span class="text fl">送</span>
+                               <img class="sign fl" src="../images/gold2.png">
+                               <span class="text fl">5,000,000</span>
+                               <span class="text fl">个</span>
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn fl" >
+                                 <b>1000元宝</b>
+                               </a>
+                            </div>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="shop-exchange-02">
+                      <ul class="clearfix">
+                        <li class="shop-list fl">
+                            <div class="list-1 fl ">
+                              <div class="border clearfix">
+                                <img src="../images/shop-30.png" id="" class="dragon fl" />
+                              </div>
+                               <div class="goods-info">
+                               30元京东卡
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn" >
+                                  <div class="gold-text clearfix">
+                                     <b class="fl text01">4,000</b>
+                                      <b class="fl text01">彩豆</b>
+                                  </div>
+                               </a>
+                            </div>
+                            <div class="list-1 shopping fl">
+                              <div class="border clearfix">
+                                <img src="../images/shop-50.png" id="" class="wish dragon fl" />
+                              </div>
+                              <div class="goods-info">
+                               <span class="text">50元京东卡</span>
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn" >
+                                  <div class="gold-text clearfix">
+                                     <b class="fl text01">6,000</b>
+                                      <b class="fl text01">彩豆</b>
+                                  </div>
+                               </a>
+                            </div>
+                        </li>
+                        <li class="shop-list shop-bottom fl">
+                            <div class="list-1 fl ">
+                              <div class="border clearfix">
+                              <img src="../images/shop-300.png" id="" class="dragon fl"  />
+                              </div>
+                               <div class="goods-info">
+                                  <span class="text">100元京东卡</span>
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn" >
+                                  <div class="gold-text clearfix">
+                                     <b class="fl text01">12,000</b>
+                                      <b class="fl text01">彩豆</b>
+                                  </div>
+                               </a>
+                            </div>
+                            <div class="list-1 shopping fl">
+                              <div class="border clearfix">
+                              <img src="../images/shop-200.png" id="" class="wish dragon fl" />
+                              </div>
+                              <div class="goods-info">
+                               <span class="text">100元京东卡</span>
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn" >
+                                  <div class="gold-text clearfix">
+                                     <b class="fl text01">12,000</b>
+                                      <b class="fl text01">彩豆</b>
+                                  </div>
+                               </a>
+                            </div>
+                        </li>
+                        <li class="shop-list shop-bottom fl">
+                            <div class="list-1 fl ">
+                              <div class="border clearfix">
+                              <img src="../images/5G.png" id="" class="dragon fl gold-knife"  />
+                              </div>
+                               <div class="goods-info">
+                                  <span class="text">薄片投资金条5g</span>
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn" >
+                                  <div class="gold-text clearfix">
+                                     <b class="fl text01 little">150,000</b>
+                                      <b class="fl text01 little">彩豆</b>
+                                  </div>
+                               </a>
+                            </div>
+                            <div class="list-1 shopping fl">
+                              <div class="border clearfix">
+                              <img src="../images/speed2.png" id="" class="wish dragon fl speed" />
+                              </div>
+                              <div class="goods-info">
+                               <span class="text">小米平衡车</span>
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn" >
+                                  <div class="gold-text clearfix">
+                                     <b class="fl text01 little">200,000</b>
+                                      <b class="fl text01 little">彩豆</b>
+                                  </div>
+                               </a>
+                            </div>
+                        </li>
+                        <li class="shop-list shop-bottom fl">
+                            <div class="list-1 fl ">
+                              <div class="border clearfix">
+                              <img src="../images/g10.png" id="" class="dragon fl gold-knife"  />
+                              </div>
+                               <div class="goods-info">
+                                  <span class="text">薄片投资金条10g</span>
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn" >
+                                  <div class="gold-text clearfix">
+                                     <b class="fl text01 little">300,000</b>
+                                      <b class="fl text01 little">彩豆</b>
+                                  </div>
+                               </a>
+                            </div>
+                            <div class="list-1 shopping fl">
+                              <div class="border clearfix">
+                              <img src="../images/ip7.png" id="" class="wish dragon fl ip7" />
+                              </div>
+                              <div class="goods-info">
+                               <span class="text">iphone7</span>
+                               </div>
+                               <a class="gold-star clearfix" href="javascript:;">
+                                 <img src="../images/gold-btn.png" class="shop-btn" >
+                                  <div class="gold-text clearfix">
+                                     <b class="fl text01 little">620,000</b>
+                                      <b class="fl text01 little">彩豆</b>
+                                  </div>
+                               </a>
+                            </div>
+                        </li>
+                       
+                      </ul>
+                      </div>
+                  </div>
+                  <!-- <div class="shop-exchange-01">
+                      <img src="../images/" id="" class="prop" />
+                  </div> -->
+                <!-- </div> -->
+              </section>
+
+            </div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+     <script type="text/javascript" src="../js/shop.js"></script>
+  </body>
+  </html>

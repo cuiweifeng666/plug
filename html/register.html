@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>注册</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script>
+
+    $(document).ready(function($){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+
+    })
+    </script>
+  </head>
+  <body id="">
+      <div class="bg"></div>
+      <header class="head-first-text">
+            <div class="head-back">
+                <span class="back"></span>
+            </div>
+           登录
+      </header>
+      <section>
+          <div class="writing">
+           <div class="name clearfix">
+              <label for="writing-name" id="name" class="fl">用户名:</label>
+              <input type="text" name="name" placeholder="请输入4~12位字符和数字" min="12" id="writing-name" class="fl">
+            </div>
+            <div class="password clearfix">
+               <label for="writing-password" id="password" class="fl">设置密码：</label>
+              <input type="password" name="password" placeholder="请输入6~12位字符和数字" id="writing-password" class="fl">
+            </div>
+             <div class="sure-password clearfix">
+               <label for="writing-password" id="password" class="fl">确认密码：</label>
+              <input type="password" name="password" placeholder="请输入6~12位字符和数字" id="writing-password" class="fl">
+            </div>
+            
+          </div>
+          <div class="bottom">
+          <div class="login-border clearfix">
+             <a href="javascript:;" class="login fl">立即注册</a>
+          </div>
+          <div class="other-methods">
+              <div class="other-remind">
+                <span class="other-left line border-1"></span>
+                <span class="other-text">其他方式登录</span>
+                <span class="other-right line border-1"></span>
+              </div>
+              <div class="other-sign">
+                  <div class="other-link">
+                      <a href="javascript:;" >
+                          <img src="../images/QQ.png" id="" class="weixin" />
+                          <em >微信登录</em>
+                      </a>
+                  </div>
+                  <div class="other-link">
+                      <a href="javascript:;" >
+                          <img src="../images/cai.png" id="" class="weixin" />
+                          <em>QQ登录</em>
+                      </a>
+                  </div>
+                  <div class="other-link">
+                      <a href="javascript:;" >
+                          <img src="../images/talk.png" id="" class="weixin" />
+                          <em>彩经网登录</em>
+                      </a>
+                  </div>
+              </div>
+              <div class="link-bottom">
+                  <a href="">
+                    <u>先逛逛</u>
+                 </a>
+              </div>
+          </div>
+          </div>
+      </section>
+     <script type="text/javascript" src="../js/login.js"></script>
+  </body>
+  </html>

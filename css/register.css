@@ -1,0 +1,293 @@
+@-webkit-keyframes move {}
+* {
+  touch-action: none; }
+
+#myCanve {
+  position: absolute;
+  z-index: 1000; }
+
+em {
+  font-style: normal; }
+
+body {
+  position: relative;
+  z-index: 0; }
+
+.border-1 {
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #f3f5f7;
+  width: 100%;
+  content: ''; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both; }
+
+.red {
+  background: red;
+  position: absolute;
+  z-index: 1001; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+.border-1px {
+  position: relative; }
+
+.border-1px::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 1px solid #E6E6E6;
+  width: 100%;
+  content: ''; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.7);
+    transform: scaleX(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+.border-left {
+  position: relative; }
+
+.border-left::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: 1px solid #A941E3;
+  height: 100%;
+  content: ''; }
+
+html, body {
+  position: relative;
+  height: 100%;
+  background: #F2F2F2; }
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #F2F2F2 no-repeat;
+  background: #F2F2F2;
+  z-index: -1; }
+
+header {
+  position: relative;
+  width: 100%;
+  height: 1.70667rem;
+  background: #DA3231 no-repeat;
+  font-size: 0.48rem;
+  line-height: 2.24rem;
+  text-align: center;
+  color: #fff; }
+  header .head-back {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 1.33333rem;
+    height: 1.70667rem;
+    background: none no-repeat; }
+    header .head-back .back {
+      position: absolute;
+      left: 0.4rem;
+      top: 0.82667rem;
+      width: 0.33333rem;
+      height: 0.56rem;
+      background: url(../images/back.png) no-repeat;
+      background-size: contain; }
+
+a:link, a:visited {
+  color: #fff; }
+
+section .writing {
+  background: #fff;
+  margin-top: 0.26667rem;
+  margin-left: 0rem; }
+  section .writing .name {
+    height: 1.33333rem; }
+    section .writing .name #name {
+      margin-top: 0rem;
+      margin-left: 0.6rem;
+      width: 2rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      font-size: 0.4rem;
+      line-height: 1.33333rem; }
+    section .writing .name #writing-name {
+      margin-top: 0rem;
+      margin-left: 0rem;
+      width: 6.93333rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      font-size: 0.4rem;
+      line-height: 1.33333rem;
+      color: #CCCCCC; }
+  section .writing .password {
+    height: 1.33333rem; }
+    section .writing .password #password {
+      margin-top: 0rem;
+      margin-left: 0.4rem;
+      width: 2.2rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      font-size: 0.4rem;
+      line-height: 1.33333rem; }
+    section .writing .password #writing-password {
+      margin-top: 0rem;
+      margin-left: 0rem;
+      width: 6.93333rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      font-size: 0.4rem;
+      line-height: 1.33333rem;
+      color: #CCCCCC; }
+  section .writing .sure-password {
+    height: 1.33333rem; }
+    section .writing .sure-password #password {
+      margin-top: 0rem;
+      margin-left: 0.4rem;
+      width: 2.2rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      font-size: 0.4rem;
+      line-height: 1.33333rem; }
+    section .writing .sure-password #writing-password {
+      margin-top: 0rem;
+      margin-left: 0rem;
+      width: 6.93333rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      font-size: 0.4rem;
+      line-height: 1.33333rem;
+      color: #CCCCCC; }
+section .bottom {
+  position: relative;
+  margin-top: 0.26667rem;
+  margin-left: 0rem;
+  width: 100%;
+  height: 13.33333rem;
+  background: #fff no-repeat; }
+  section .bottom .login-border {
+    position: relative; }
+    section .bottom .login-border .login, section .bottom .login-border .register {
+      display: block;
+      margin-top: 0.26667rem;
+      margin-left: 0.26667rem;
+      width: 9.46667rem;
+      height: 1.06667rem;
+      background: #DA3231 no-repeat;
+      font-size: 0.45333rem;
+      line-height: 1.06667rem;
+      text-align: center;
+      color: #fff;
+      border-radius: 0.13333rem; }
+    section .bottom .login-border .register {
+      background: #4990E2; }
+    section .bottom .login-border .forget {
+      position: absolute;
+      right: 0.26667rem;
+      top: 2.97333rem;
+      font-size: 0.4rem;
+      line-height: 0.48rem;
+      color: #DA3231; }
+section .other-methods {
+  position: absolute;
+  left: 0;
+  top: 4.21333rem;
+  width: 10rem;
+  height: 100%;
+  background: none no-repeat; }
+  section .other-methods .other-remind {
+    position: relative;
+    width: 10rem;
+    height: 0.48rem;
+    background: none no-repeat;
+    text-align: center;
+    position: absolute; }
+    section .other-methods .other-remind .other-text {
+      display: block;
+      font-size: 0.4rem;
+      line-height: 0.48rem;
+      color: #4A4A4A; }
+    section .other-methods .other-remind .line {
+      position: absolute;
+      width: 1.6rem;
+      height: 0;
+      background: none no-repeat; }
+    section .other-methods .other-remind .other-left {
+      left: 1.85333rem;
+      top: 0.24rem; }
+    section .other-methods .other-remind .other-right {
+      left: 6.4rem;
+      top: 0.24rem; }
+  section .other-methods .other-sign {
+    position: absolute;
+    top: 1.10667rem;
+    left: 0rem;
+    width: 10rem;
+    display: flex;
+    display: -webkit-box;
+    justify-content: space-around;
+    -webkit-box-pack: justify; }
+    section .other-methods .other-sign .other-link {
+      flex: 1;
+      -webkit-box-flex: 1;
+      text-align: center; }
+      section .other-methods .other-sign .other-link a {
+        display: block;
+        position: relative;
+        text-align: center; }
+        section .other-methods .other-sign .other-link a img {
+          width: 1.14667rem;
+          height: 1.14667rem;
+          background: none no-repeat; }
+        section .other-methods .other-sign .other-link a em {
+          position: absolute;
+          top: 1.10667rem;
+          left: 0rem;
+          display: block;
+          text-align: center;
+          font-size: 0.29333rem;
+          line-height: 0.66667rem;
+          color: #4a4a4a;
+          width: 100%; }
+  section .other-methods .link-bottom {
+    position: absolute;
+    top: 4.88rem;
+    left: 0rem;
+    width: 100%;
+    font-size: 0.4rem;
+    line-height: 0.48rem;
+    text-align: center; }
+    section .other-methods .link-bottom a {
+      display: block;
+      width: 100%;
+      color: #DA3231; }
+
+/*# sourceMappingURL=register.css.map */

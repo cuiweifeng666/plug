@@ -1,0 +1,283 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>疯狂骰子</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="../css/dice.css">
+     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <!-- <script type="text/javascript" src="../js/iscroll.js"></script> -->
+
+    <script>
+
+    $(document).ready(function($){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+        // document.ontouchmove = function(e){ 
+        //   e.preventDefault(); 
+        // };
+
+    })
+    </script>
+  </head>
+  <body id="">
+      <img class="bg" src="../images/game.png">
+       <audio controls="controls" id="controls" >
+            <!-- <source src="../images/song.ogg" type="audio/ogg"> -->
+            <source src="../images/song.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+      </audio>
+      <div class="plug-bg"></div>
+      <div class="plug">
+        <img src="../images/plug1.gif" id="" class="plug-left" />
+        <img src="../images/plug2.gif" id="" class="plug-right" />
+      </div>
+      <div class="ranking-head">
+        <img src="../images/rank-bg.png" id="" class="rank-bg" />
+        <img src="../images/close.png" id="" class="close" />
+         <div class="ranking-title clearfix">
+            <img src="../images/rank-head.png" id="" class="rank-head" />
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="../images/" id="" class="" /> -->
+            </span>
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="../images/" id="" class="" /> -->
+            </span>
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="../images/" id="" class="" /> -->
+            </span>
+         </div>
+         <div class="ranking-content">
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <img src="../images/first.png" id="" class="rank-order fl" />
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+                <img src="../images/30.png" id="" class="fl card" />
+            </div>
+
+             <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <img src="../images/second.png" id="" class="rank-order  fl" />
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class=" fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class=" fl">1422.01万</i >
+                <img src="../images/50.png" id="" class="fl card" />
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <img src="../images/second.png" id="" class="rank-order fl" />
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class=" fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+                <img src="../images/100-card.png" id="" class=" fl card" />
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+             <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+         </div>
+      </div>
+      <canvas id="myCanve"></canvas>
+      <header class="clearfix">
+          <div class="dice-head-left clearfix fl">
+              <span class="fl dice-circle"></span>
+              <img src="../images/Bitmap-Copy.png" class="gold-sign fl" id="gold" />
+              <b class="gold-count fl">123034</b>
+              <a href="" class="fl copy">
+                <img src="../images/fill.png" id="" class="fl more" />
+              </a>
+          </div>
+          <div class="fr list">
+            <a href="javascript:;" class="fl primary">
+                <img src="../images/start1.png" id="" class="fl primary01" />
+            </a>
+            <a href="javascript:;" class="fl rank">
+                <img src="../images/rank1.png" id="" class="fl rank01" />
+             </a>
+            
+          </div>
+      </header>
+      <section class="dice-content">
+
+          <div class="dice-bg">
+            <img src="../images/table.png" id="" class="table fl" />
+            <div class="dice-pos">
+              <img src="../images/trend.png" id="" class="trend sa" />
+              <img src="../images/contect.png" id="" class="contect sa" />
+              <img src="../images/help.png" id="" class="help sa" />
+              <img src="../images/set.png" id="" class="set sa" />
+              <img src="../images/head-start.png" id="" class="head-start sa" />
+              <b class="winner">
+                恭喜:"彩票最牛"在幸运PC金
+              </b>
+               <div class="start">
+                    <img class="p1" src="../images/left.png">
+                    <img class="p2" src="../images/right.png">
+                    <img class="cicle" src="../images/circle.png">
+                    <img class="start_text" src="../images/start.png">
+                </div>
+              <div class="trending-head clearfix">
+                  <img class="trending-sign fl" src="../images/trend-text.png">
+                  <div class="trending-group fl">
+                      <img src="../images/trr2.png" id="" class="trr2 tr-pic fl" />
+                      <img src="../images/tr1.png" id="" class="tr2 tr-pic fl" />
+                      <img src="../images/tr3.png" id="" class="trr2 tr-pic  fl" />
+                      <img src="../images/trr1.png" id="" class="trr2 tr-pic  fl" />
+                      <img src="../images/tr2.png" id="" class="tr2 tr-pic  fl" />
+                      <img src="../images/tr3.png" id="" class="trr2 tr-pic  fl" />
+                      <img src="../images/tr3.png" id="" class="trr2 tr-pic  fl" />
+                      <img src="../images/trr2.png" id="" class="tr2 tr-pic  fl" />
+                  </div>
+              </div>
+              <div class="rect">
+              <div class="win-01 re st"></div>
+              <div class="win-02 re long"></div>
+              <div class="win-03 re st"></div>
+              <div class="win-04 re st"></div>
+              <div class="win-05 re long"></div>
+              <div class="win-06 re st"></div>
+              <div class="win-07 re st"></div>
+              <div class="win-08 re long"></div>
+              <div class="win-09 re st"></div>
+              </div>
+              <div class="win-01 st" id="canvas1">
+                <img src="../images/1.png" id="" class="win-first-01" />
+                <img src="../images/1.png" id="" class="win-first-02" />
+                <img src="../images/x36.png" id="" class="win-first-03" />
+              </div>
+              <div class="win-02 long" >
+                <img src="../images/8~12.png" id="" class="" />
+                <img src="../images/bigp.png" id="" class="" />
+                <img src="../images/x2.png" class="w" />
+                <img src="../images/groupx4-1.png" class="" />
+              </div>
+              <div class="win-03 st" >
+                <img src="../images/4.png" id="" class="win-first-01" />
+                <img src="../images/4.png" id="" class="win-first-02" />
+                <img src="../images/x36.png" class="win-first-03" />
+              </div>
+              <div class="win-04 st" >
+                <img src="../images/2.png" id="" class="win-first-01" />
+                <img src="../images/2.png" id="" class="win-first-02" />
+                <img src="../images/x36.png" class="win-first-03" />
+              </div>
+              <div class="win-05 long" >
+                <img src="../images/7.png" id="" class="" />
+                <img src="../images/speed.png" id="" class="" />
+                <img src="../images/x6.png" class="" />
+              </div>
+              <div class="win-06 st">
+                <img src="../images/5.png" id="" class="win-first-01" />
+                <img src="../images/5.png" id="" class="win-first-02" />
+                <img src="../images/x36.png" class="win-first-03" />
+              </div>
+              <div class="win-07 st" >
+                <img src="../images/3.png" id="" class="win-first-01" />
+                <img src="../images/3.png" id="" class="win-first-02" />
+                <img src="../images/x36.png" class="win-first-03" />
+              </div>
+              <div class="win-08 long" >
+                <img src="../images/2-6.png" id="" class="" />
+                <img src="../images/small-text.png" id="" class="" />
+                <img src="../images/x2.png" class="" />
+                <img src="../images/groupx4-1.png" class="" />
+              </div>
+              <div class="win-09 st">
+                <img src="../images/6.png" id="" class="win-first-01" />
+                <img src="../images/6.png" id="" class="win-first-02" />
+                <img src="../images/x36.png" class="win-first-03" />
+              </div>
+
+            </div>
+             
+          </div>
+         
+      </section>
+      <footer class="clearfix dice-foot">
+        <div class="dice-footer-bg fl"></div>
+        <div class="m-my">
+        <img src="../images/10.png"10.png id="" class="fl count-1 choose active" />
+        <img src="../images/100.png" id="" class="fl count-2 choose " />
+        <img src="../images/1000.png" id="" class="fl count-3 choose" />
+        <img src="../images/all.png" id="" class="fl count-4 choose" />
+        </div>
+        <img src="../images/cancel.png" id="" class="fl cancel" />
+      </footer>
+      
+     <script type="text/javascript" src="../js/gold.js"></script>
+  </body>
+  </html>

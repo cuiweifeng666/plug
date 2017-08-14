@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>商城</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="../css/sign.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script>
+
+    $(document).ready(function($){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+
+    })
+    </script>
+  </head>
+  <body id="">
+      <img src="../images/duty-bg.png" id="" class="bg" />
+      <header class="head-first-text">
+                  <span class="back"></span>
+                  每日任务
+      </header>
+      <section>
+        <img src="../images/duty-2.png" id="" class="duty" />
+        <a href="javascript:;" class="sign top01">
+            <b>签到</b>
+            <img src="../images/green.png" id="" class="" />
+        </a>
+        <a href="javascript:;" class="sign top02">
+            <b>领取奖励</b>
+            <img src="../images/green.png" id="" class="" />
+        </a>
+        <a href="javascript:;" class="sign top03">
+             <b>立即分享</b>
+            <img src="../images/blue2.png" id="" class="" />
+        </a>
+      </section>
+      
+     <script type="text/javascript" src="../js/sign.js"></script>
+  </body>
+  </html>

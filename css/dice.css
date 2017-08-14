@@ -1,0 +1,510 @@
+@-webkit-keyframes move {}
+* {
+  touch-action: none; }
+
+#myCanve {
+  position: absolute;
+  z-index: 200; }
+
+#myCanve2 {
+  position: absolute;
+  z-index: 999; }
+
+em {
+  font-style: normal; }
+
+body {
+  position: relative;
+  z-index: 0; }
+
+.border-1 {
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #f3f5f7;
+  width: 100%;
+  content: ''; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both; }
+
+.re {
+  background: red;
+  position: absolute;
+  z-index: 1001; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+.border-1px {
+  position: relative; }
+
+.border-1px::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 1px solid #A941E3;
+  width: 100%;
+  content: ''; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.7);
+    transform: scaleX(0.7); } }
+#controls {
+  position: absolute;
+  z-index: -100000; }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+.border-left {
+  position: relative; }
+
+.border-left::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: 1px solid #A941E3;
+  height: 100%;
+  content: ''; }
+
+.bg {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  z-index: -9999; }
+
+.ranking-head {
+  display: none;
+  position: absolute;
+  left: 0.37333rem;
+  top: 9.5%;
+  z-index: 300;
+  width: 9.26667rem;
+  height: 14.88rem;
+  background: none no-repeat; }
+  .ranking-head .rank-bg {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 9.26667rem;
+    height: 14.88rem;
+    background: none no-repeat; }
+  .ranking-head .close {
+    position: absolute;
+    right: -0.4rem;
+    top: 1.33333rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: none no-repeat; }
+  .ranking-head .ranking-title {
+    position: absolute;
+    left: 5.6%;
+    top: 2.78667rem;
+    width: 8rem;
+    height: 0.64rem;
+    background: none no-repeat;
+    padding: 0.08rem 0.09333rem 0.08rem 0.09333rem; }
+    .ranking-head .ranking-title .title {
+      position: relative;
+      z-index: 3;
+      width: 2.66667rem;
+      height: 0.64rem;
+      background: none no-repeat;
+      color: #fff;
+      text-align: center; }
+      .ranking-head .ranking-title .title em {
+        font-size: 0.32rem;
+        line-height: 0.64rem;
+        width: 2.66667rem;
+        height: 0.64rem;
+        background: none no-repeat; }
+    .ranking-head .ranking-title .rank-head {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 8.18667rem;
+      height: 0.8rem;
+      background: none no-repeat; }
+  .ranking-head .ranking-content {
+    position: absolute;
+    top: 4rem;
+    left: 0.22667rem;
+    width: 8.8rem;
+    height: auto; }
+    .ranking-head .ranking-content .ranking-detail {
+      position: relative;
+      width: 8.8rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      margin-bottom: 0.2rem; }
+      .ranking-head .ranking-content .ranking-detail .rank-img {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 8.8rem;
+        height: 1.4rem;
+        background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail .text {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.41333rem;
+        margin-left: 0.32rem;
+        margin-right: 0.16rem;
+        font-size: 0.32rem;
+        line-height: 0.52rem;
+        width: 0.52rem;
+        height: 0.52rem;
+        background: #fff no-repeat;
+        text-align: center;
+        color: #44154E;
+        opacity: .4; }
+      .ranking-head .ranking-content .ranking-detail .rank-order {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.33333rem;
+        margin-left: 0.16rem;
+        width: 0.82667rem;
+        height: 0.66667rem;
+        background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail .head-pic {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.13333rem;
+        margin-left: 0.21333rem;
+        width: 1.06667rem;
+        height: 1.06667rem;
+        background: none no-repeat;
+        border-radius: 50%; }
+        .ranking-head .ranking-content .ranking-detail .head-pic img {
+          position: absolute;
+          top: 0rem;
+          left: 0rem;
+          width: 1.06667rem;
+          height: 1.06667rem;
+          background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail em {
+        position: relative;
+        z-index: 1;
+        margin-top: 0rem;
+        margin-left: 0.30667rem;
+        font-size: 0.32rem;
+        line-height: 1.33333rem;
+        width: 2.16rem;
+        height: 1.25333rem;
+        background: none no-repeat;
+        color: #fff; }
+      .ranking-head .ranking-content .ranking-detail .gold {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.46667rem;
+        margin-left: 0rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail i {
+        position: relative;
+        z-index: 1;
+        margin-top: 0rem;
+        margin-left: 0.12rem;
+        font-size: 0.32rem;
+        line-height: 1.33333rem;
+        width: 1.94667rem;
+        height: 1.25333rem;
+        background: none no-repeat;
+        color: #F8D271; }
+      .ranking-head .ranking-content .ranking-detail .card {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.4rem;
+        margin-left: 0rem;
+        width: 1.14667rem;
+        height: 0.66667rem;
+        background: none no-repeat; }
+
+.plug {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  width: 100%;
+  height: 4rem;
+  z-index: 10002;
+  text-align: center;
+  font-size: 0; }
+  .plug .plug-left, .plug .plug-right {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: none no-repeat; }
+
+.iScrollVerticalScrollbar {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 10px;
+  height: 200px; }
+
+.iSrollVerticalScrollbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  wdith: 10px;
+  height: 100%; }
+
+.iScrollIndicator {
+  background: #efefef;
+  opacity: .3; }
+
+header {
+  width: 100%;
+  height: 1.33333rem;
+  background: url(../images/gold-head.png) no-repeat;
+  background-size: 100%;
+  position: relative;
+  z-index: 400; }
+  header .dice-head-left {
+    position: relative;
+    margin-top: 0.33333rem;
+    margin-left: 0.69333rem;
+    width: 4.4rem;
+    height: 0.77333rem;
+    background: none no-repeat; }
+    header .dice-head-left .dice-circle {
+      position: absolute;
+      top: 0.04rem;
+      left: 0rem;
+      z-index: -11;
+      width: 3.86667rem;
+      height: 0.66667rem;
+      background: #2d697f no-repeat;
+      border-radius: 0.37333rem; }
+    header .dice-head-left .gold {
+      position: relative;
+      z-index: 1;
+      width: 0.46667rem;
+      height: 0.46667rem;
+      background: none no-repeat;
+      margin-top: 0.12rem;
+      margin-left: 0.16rem;
+      margin-right: 0.13333rem; }
+    header .dice-head-left .gold-count {
+      position: relative;
+      z-index: 1;
+      width: 2.72rem;
+      height: 0.72rem;
+      background: none no-repeat;
+      font-size: 0.26667rem;
+      line-height: 0.74667rem;
+      color: #fff; }
+    header .dice-head-left .copy {
+      position: relative;
+      z-index: 1; }
+      header .dice-head-left .copy img {
+        width: 0.76rem;
+        height: 0.76rem;
+        background: none no-repeat; }
+  header .list {
+    padding-right: 0.29333rem;
+    padding-top: 0.24rem; }
+    header .list a img {
+      width: 1.77333rem;
+      height: 0.82667rem;
+      background: none no-repeat;
+      padding-right: 0.29333rem; }
+
+section {
+  padding-top: 0rem;
+  padding-left: 0.26667rem;
+  padding-right: 0.26667rem;
+  padding-bottom: 0rem;
+  position: relative; }
+  section .dice-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: none no-repeat; }
+    section .dice-bg .table {
+      position: absolute; }
+    section .dice-bg .dice-pos {
+      position: absolute; }
+      section .dice-bg .dice-pos .start {
+        width: 7.2rem;
+        height: 1%;
+        background: none no-repeat;
+        position: absolute;
+        z-index: 200;
+        left: 50%;
+        margin-left: -3.6rem;
+        top: 49%;
+        display: none; }
+        section .dice-bg .dice-pos .start .p1 {
+          position: absolute;
+          width: 1.37333rem;
+          height: 1.33333rem;
+          background: none no-repeat;
+          left: 0;
+          margin-top: -0.66667rem;
+          z-index: 2; }
+        section .dice-bg .dice-pos .start .p2 {
+          position: absolute;
+          width: 1.37333rem;
+          height: 1.33333rem;
+          background: none no-repeat;
+          right: 0;
+          margin-top: -0.66667rem;
+          z-index: 2; }
+        section .dice-bg .dice-pos .start .cicle {
+          position: absolute;
+          width: 1.33333rem;
+          height: 1.33333rem;
+          background: none no-repeat;
+          left: 50%;
+          margin-top: -0.66667rem;
+          margin-left: -0.66667rem;
+          z-index: 0; }
+        section .dice-bg .dice-pos .start .start_text {
+          position: absolute;
+          width: 5.38667rem;
+          height: 3.09333rem;
+          background: none no-repeat;
+          left: 50%;
+          top: 50%;
+          margin-top: -1.54667rem;
+          margin-left: -2.69333rem;
+          z-index: 0;
+          opacity: 0; }
+      section .dice-bg .dice-pos .trend {
+        position: absolute;
+        left: 0;
+        transform-origin: left center;
+        -webkit-transform-origin: left center; }
+      section .dice-bg .dice-pos .contect {
+        position: absolute;
+        right: 0;
+        transform-origin: right center;
+        -webkit-transform-origin: right center; }
+      section .dice-bg .dice-pos .help {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform-origin: left center;
+        -webkit-transform-origin: left center; }
+      section .dice-bg .dice-pos .set {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform-origin: right center;
+        -webkit-transform-origin: right center; }
+      section .dice-bg .dice-pos .head-start {
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 22; }
+      section .dice-bg .dice-pos .winner {
+        color: #c4ecff;
+        position: absolute; }
+      section .dice-bg .dice-pos .trending-head, section .dice-bg .dice-pos .win-01 {
+        position: absolute; }
+      section .dice-bg .dice-pos .st {
+        width: 1.6rem;
+        height: 2.64rem;
+        background: none no-repeat; }
+        section .dice-bg .dice-pos .st img {
+          position: absolute; }
+      section .dice-bg .dice-pos .win-01 {
+        position: absolute;
+        top: 2.45333rem;
+        left: 1.45333rem; }
+      section .dice-bg .dice-pos .long {
+        width: 3.01333rem;
+        height: 2.64rem;
+        background: none no-repeat; }
+        section .dice-bg .dice-pos .long img {
+          position: absolute; }
+      section .dice-bg .dice-pos .win-02 {
+        position: absolute;
+        top: 2.45333rem;
+        left: 3.04rem; }
+      section .dice-bg .dice-pos .win-03 {
+        position: absolute;
+        top: 2.45333rem;
+        left: 6.09333rem; }
+      section .dice-bg .dice-pos .win-04 {
+        position: absolute;
+        top: 5.12rem;
+        left: 1.45333rem; }
+      section .dice-bg .dice-pos .win-05 {
+        position: absolute;
+        top: 5.12rem;
+        left: 2.77333rem; }
+      section .dice-bg .dice-pos .win-06 {
+        position: absolute;
+        top: 5.12rem;
+        left: 6.09333rem; }
+      section .dice-bg .dice-pos .win-07 {
+        position: absolute;
+        top: 7.78667rem;
+        left: 1.45333rem; }
+      section .dice-bg .dice-pos .win-08 {
+        position: absolute;
+        top: 7.78667rem;
+        left: 2.77333rem; }
+      section .dice-bg .dice-pos .win-09 {
+        position: absolute;
+        top: 7.78667rem;
+        left: 6.09333rem; }
+
+footer {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1001;
+  width: 100%;
+  height: 1.46667rem;
+  background: url(../images/footer.png) no-repeat;
+  background-size: 100%; }
+  footer img {
+    margin-left: 0.8rem;
+    margin-top: 0.13333rem;
+    width: 1.14667rem;
+    height: 1.2rem;
+    background: none no-repeat; }
+  footer .cancel {
+    margin-left: 0.86667rem;
+    margin-top: 0.21333rem;
+    width: 0.96rem;
+    height: 0.96rem;
+    background: none no-repeat; }
+
+.selfsect {
+  position: absolute;
+  z-index: 10000; }
+
+/*# sourceMappingURL=dice.css.map */

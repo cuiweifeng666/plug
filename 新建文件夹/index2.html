@@ -1,0 +1,574 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>竞猜游戏</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+        document.ontouchmove = function(e){ 
+          e.preventDefault(); 
+        };
+
+    })
+    </script>
+  </head>
+  <body id="">
+      <img class="bg" src="images/head-bg.jpg">
+      <div class="bg-color"></div>
+      <div class="diag-win">
+          <div class="diag-text">签到奖励</div>
+          <div class="diag-img clearfix">
+              <img src="images/Bitmap-Copy.png" id="" class="diag-gold fl" />
+              <i class="fl">+288</i>
+          </div>
+      </div>
+      <div class="diag-sign">
+          <b class="diag-title">签到第<i>0</i>天</b>
+          <img src="images/close.png" id="" class="day-close" />
+          <div class="diag-content clearfix">
+              <div class="diag-days fl">
+                  <b class="bg"></b>
+                  <div class="day">第一天</div>
+                  <img src="images/prize01.png" id="" class="prize01" />
+                  <img src="images/true.png" id="" class="true" />
+                  <p>288</p>
+              </div>
+              <div class="diag-days fl">
+              <b class="bg"></b>
+                  <div class="day">第二天</div>
+                  <img src="images/prize02.png" id="" class="prize02" />
+                  <img src="images/true.png" id="" class="true" />
+                  <p>288</p>
+              </div>
+              <div class="diag-days fl">
+              <b class="bg"></b>
+                  <div class="day">第三天</div>
+                  <img src="images/prize03.png" id="" class="prize03" />
+                  <img src="images/true.png" id="" class="true" />
+                  <p>288</p>
+              </div>
+              <div class="diag-days fl last">
+               <b class="bg "></b>
+                  <div class="day">第四天</div>
+                  <img src="images/prize04.png" id="" class="prize04" />
+                  <img src="images/true.png" id="" class="true" />
+                  <p>288</p>
+              </div>
+              <div class="content-02 clearfix">
+                   <div class="diag-days fl">
+                    <b class="bg "></b>
+                      <div class="day">第五天</div>
+                      <img src="images/prize05.png" id="" class="prize05" />
+                      <img src="images/true.png" id="" class="true" />
+                      <p>288</p>
+                  </div>
+                  <div class="diag-days fl">
+                   <b class="bg "></b>
+                      <div class="day">第六天</div>
+                     <img src="images/prize06.png" id="" class="prize06" />
+                      <img src="images/true.png" id="" class="true" />
+                      <p>288</p>
+                  </div>
+                  <div class="diag-days fl">
+                   <b class="bg "></b>
+                      <div class="day">第七天</div>
+                     <img src="images/prize07.png" id="" class="prize07" />
+                      <img src="images/true.png" id="" class="true" />
+                      <p>288</p>
+                  </div>
+              </div>
+          </div>
+          <a href="javascript:;" class="get-win" >
+              <img src="images/get-win.png" id="" class="" />
+          </a>
+      </div>
+      <div class="diag-goods">
+           <div class="text">恭喜获得 <b>2888</b> <i>彩豆！</i></div>
+           <div class="text-plain">每日猜猜猜,乐趣享无穷,大奖送不停</div>
+           <a href="javascript:;" class="get-win" >
+              <img src="images/get-win.png" id="" class="" />
+          </a>
+           <img src="images/close.png" id="" class="close" />
+      </div>
+      <div class="diag-help">
+           <div class="text">恭喜获得&nbsp;<b>2888</b>&nbsp;彩豆救济金</div>
+           <div class="time">今日还剩余&nbsp;<b>2</b>&nbsp;次</div>
+           <a href="javascript:;" class="get-win" >
+              <img src="images/get-win.png" id="" class="" />
+          </a>
+      </div>
+      <div class="ranking">
+        <img src="images/rank-bg.png" id="" class="rank-bg" />
+         <div class="ranking-title clearfix">
+            <img src="images/rank-head.png" id="" class="rank-head" />
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="images/" id="" class="" /> -->
+            </span>
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="images/" id="" class="" /> -->
+            </span>
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="images/" id="" class="" /> -->
+            </span>
+         </div>
+         <div class="ranking-content">
+            <div class="ranking-detail">
+                <img src="images/name.png" id="" class="rank-img" />
+                <img src="images/first.png" id="" class="rank-order fl" />
+                <b class="head-pic fl">
+                  <img src="images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+                <img src="images/30.png" id="" class="fl card" />
+            </div>
+
+             <div class="ranking-detail">
+                <img src="images/name.png" id="" class="rank-img" />
+                <img src="images/second.png" id="" class="rank-order  fl" />
+                <b class="head-pic fl">
+                  <img src="images/head1.png" id="" class="" />
+                </b>
+                <em class=" fl">Tantainic</em>
+                <img src="images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class=" fl">1422.01万</i >
+                <img src="images/50.png" id="" class="fl card" />
+            </div>
+            <div class="ranking-detail">
+                <img src="images/name.png" id="" class="rank-img" />
+                <img src="images/second.png" id="" class="rank-order fl" />
+                <b class="head-pic fl">
+                  <img src="images/head1.png" id="" class="" />
+                </b>
+                <em class=" fl">Tantainic</em>
+                <img src="images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+                <img src="images/100-card.png" id="" class=" fl card" />
+            </div>
+            <div class="ranking-detail">
+                <img src="images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+            <div class="ranking-detail">
+                <img src="images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+             <div class="ranking-detail">
+                <img src="images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+            <div class="ranking-detail">
+                <img src="images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+         </div>
+      </div>
+
+    <div class="perfect clearfix">
+        <img src="images/continue.png" id="" class="continue" />
+        <div  class="per-center fl">完善资料可领取&nbsp;&nbsp;<b>1880</b>&nbsp;&nbsp;彩豆</div>
+        <div class="per-content fl">
+            <div class="per">
+                <label for="user-phone" class="user-name fl" >手机号</label>
+                <i  class="fl border-left"></i>
+                <input type="tel" name="" id="user-phone" class="fl" value="">
+            </div>
+            <div class="per">
+                <label for="user-tel" class="user-identify fl">验证码</label>
+                <i  class="fl border-left" ></i>
+                <input type="tel" name="" id="user-tel" class="fl">
+            </div>
+            <div class="per">
+                <label for="user-text" class="user-identify fl">领取人</label>
+                <i class="fl border-left"></i>
+                <input type="text" name="" id="user-text" class="fl">
+            </div>
+            <i class="restart">
+             <i>49后重新发送</i>
+              <img src="images/restart-code.png" id="" class="" />
+            </i>
+            <i class="get-code">
+             <i>获取验证码</i>
+              <img src="images/get-code.png" id="" class="" />
+            </i>
+            <div class="btn">
+              <a href="javascript:;" class="fl"></a>
+              <a href="javascript:;" class="fl"></a>
+            </div>
+        </div>
+    </div>
+    <div class="address">
+        <img src="images/close.png" id="" class="close" />
+        <img src="images/bg-phone.png" id="" class="bg-phone" />
+        <div class="head1 clearfix">
+              <a href="javascript:;" class="head-pic fl">
+                  <img src="images/head-add1.png" id="" class="fl" />
+              </a>
+              
+              <div class="head-info fl">
+                  <div class="head-name fl">
+                      <i class="fl">我爱竞猜牌</i>
+                      <img src="images/Group3.png" id="" class="fl" />
+                  </div>
+                  <div class="head-gold fl">
+                      <img src="images/Bitmap-Copy.png" id="" class="gold fl" />
+                      <b class="gold-info fl">123000</b>
+                      <img src="images/gold.png" id="" class="acer fl" />
+                      <b class="acer-info fl">125000</b>
+                  </div>
+              </div>
+              <div class="head-btn fr">
+                <img src="images/news.png" id="" class="news-bg" />
+                <img src="images/news-circle.png" id="" class="news-circle" />
+                <i>中奖通知</i> 
+              </div>
+        </div>
+        <div class="head-img clearfix">
+            <a href="javascript:;" class="fl head-change disappear">
+                <img src="images/head-add1.png" id="" class="bg-violet" />
+                <img src="images/star.png" id="" class="bg-star active" />
+                <b>设为头像</b>
+                <span class="hide"></span>
+            </a>
+            <a href="javascript:;" class="fl head-change">
+                <img src="images/head-add2.png" id="" class="bg-violet" />
+                <img src="" id="" class="bg-star" />
+                <b>设为头像</b>
+                <span></span>
+            </a>
+            <a href="javascript:;" class="fl head-change">
+                <img src="images/head-add3.png" id="" class="bg-violet" />
+                <img src="" id="" class="bg-star" />
+                <b>设为头像</b>
+                <span></span>
+            </a>
+            <a href="javascript:;" class="fl head-change">
+                <img src="images/head-add4.png" id="" class="bg-violet" />
+                <img src="" id="" class="bg-star" />
+                <b>设为头像</b>
+                <span></span>
+            </a>
+            <a href="javascript:;" class="fl head-change">
+                <img src="images/head-add4.png" id="" class="bg-violet" />
+                <img src="" id="" class="bg-star" />
+                <b>设为头像</b>
+                <span></span>
+            </a>
+        </div>
+        <div class="address-info">
+            <img src="images/circle-radius.png" id="" class="circle-radius" />
+            <div class="address-link clearfix">
+              <a href="javascript:;" class="fl active">
+                  <img src="images/harf-circle.png" id="" class="harf-circle" />
+                  <i class="fl">手机验证</i>
+              </a>
+              <a href="javascript:;" class="fl">
+                  <img src="images/harf-rect.png" id="" class="harf-circle" />
+                  <i class="fl">收货信息</i>
+              </a>
+              <a href="javascript:;" class="fl">
+                  <img src="images/harf-rect.png" id="" class="harf-circle" />
+                  <i class="fl">已购商品</i>
+              </a>
+              <a href="javascript:;" class="fl">
+                  <img src="images/harf-rect.png" id="" class="harf-circle" />
+                  <i class="fl">兑换记录</i>
+              </a>
+            </div>
+            <div class="address-detail">
+                  <div class="phone show">
+                      <div class="per clearfix">
+                          <label for="user-phone" class="user-name fl" >用户名</label>
+                          <i  class="fl border-left"></i>
+                          <input type="tel" name="" id="user-phone" class="fl" value="我爱竞猜牌">
+                      </div>
+                      <div class="per">
+                          <label for="user-tel" class="user-identify fl">验证码</label>
+                          <i  class="fl border-left" ></i>
+                          <input type="tel" name="" id="user-tel" class="fl">
+                          <a href="javascript:;" class="fr get-bg">
+                              <i>50</i>
+                              秒后重发
+                          </a>
+                          <img src="images/restart-code.png" id="" class="pray" />
+                      </div>
+                      <div class="per">
+                          <label for="user-text" class="user-identify fl">领取人</label>
+                          <i class="fl border-left"></i>
+                          <input type="text" name="" id="user-text" class="fl">
+                           <a href="javascript:;" class="fr code-bg">立即验证</a>
+                           <img src="images/start-code.png" id="" class="code" />
+                      </div>
+                      <b class="wrong">验证码有误</b>
+                  </div>
+                       <!-- <div class=""> -->
+                  <div id="wrapper01">
+                  <div class="list">
+                  <div class="address-write">
+                      <div class="per select">
+                          <label for="user-text" class="user-identify fl">领取人</label>
+                          <i class="fl border-left"></i>
+                          <input type="text" name="" id="user-text" class="fl text" value="刘德华">
+                      </div>
+                      <div class="per add-text ">
+                          <label for="user-area" class="user-identify fl">收获地址<i>1</i></label>
+                          <i class="fl border-left"></i>
+                          <textarea  name="" id="user-area" class="fl user-area text" maxlength="60"></textarea>
+                      </div>
+                      <a href="javascript:;" class="clearfix addInfo">
+                          <img src="images/get-code.png" id="" class="fl text-bg" />
+                          <img src="images/add-green.png" id="" class="fl add-sign" />
+                          <i class="fl text">新增地址</i>
+                      </a>
+                  </div>
+                </div>
+                <!-- Add Scroll Bar -->
+            </div>
+                  <div class="get-shops clearfix">
+                      <div class="shops-show clearfix">
+                      <span class="fl">
+                        <img src="images/dragon.png" id="" class="fl" />
+                        <i class="fl">好运香5个</i>
+                      </span>
+                      <span class="fl">
+                        <img src="images/wish.png" id="" class="fl" />
+                        <i class="fl">许愿灯5个</i>
+                      </span>
+                      <span class="fl">
+                        <img src="images/writing.png" id="" class="fl" />
+                        <i class="fl">文财神5个</i>
+                      </span>
+                      <span class="fl">
+                        <img src="images/buddhism.png" id="" class="fl" />
+                        <i class="fl">财神弥勒2个</i>
+                      </span>
+                      <span class="fl">
+                        <img src="images/five-load.png" id="" class="fl" />
+                        <i class="fl">五路财神5个</i>
+                      </span>
+                      <span class="fl">
+                        <img src="images/move.png" id="" class="fl" />
+                        <i class="fl">武财神1个</i>
+                      </span>
+                      </div>
+                      <div class="no-shops">
+                        暂无购买商品
+                      </div>
+                  </div>
+                  <div class="exchange">
+                      <div class="exchange-info">
+                          <img src="images/30.png" id="" class="fl card" />
+                          <!-- <div class="fl bord"> -->
+                            <i class="fl first">30元京东购物卡</i>
+                           <i class="fl second">兑换日期：2017年4月18日</i>
+                          <!-- </div> -->
+                          
+                          <b class="ex-true">已兑换✓</b>
+                      </div>
+                      <div class="exchange-info">
+                          <img src="images/50.png" id="" class="fl card" />
+                          <i class="fl first">30元京东购物卡</i>
+                          <i class="fl second">兑换日期：2017年4月18日</i>
+                          <b class="ex-true">已兑换✓</b>
+                      </div>
+                      <div class="exchange-no">
+                        暂无兑换记录
+                      </div>
+                  </div>
+
+            </div>
+            
+        </div>
+        <a href="javascript:;" class="save">
+                  保存修改      
+            </a>
+    </div>
+   <div id="wrapper">
+    <div class="list">
+     <header class="head-first-text">
+        竞猜游戏
+     </header>
+     <section  >
+        <header class="head-first clearfix">
+          <div class="guess-header fl show">
+            <a class="header-border fl" href="">
+                <img src="images/head-pi.png">
+            </a>
+            <a href="http://m.cjcp.com.cn/index.php?m=Account&a=login" id="login" class="fl">
+              <img src="images/Group2.png" class="fl">
+            </a>
+            <div class="myGuess fl">
+              <div class="myText clearfix">
+                  <b class="fl">我爱竞猜牌</b>
+                  <img src="images/Group3.png" class="fl">
+              </div>
+              <div class="gold clearfix ">
+                  <span class="gold-bg fl"></span>
+                  <span class="mongy-group-01 fl">
+                      <img src="images/Bitmap-Copy.png" id="gold-small" class="fl">
+                      <small id="money-change" class="fl">123000</small>
+                  </span>
+                  <span class="mongy-group-02 fl">
+                      <img src="images/gold.png" id="gold-big" class="fl">
+                      <small id="gold-change" class="fl">123000</small>
+                  </span>
+                  <img src="images/fill.png" class="more fl">
+              </div>
+            </div>
+          </div>
+          <nav id="head-nav" class="head-right fr">
+              <a href="" class="head-duty fr righ">
+                <img src="images/rw.png " class="fr">
+                <b class="fr">任务</b>
+              </a>
+              <a href="" class="head-prize fr righ">
+                <img src="images/dj.png" class="fr">
+                <b class="fr">兑奖</b>
+              </a>
+              <a href="" class="head-Ranking fr righ">
+                <img src="images/ph.png" class="fr">
+                <b class="fr">排行</b>
+              </a>
+          </nav>
+        </header>
+        <div id="banner" class="swiper-container">
+          <div class="pic-banner clearfix swiper-wrapper">
+            <a href="javascript:;" class="fl swiper-slide">
+              <img src="images/banner1.png" class="pic01 fl">
+            </a>
+            <a href="javascript:;"  class="fl swiper-slide">
+              <img src="images/banner2.png" class="pic02 fl">
+             </a>
+             <a href="javascript:;"  class="fl swiper-slide">
+              <img src="images/banner3.png" class="pic03 fl">
+             </a>
+          </div>
+          <div class="swiper-pagination">
+              <span class="white-circle fl"></span>
+              <span class="white-circle fl"></span>
+              <span class="white-circle fl"></span>
+          </div>
+        </div>
+        <div id="head-content">
+            <div class="win-prize clearfix">
+                <img class="fl win-text" src="images/win.png">
+                <b class="fl win-show">恭喜：“曾哥”PC彩蛋竞猜中赢得888彩豆</b>
+            </div>
+            <ul class="head-list ">
+              <li class="list-link clearfix border-1px">
+                <a href="javascript:;" class="list one fl">
+                  <img src="images/crazy.png" id="" class=" fl"/>
+                </a>
+                <span class="pic-line fl border-left"></span>
+                <a href="javascript:;" class="list two fl out">
+                  <img src="images/flower.png" id="" class=" fl"/>
+                </a>
+              </li>
+               <li class="list-link clearfix border-1px">
+                <a href="javascript:;" class="list one fl">
+                  <img src="images/gold-circle.png" id="" class="fl"/>
+                </a>
+                <span class="pic-line fl border-left"></span>
+                <a href="javascript:;" class="list two three">
+                  <img src="images/happy.png" id="" class="l2-1"/>
+                </a>
+              </li>
+              <li class="list-link clearfix border-1px">
+                <a href="javascript:;" class="list one fl  ">
+                  <img src="images/gray.png" id="" class=" fl four"/>
+                </a>
+                <span class="pic-line fl border-left"></span>
+                <a href="javascript:;" class="list two fl out">
+                  <img src="images/handle.png" id="" class=" fl five"/>
+                </a>
+              </li>
+              <li class="list-link clearfix border-1px">
+                <a href="javascript:;" class="list one fl">
+                  <img src="images/turntable.png" id="" class=" fl six"/>
+                </a>
+                <span class="pic-line fl border-left"></span>
+              </li>
+            </ul>
+        </div>
+     </section>
+     <footer>
+       <nav class="clearfix">
+         <a href="" class="fl">
+           联系我们
+         </a>
+          <a href="" class="fl">
+           关于我们
+         </a>
+          <a href=""    class="fl"   >
+           游戏攻略
+         </a>
+          <div class="footer-bg"></div>
+       </nav>
+
+     </footer>
+   </div>
+    </div>
+      
+     <script type="text/javascript" src="js/head.js"></script>
+  </body>
+  </html>

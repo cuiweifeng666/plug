@@ -1,0 +1,203 @@
+@-webkit-keyframes move {}
+* {
+  touch-action: none; }
+
+#myCanve {
+  position: absolute;
+  z-index: 1000; }
+
+em {
+  font-style: normal; }
+
+body {
+  position: relative;
+  z-index: 0; }
+
+.border-1 {
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #f3f5f7;
+  width: 100%;
+  content: ''; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both; }
+
+.red {
+  background: red;
+  position: absolute;
+  z-index: 1001; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+.border-1px {
+  position: relative; }
+
+.border-1px::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 1px solid #E6E6E6;
+  width: 100%;
+  content: ''; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.7);
+    transform: scaleX(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+.border-left {
+  position: relative; }
+
+.border-left::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: 1px solid #A941E3;
+  height: 100%;
+  content: ''; }
+
+html, body {
+  position: relative;
+  height: 100%; }
+
+header {
+  position: relative;
+  width: 100%;
+  height: 1.70667rem;
+  background: #DA3231 no-repeat;
+  font-size: 0.48rem;
+  line-height: 2.24rem;
+  text-align: center;
+  color: #fff; }
+  header .head-back {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 1.33333rem;
+    height: 1.70667rem;
+    background: none no-repeat; }
+    header .head-back .back {
+      position: absolute;
+      left: 0.4rem;
+      top: 0.82667rem;
+      width: 0.33333rem;
+      height: 0.56rem;
+      background: url(../images/back.png) no-repeat;
+      background-size: contain; }
+
+a:link, a:visited {
+  color: #fff; }
+
+section {
+  background: #f2f2f2;
+  height: 100%; }
+  section .pay-head {
+    height: 1.42667rem;
+    padding-top: 0.17333rem;
+    background: #FBF8E9; }
+    section .pay-head .text1 {
+      text-align: center;
+      font-size: 0.45333rem;
+      line-height: 0.68rem;
+      color: #DA3231; }
+    section .pay-head .text2 {
+      text-align: center;
+      font-size: 0.34667rem;
+      line-height: 0.58667rem;
+      color: #000; }
+  section .pay {
+    margin-top: 0.26667rem; }
+    section .pay li {
+      width: 100%;
+      height: 1.6rem;
+      background: #fff no-repeat; }
+      section .pay li a {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: none no-repeat; }
+        section .pay li a .weixin {
+          width: 0.90667rem;
+          height: 0.90667rem;
+          background: #fff no-repeat;
+          margin-top: 0.33333rem;
+          margin-left: 0.4rem; }
+        section .pay li a .text-bord {
+          padding-left: 0.25333rem;
+          padding-top: 0.26667rem;
+          width: 5.86667rem;
+          height: 1.33333rem;
+          background: #fff no-repeat; }
+          section .pay li a .text-bord .text1 {
+            display: block;
+            width: 100%;
+            color: #4A4A4A;
+            font-size: 0.4rem;
+            line-height: 0.53333rem; }
+          section .pay li a .text-bord .text2 {
+            display: block;
+            color: #9B9B9B;
+            font-size: 0.32rem;
+            line-height: 0.45333rem; }
+        section .pay li a .select {
+          position: absolute;
+          right: 0.4rem;
+          top: 0.56rem;
+          width: 0.46667rem;
+          height: 0.46667rem;
+          background: #fff no-repeat; }
+  section .pay-btn {
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    width: 9.2rem;
+    height: 1.06667rem;
+    background: #DA3231 no-repeat;
+    margin-top: 0.4rem;
+    margin-left: 0.4rem;
+    font-size: 0.45333rem;
+    line-height: 1.09333rem; }
+  section .info-text {
+    padding-top: 0.48rem;
+    padding-left: 0.4rem;
+    color: #9B9B9B; }
+    section .info-text span {
+      display: block;
+      font-size: 0.34667rem;
+      line-height: 0.49333rem;
+      margin-bottom: 0.13333rem; }
+    section .info-text em {
+      display: block;
+      font-size: 0.29333rem;
+      line-height: 0.53333rem; }
+
+/*# sourceMappingURL=buy.css.map */

@@ -1,0 +1,1636 @@
+@-webkit-keyframes move {}
+em {
+  font-style: normal; }
+
+body {
+  position: relative;
+  resize: both;
+  z-index: 0; }
+
+.border-1 {
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #f3f5f7;
+  width: 100%;
+  content: ''; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both; }
+
+i {
+  font-style: normal; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+.border-1px {
+  position: relative; }
+
+.border-1px::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 1px solid #A941E3;
+  width: 100%;
+  content: ''; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.7);
+    transform: scaleX(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+.border-left {
+  position: relative; }
+
+.border-left::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: 1px solid #A941E3;
+  height: 100%;
+  content: ''; }
+
+.head-first-text {
+  position: relative;
+  width: 100%;
+  height: 1.70667rem;
+  background: #da3231 no-repeat;
+  font-size: 0.48rem;
+  line-height: 2.13333rem;
+  color: #fff;
+  text-align: center; }
+
+.bg {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  background: url(../images/head-bg.jpg) no-repeat;
+  z-index: -9999; }
+
+.bg-color {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  background: #000 no-repeat;
+  opacity: .5;
+  z-index: 2;
+  display: none; }
+
+.diag-win {
+  display: none;
+  position: absolute;
+  left: 1.65333rem;
+  top: 30%;
+  width: 6.69333rem;
+  height: 6.36rem;
+  background: url(../images/diag-win.png) no-repeat;
+  background-size: contain;
+  z-index: 2;
+  font-size: 0.42667rem;
+  line-height: 0.6rem;
+  color: #F8D271; }
+  .diag-win .diag-text {
+    position: absolute;
+    top: 4rem;
+    left: 0rem;
+    width: 100%;
+    height: 0.6rem;
+    background: none no-repeat;
+    text-align: center;
+    z-index: 3; }
+  .diag-win .diag-img {
+    position: absolute;
+    top: 4.8rem;
+    left: 0rem;
+    width: 100%;
+    height: 0.6rem;
+    background: none no-repeat;
+    text-align: center; }
+    .diag-win .diag-img img {
+      margin-left: 2.37333rem;
+      width: 0.53333rem;
+      height: 0.53333rem;
+      background: none no-repeat;
+      margin-right: 0.13333rem; }
+
+.diag-sign {
+  display: none;
+  position: absolute;
+  left: 0.66667rem;
+  top: 18%;
+  z-index: 2;
+  width: 8.66667rem;
+  height: 10.49333rem;
+  background: url(../images/diag-duty.png) no-repeat;
+  background-size: contain; }
+  .diag-sign .diag-title {
+    position: absolute;
+    left: 3.53333rem;
+    top: 2.66667rem;
+    font-size: 0.34667rem;
+    line-height: 0.49333rem;
+    color: #5F1C6E; }
+  .diag-sign .day-close {
+    position: absolute;
+    right: -0.4rem;
+    top: 2rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: none no-repeat; }
+  .diag-sign .diag-content {
+    position: absolute;
+    top: 3.33333rem;
+    left: 0.2rem;
+    height: 2.4rem; }
+    .diag-sign .diag-content .diag-days {
+      box-sizing: border-box;
+      position: relative;
+      margin-right: 0.16rem;
+      width: 1.94667rem;
+      height: 2.4rem;
+      background: none no-repeat; }
+      .diag-sign .diag-content .diag-days .bg {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 100%;
+        height: 100%;
+        background: #000 no-repeat;
+        opacity: .3;
+        border-radius: 0.06667rem; }
+      .diag-sign .diag-content .diag-days .day {
+        width: 100%;
+        height: 0.53333rem;
+        background: #470853 no-repeat;
+        font-size: 0.34667rem;
+        line-height: 0.53333rem;
+        text-align: center;
+        color: #F8D271;
+        border-radius: 0.06667rem 0.06667rem 0 0; }
+      .diag-sign .diag-content .diag-days .prize01 {
+        position: absolute;
+        top: 0.82667rem;
+        left: 0.62667rem;
+        width: 0.69333rem;
+        height: 0.72rem;
+        background: none no-repeat; }
+      .diag-sign .diag-content .diag-days .prize02 {
+        position: absolute;
+        top: 0.84rem;
+        left: 0.42667rem;
+        width: 1.09333rem;
+        height: 0.76rem;
+        background: none no-repeat; }
+      .diag-sign .diag-content .diag-days .prize03 {
+        position: absolute;
+        top: 0.73333rem;
+        left: 0.33333rem;
+        width: 1.28rem;
+        height: 0.93333rem;
+        background: none no-repeat; }
+      .diag-sign .diag-content .diag-days .prize04 {
+        position: absolute;
+        top: 0.66667rem;
+        left: 0.26667rem;
+        width: 1.42667rem;
+        height: 1.06667rem;
+        background: none no-repeat; }
+      .diag-sign .diag-content .diag-days .true {
+        display: none; }
+      .diag-sign .diag-content .diag-days p {
+        text-align: center;
+        position: absolute;
+        top: 1.68rem;
+        left: 0rem;
+        width: 100%;
+        height: 0.56rem;
+        background: none no-repeat;
+        font-size: 0.4rem;
+        line-height: 0.56rem;
+        color: #F8D271; }
+    .diag-sign .diag-content .last {
+      margin-right: 0; }
+  .diag-sign .content-02 {
+    position: absolute;
+    top: 2.64rem;
+    left: 1.05333rem;
+    height: 2.4rem; }
+    .diag-sign .content-02 .diag-days {
+      box-sizing: border-box;
+      position: relative;
+      margin-right: 0.16rem;
+      width: 1.94667rem;
+      height: 2.4rem;
+      background: none no-repeat; }
+      .diag-sign .content-02 .diag-days .bg {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 100%;
+        height: 100%;
+        background: #000 no-repeat;
+        opacity: .3;
+        border-radius: 0.06667rem; }
+      .diag-sign .content-02 .diag-days .prize05 {
+        position: absolute;
+        top: 0.73333rem;
+        left: 0.29333rem;
+        width: 1.36rem;
+        height: 0.93333rem;
+        background: none no-repeat; }
+      .diag-sign .content-02 .diag-days .prize06 {
+        position: absolute;
+        top: 0.66667rem;
+        left: 0.36rem;
+        width: 1.24rem;
+        height: 1.06667rem;
+        background: none no-repeat; }
+      .diag-sign .content-02 .diag-days .prize07 {
+        position: absolute;
+        top: 0.6rem;
+        left: 0.32rem;
+        width: 1.32rem;
+        height: 1.2rem;
+        background: none no-repeat; }
+      .diag-sign .content-02 .diag-days p {
+        top: 1.81333rem; }
+  .diag-sign .get-win {
+    position: absolute;
+    left: 2.62667rem;
+    bottom: 0.8rem;
+    width: 3.41333rem;
+    height: 1.13333rem;
+    background: none no-repeat; }
+    .diag-sign .get-win img {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 3.41333rem;
+      height: 1.13333rem;
+      background: none no-repeat; }
+
+.diag-goods {
+  display: none;
+  position: absolute;
+  top: 34%;
+  left: 10%;
+  width: 8rem;
+  height: 5.06667rem;
+  background: url(../images/diag-goods.png) no-repeat;
+  background-size: contain;
+  z-index: 2;
+  font-size: 0.4rem;
+  line-height: 0.56rem;
+  color: #fff; }
+  .diag-goods .text {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    text-align: center;
+    width: 100%; }
+    .diag-goods .text b:nth-of-type(1) {
+      color: #F8D271;
+      font-size: 0.45333rem; }
+    .diag-goods .text i {
+      color: #fff;
+      font-size: 0.45333rem; }
+  .diag-goods .text-plain {
+    position: absolute;
+    top: 2.66667rem;
+    left: 0rem;
+    text-align: center;
+    width: 100%; }
+  .diag-goods .get-win {
+    position: absolute;
+    left: 2.26667rem;
+    top: 3.78667rem;
+    width: 3.41333rem;
+    height: 1.13333rem;
+    background: none no-repeat; }
+    .diag-goods .get-win img {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 3.41333rem;
+      height: 1.13333rem;
+      background: none no-repeat; }
+  .diag-goods .close {
+    position: absolute;
+    top: 0.66667rem;
+    left: 7.46667rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: none no-repeat; }
+
+.diag-help {
+  display: none;
+  position: absolute;
+  left: 16.7%;
+  top: 37%;
+  width: 6.66667rem;
+  height: 4.69333rem;
+  background: url(../images/diag-help.png) no-repeat;
+  background-size: contain;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.42667rem;
+  line-height: 0.6rem; }
+  .diag-help .text {
+    text-align: center;
+    position: absolute;
+    top: 1.6rem;
+    left: 0rem;
+    width: 100%;
+    height: 0.6rem;
+    background: none no-repeat; }
+    .diag-help .text b {
+      font-size: 0.53333rem;
+      line-height: 0.6rem;
+      color: #F8D271; }
+  .diag-help .time {
+    font-size: 0.37333rem;
+    line-height: 0.53333rem;
+    text-align: center;
+    position: absolute;
+    top: 2.36rem;
+    left: 0rem;
+    width: 100%;
+    height: 0.53333rem;
+    background: none no-repeat; }
+    .diag-help .time b {
+      font-size: 0.48rem;
+      line-height: 0.53333rem;
+      color: #F8D271; }
+  .diag-help .get-win {
+    position: absolute;
+    left: 1.62667rem;
+    top: 3.33333rem;
+    width: 3.41333rem;
+    height: 1.13333rem;
+    background: none no-repeat; }
+    .diag-help .get-win img {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 3.41333rem;
+      height: 1.13333rem;
+      background: none no-repeat; }
+
+.ranking {
+  display: none;
+  position: absolute;
+  left: 0.37333rem;
+  top: 9.5%;
+  z-index: 2;
+  width: 9.26667rem;
+  height: 14.88rem;
+  background: none no-repeat; }
+  .ranking .rank-bg {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 9.26667rem;
+    height: 14.88rem;
+    background: none no-repeat; }
+  .ranking .close {
+    position: absolute;
+    right: -0.4rem;
+    top: 1.33333rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: none no-repeat; }
+  .ranking .ranking-title {
+    position: absolute;
+    left: 5.6%;
+    top: 2.78667rem;
+    width: 8rem;
+    height: 0.64rem;
+    background: none no-repeat;
+    padding: 0.08rem 0.09333rem 0.08rem 0.09333rem; }
+    .ranking .ranking-title .title {
+      position: relative;
+      z-index: 3;
+      width: 2.66667rem;
+      height: 0.64rem;
+      background: none no-repeat;
+      color: #fff;
+      text-align: center; }
+      .ranking .ranking-title .title em {
+        font-size: 0.32rem;
+        line-height: 0.64rem;
+        width: 2.66667rem;
+        height: 0.64rem;
+        background: none no-repeat; }
+    .ranking .ranking-title .rank-head {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 8.18667rem;
+      height: 0.8rem;
+      background: none no-repeat; }
+  .ranking .ranking-content {
+    position: absolute;
+    top: 4rem;
+    left: 0.22667rem;
+    width: 8.8rem;
+    height: auto; }
+    .ranking .ranking-content .ranking-detail {
+      position: relative;
+      width: 8.8rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      margin-bottom: 0.22667rem; }
+      .ranking .ranking-content .ranking-detail .rank-img {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 8.8rem;
+        height: 1.4rem;
+        background: none no-repeat; }
+      .ranking .ranking-content .ranking-detail .text {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.41333rem;
+        margin-left: 0.32rem;
+        margin-right: 0.16rem;
+        font-size: 0.32rem;
+        line-height: 0.52rem;
+        width: 0.52rem;
+        height: 0.52rem;
+        background: #fff no-repeat;
+        text-align: center;
+        color: #44154E;
+        opacity: .4; }
+      .ranking .ranking-content .ranking-detail .rank-order {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.33333rem;
+        margin-left: 0.16rem;
+        width: 0.82667rem;
+        height: 0.66667rem;
+        background: none no-repeat; }
+      .ranking .ranking-content .ranking-detail .head-pic {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.13333rem;
+        margin-left: 0.21333rem;
+        width: 1.06667rem;
+        height: 1.06667rem;
+        background: none no-repeat;
+        border-radius: 50%; }
+        .ranking .ranking-content .ranking-detail .head-pic img {
+          position: absolute;
+          top: 0rem;
+          left: 0rem;
+          width: 1.06667rem;
+          height: 1.06667rem;
+          background: none no-repeat; }
+      .ranking .ranking-content .ranking-detail em {
+        position: relative;
+        z-index: 1;
+        margin-top: 0rem;
+        margin-left: 0.30667rem;
+        font-size: 0.32rem;
+        line-height: 1.33333rem;
+        width: 2.16rem;
+        height: 1.25333rem;
+        background: none no-repeat;
+        color: #fff; }
+      .ranking .ranking-content .ranking-detail .gold {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.46667rem;
+        margin-left: 0rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: none no-repeat; }
+      .ranking .ranking-content .ranking-detail i {
+        position: relative;
+        z-index: 1;
+        margin-top: 0rem;
+        margin-left: 0.12rem;
+        font-size: 0.32rem;
+        line-height: 1.33333rem;
+        width: 1.94667rem;
+        height: 1.25333rem;
+        background: none no-repeat;
+        color: #F8D271; }
+      .ranking .ranking-content .ranking-detail .card {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.4rem;
+        margin-left: 0rem;
+        width: 1.14667rem;
+        height: 0.66667rem;
+        background: none no-repeat; }
+
+.perfect {
+  display: none;
+  position: absolute;
+  left: 0.45333rem;
+  top: 26%; }
+  .perfect .continue {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    z-index: 2;
+    width: 9.09333rem;
+    height: 7.49333rem;
+    background: none no-repeat; }
+  .perfect .per-center {
+    position: absolute;
+    top: 1.46667rem;
+    left: 0rem;
+    width: 9.06667rem;
+    height: 0.49333rem;
+    background: none no-repeat;
+    font-size: 0.34667rem;
+    line-height: 0.4rem;
+    z-index: 3;
+    color: #fff;
+    text-align: center; }
+    .perfect .per-center b {
+      font-size: 0.48rem;
+      line-height: 0.49333rem;
+      color: #F8D271; }
+  .perfect .per-content {
+    position: absolute;
+    top: 2.46667rem;
+    left: 0.50667rem;
+    z-index: 3;
+    width: 8.10667rem;
+    height: 5.01333rem; }
+    .perfect .per-content .per {
+      width: 8.10667rem;
+      height: 0.89333rem;
+      background: none no-repeat;
+      font-size: 0.32rem;
+      line-height: 0.86667rem;
+      text-align: center;
+      margin-bottom: 0.29333rem; }
+      .perfect .per-content .per label {
+        font-weight: bold;
+        width: 1.46667rem;
+        height: 0.89333rem;
+        background: none no-repeat;
+        color: #868697; }
+      .perfect .per-content .per i {
+        margin-top: 0.29333rem;
+        width: 0rem;
+        height: 0.26667rem;
+        background: none no-repeat; }
+      .perfect .per-content .per input {
+        width: 4.4rem;
+        height: 0.89333rem;
+        background: none no-repeat; }
+    .perfect .per-content .restart {
+      display: none;
+      position: absolute;
+      right: 0.10667rem;
+      top: 0.10667rem;
+      text-align: center;
+      width: 2.4rem;
+      height: 0.64rem;
+      background: none no-repeat;
+      background-size: contain;
+      font-size: 0.32rem;
+      line-height: 0.64rem;
+      color: #fff; }
+      .perfect .per-content .restart i {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 2.4rem;
+        height: 0.64rem;
+        background: none no-repeat;
+        z-index: 2; }
+      .perfect .per-content .restart img {
+        position: absolute;
+        right: 0;
+        width: 2.4rem;
+        height: 0.64rem;
+        background: none no-repeat; }
+    .perfect .per-content .get-code {
+      position: absolute;
+      right: 0.10667rem;
+      top: 0.10667rem;
+      text-align: center;
+      width: 2.4rem;
+      height: 0.64rem;
+      background: none no-repeat;
+      background-size: contain;
+      font-size: 0.32rem;
+      line-height: 0.64rem;
+      color: #fff; }
+      .perfect .per-content .get-code i {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 2.4rem;
+        height: 0.64rem;
+        background: none no-repeat;
+        z-index: 2; }
+      .perfect .per-content .get-code img {
+        position: absolute;
+        right: 0;
+        width: 2.4rem;
+        height: 0.64rem;
+        background: none no-repeat; }
+    .perfect .per-content .btn {
+      position: absolute;
+      left: 0;
+      bottom: 0.33333rem;
+      width: 100%;
+      height: 0.8rem;
+      background: none no-repeat; }
+      .perfect .per-content .btn a {
+        width: 3.73333rem;
+        height: 0.8rem;
+        background: none no-repeat;
+        font-size: 0.32rem;
+        line-height: 0.8rem;
+        color: #fff; }
+      .perfect .per-content .btn a:nth-of-type(1) {
+        margin-left: 0.05333rem;
+        background: url(../images/make-cancel.png);
+        background-size: contain;
+        margin-right: 0.49333rem; }
+      .perfect .per-content .btn a:nth-of-type(2) {
+        background: url(../images/make-sure.png);
+        background-size: contain; }
+
+.address {
+  position: absolute;
+  left: 0.66667rem;
+  top: 23.6%;
+  z-index: 2;
+  display: none;
+  width: 8.66667rem;
+  height: 11.06667rem;
+  background: none no-repeat; }
+  .address .bg-phone {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 8.66667rem;
+    height: 11.06667rem;
+    background: none no-repeat; }
+  .address .close {
+    position: absolute;
+    z-index: 3;
+    right: -0.33333rem;
+    top: -0.33333rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: none no-repeat; }
+  .address .head1 {
+    position: relative;
+    z-index: 3;
+    width: 8.66667rem;
+    height: 2rem;
+    background: none no-repeat; }
+    .address .head1 .head-pic {
+      position: relative;
+      z-index: 4;
+      border-radius: 0.08rem;
+      margin-top: 0.33333rem;
+      margin-left: 0.28rem;
+      width: 1.33333rem;
+      height: 1.33333rem;
+      background: #F8DDA9 no-repeat; }
+      .address .head1 .head-pic img {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        z-index: 4;
+        margin-top: 0.05333rem;
+        margin-left: 0.05333rem;
+        width: 1.22667rem;
+        height: 1.22667rem;
+        background: none no-repeat; }
+    .address .head1 .head-info {
+      width: 3.73333rem;
+      height: 2rem;
+      background: none no-repeat; }
+      .address .head1 .head-info .head-name {
+        margin-top: 0.33333rem;
+        margin-left: 0.18667rem;
+        width: 2.93333rem;
+        height: 0.50667rem;
+        background: none no-repeat;
+        font-size: 0.42667rem;
+        line-height: 0.50667rem;
+        color: #fff; }
+        .address .head1 .head-info .head-name img {
+          margin-top: 0.04rem;
+          margin-left: 0.26667rem;
+          width: 0.4rem;
+          height: 0.4rem;
+          background: none no-repeat; }
+      .address .head1 .head-info .head-gold {
+        margin-top: 0.36rem;
+        margin-left: 0.18667rem;
+        width: 4rem;
+        height: 0.50667rem;
+        background: none no-repeat; }
+        .address .head1 .head-info .head-gold .gold {
+          width: 0.4rem;
+          height: 0.4rem;
+          background: none no-repeat; }
+        .address .head1 .head-info .head-gold .gold-info {
+          width: 1.52rem;
+          height: 0.4rem;
+          background: none no-repeat;
+          margin-left: 0.06667rem;
+          font-size: 0.34667rem;
+          line-height: 0.45333rem;
+          color: #F8D271; }
+        .address .head1 .head-info .head-gold .acer {
+          margin-top: 0.06667rem;
+          margin-left: 0rem;
+          width: 0.46667rem;
+          height: 0.33333rem;
+          background: none no-repeat; }
+        .address .head1 .head-info .head-gold .acer-info {
+          margin-left: 0.09333rem;
+          width: 1.33333rem;
+          height: 0.4rem;
+          background: none no-repeat;
+          font-size: 0.34667rem;
+          line-height: 0.45333rem;
+          color: #F8D271; }
+    .address .head1 .head-btn {
+      position: relative;
+      right: 0.49333rem;
+      top: 0.73333rem;
+      width: 2.24rem;
+      height: 0.66667rem;
+      background: none no-repeat;
+      color: #fff; }
+      .address .head1 .head-btn .news-bg {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        z-index: 3;
+        width: 2.24rem;
+        height: 0.66667rem;
+        background: none no-repeat; }
+      .address .head1 .head-btn i {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        z-index: 3;
+        font-size: 0.32rem;
+        line-height: 0.72rem;
+        width: 2.24rem;
+        height: 0.66667rem;
+        background: none no-repeat;
+        text-align: center; }
+      .address .head1 .head-btn .news-circle {
+        position: absolute;
+        right: 0.08rem;
+        top: 0;
+        z-index: 3;
+        width: 0.26667rem;
+        height: 0.26667rem;
+        background: none no-repeat; }
+  .address .head-img {
+    position: relative;
+    z-index: 3;
+    width: 8.36rem;
+    height: 1.6rem;
+    background: none no-repeat;
+    padding-left: 0.28rem;
+    padding-top: 0.33333rem; }
+    .address .head-img a {
+      position: relative;
+      width: 1.33333rem;
+      height: 1.33333rem;
+      background: #3A0C40 no-repeat;
+      margin-right: 0.33333rem;
+      border-radius: 0.13333rem; }
+      .address .head-img a .bg-violet {
+        position: absolute;
+        top: 0.05333rem;
+        left: 0.05333rem;
+        z-index: 4;
+        width: 1.22667rem;
+        height: 1.22667rem;
+        background: none no-repeat;
+        border-radius: 0.08rem; }
+      .address .head-img a b {
+        position: absolute;
+        left: 0.05333rem;
+        bottom: 0.05333rem;
+        z-index: 5;
+        text-align: center;
+        width: 1.22667rem;
+        height: 0.36rem;
+        background: none no-repeat;
+        font-size: 0.24rem;
+        line-height: 0.36rem;
+        color: #fff; }
+      .address .head-img a span {
+        position: absolute;
+        left: 0.05333rem;
+        bottom: 0.05333rem;
+        z-index: 4;
+        width: 1.22667rem;
+        height: 0.36rem;
+        background: #000 no-repeat;
+        opacity: .4;
+        border-radius: 0 0 0.08rem 0.08rem; }
+      .address .head-img a .active {
+        position: absolute;
+        top: -0.26667rem;
+        left: -0.26667rem;
+        z-index: 3;
+        width: 1.86667rem;
+        height: 1.86667rem;
+        background: none no-repeat; }
+      .address .head-img a .hide {
+        display: none; }
+    .address .head-img .disappear {
+      background: none; }
+  .address .address-info {
+    position: relative;
+    margin-top: 0rem;
+    margin-left: 0.22667rem;
+    width: 8.18667rem;
+    height: 6.93333rem;
+    background: none no-repeat; }
+    .address .address-info .circle-radius {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 8.18667rem;
+      height: 0.8rem;
+      background: none no-repeat; }
+    .address .address-info .address-link {
+      padding-top: 0rem;
+      padding-left: 0rem;
+      width: 8rem;
+      height: 0.8rem;
+      background: none no-repeat;
+      margin-bottom: 0.26667rem; }
+      .address .address-info .address-link a {
+        position: relative;
+        width: 2rem;
+        height: 0.64rem;
+        background: none no-repeat;
+        text-align: center;
+        font-size: 0.32rem;
+        line-height: 0.64rem;
+        color: #fff; }
+        .address .address-info .address-link a img {
+          display: none;
+          position: absolute;
+          top: 0.08rem;
+          left: 0.09333rem;
+          z-index: 2;
+          width: 2rem;
+          height: 0.64rem;
+          background: none no-repeat; }
+        .address .address-info .address-link a .last {
+          top: 0.10667rem;
+          height: 0.58667rem; }
+        .address .address-info .address-link a i {
+          position: absolute;
+          top: 0.08rem;
+          left: 0.09333rem;
+          z-index: 3;
+          width: 2rem;
+          height: 0.64rem;
+          background: none no-repeat;
+          color: #666; }
+      .address .address-info .address-link .active img {
+        display: block; }
+      .address .address-info .address-link .active i {
+        color: #fff; }
+    .address .address-info .address-detail {
+      margin-top: 0rem;
+      margin-left: 0.05333rem; }
+      .address .address-info .address-detail .phone {
+        display: none; }
+        .address .address-info .address-detail .phone .per {
+          position: relative;
+          width: 8.10667rem;
+          height: 0.93333rem;
+          background: #3A0C40 no-repeat;
+          font-size: 0.32rem;
+          line-height: 0.93333rem;
+          border-radius: 0.13333rem;
+          text-align: center;
+          border: 0.01333rem solid #55316C;
+          margin-top: 0.26667rem; }
+          .address .address-info .address-detail .phone .per label {
+            font-weight: bold;
+            width: 1.46667rem;
+            height: 0.89333rem;
+            background: none no-repeat;
+            color: #868697; }
+          .address .address-info .address-detail .phone .per i {
+            margin-top: 0.33333rem;
+            width: 0rem;
+            height: 0.26667rem;
+            background: none no-repeat; }
+          .address .address-info .address-detail .phone .per input {
+            margin-left: 0.22667rem;
+            color: #868697;
+            width: 4.4rem;
+            height: 0.89333rem;
+            background: none no-repeat; }
+          .address .address-info .address-detail .phone .per a {
+            position: absolute;
+            right: 0.10667rem;
+            top: 0.10667rem;
+            color: #fff;
+            z-index: 3;
+            font-size: 0.32rem;
+            line-height: 0.64rem; }
+          .address .address-info .address-detail .phone .per .get-bg {
+            width: 2rem;
+            height: 0.64rem;
+            background: url(../images/get-code.png) no-repeat;
+            background-size: contain; }
+          .address .address-info .address-detail .phone .per .pray {
+            position: absolute;
+            right: 0.08rem;
+            top: 0.06667rem;
+            z-index: 4;
+            width: 2.08rem;
+            height: 0.73333rem;
+            background: none no-repeat; }
+          .address .address-info .address-detail .phone .per .code-bg {
+            width: 2.13333rem;
+            height: 0.64rem;
+            background: none no-repeat;
+            font-size: 0.32rem;
+            line-height: 0.69333rem; }
+          .address .address-info .address-detail .phone .per .code {
+            position: absolute;
+            right: 0.10667rem;
+            top: 0.10667rem;
+            width: 2.08rem;
+            height: 0.73333rem;
+            background: none no-repeat; }
+        .address .address-info .address-detail .phone .wrong {
+          display: none;
+          position: absolute;
+          top: 1.2rem;
+          left: 2.93333rem;
+          width: 2.66667rem;
+          height: 0.8rem;
+          background: #000 no-repeat;
+          font-size: 0.37333rem;
+          line-height: 0.77333rem;
+          text-align: center;
+          z-index: 4;
+          border-radius: 0.06667rem; }
+        .address .address-info .address-detail .phone .show {
+          display: block; }
+      .address .address-info .address-detail .swiper-container2 {
+        display: none;
+        height: 4.26667rem;
+        overflow: hidden; }
+        .address .address-info .address-detail .swiper-container2 .swiper-slide {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          width: 8.10667rem;
+          height: auto;
+          background: none no-repeat; }
+          .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write {
+            width: 8.10667rem;
+            height: 8rem;
+            background: none no-repeat; }
+            .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .per {
+              position: relative;
+              width: 8.10667rem;
+              height: 0.93333rem;
+              background: #3A0C40 no-repeat;
+              font-size: 0.32rem;
+              line-height: 0.93333rem;
+              border-radius: 0.13333rem;
+              text-align: center;
+              border: 0.01333rem solid #55316C;
+              margin-bottom: 0.26667rem; }
+              .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .per label {
+                font-weight: bold;
+                width: 1.46667rem;
+                height: 0.93333rem;
+                background: none no-repeat;
+                color: #868697; }
+              .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .per i {
+                margin-top: 0.33333rem;
+                width: 0rem;
+                height: 0.26667rem;
+                background: none no-repeat; }
+              .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .per input {
+                margin-left: 0.22667rem;
+                color: #868697;
+                width: 4.4rem;
+                height: 0.93333rem;
+                background: none no-repeat;
+                font-size: 0.32rem;
+                line-height: 0.93333rem; }
+              .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .per a {
+                position: absolute;
+                right: 0.10667rem;
+                top: 0.10667rem;
+                color: #fff;
+                z-index: 3;
+                font-size: 0.32rem;
+                line-height: 0.64rem; }
+            .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .add-text {
+              width: 8.10667rem;
+              height: 1.33333rem;
+              background: #3A0C40 no-repeat; }
+              .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .add-text label {
+                width: 1.6rem;
+                margin-left: 0.08rem; }
+              .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .add-text .user-area {
+                margin-left: 0.22667rem;
+                color: #868697;
+                padding-top: 0.17333rem;
+                width: 5.73333rem;
+                height: 1.21333rem;
+                background: none no-repeat;
+                font-size: 0.32rem;
+                line-height: 0.61333rem; }
+            .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .select label {
+              color: #fff; }
+            .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .select .text {
+              color: #fff; }
+            .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .addInfo {
+              position: relative;
+              display: block;
+              width: 2.66667rem;
+              height: 0.64rem;
+              background: none no-repeat;
+              margin-top: 0.26667rem;
+              margin-left: 2.93333rem; }
+              .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .addInfo .text-bg {
+                position: absolute;
+                top: 0rem;
+                left: 0rem;
+                width: 2.66667rem;
+                height: 0.64rem;
+                background: none no-repeat; }
+              .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .addInfo .text {
+                position: absolute;
+                top: 0rem;
+                left: 0.93333rem;
+                width: 2.66667rem;
+                height: 0.64rem;
+                background: none no-repeat;
+                font-size: 0.32rem;
+                line-height: 0.64rem;
+                color: #fff; }
+              .address .address-info .address-detail .swiper-container2 .swiper-slide .address-write .addInfo .add-sign {
+                position: absolute;
+                top: 0.13333rem;
+                left: 0.37333rem;
+                width: 0.4rem;
+                height: 0.4rem;
+                background: none no-repeat;
+                z-index: 5; }
+      .address .address-info .address-detail .get-shops {
+        display: none;
+        margin-top: 0.13333rem;
+        margin-left: 0.09333rem;
+        width: 8.26667rem;
+        height: 5.33333rem;
+        background: none no-repeat; }
+        .address .address-info .address-detail .get-shops .shops-show {
+          display: none; }
+          .address .address-info .address-detail .get-shops .shops-show span {
+            margin-top: 0.08rem;
+            margin-right: 0.26667rem;
+            width: 1.8rem;
+            height: 2.4rem;
+            background: none no-repeat; }
+            .address .address-info .address-detail .get-shops .shops-show span img {
+              width: 1.8rem;
+              height: 1.8rem;
+              background: none no-repeat; }
+            .address .address-info .address-detail .get-shops .shops-show span i {
+              width: 1.8rem;
+              height: 0.58667rem;
+              background: none no-repeat;
+              font-size: 0.32rem;
+              line-height: 0.58667rem;
+              text-align: center;
+              color: #9B9B9B; }
+        .address .address-info .address-detail .get-shops .no-shops {
+          width: 8.13333rem;
+          height: 1.28rem;
+          background: none no-repeat;
+          text-align: center;
+          font-size: 0.32rem;
+          line-height: 1.28rem;
+          color: #868697; }
+      .address .address-info .address-detail .exchange {
+        display: none;
+        width: 8rem;
+        height: 5.33333rem;
+        background: none no-repeat; }
+        .address .address-info .address-detail .exchange .exchange-info {
+          position: relative;
+          margin-top: 0.26667rem;
+          margin-left: 0.05333rem;
+          width: 8rem;
+          height: 1.33333rem;
+          background: url(../images/name.png) no-repeat;
+          background-size: contain; }
+          .address .address-info .address-detail .exchange .exchange-info .card {
+            margin-top: 0.21333rem;
+            margin-left: 0.26667rem;
+            width: 1.33333rem;
+            height: 0.8rem;
+            background: none no-repeat; }
+          .address .address-info .address-detail .exchange .exchange-info .first {
+            margin-top: 0.21333rem;
+            margin-left: 0.17333rem;
+            width: 4.53333rem;
+            height: 0.48rem;
+            background: none no-repeat;
+            font-size: 0.32rem;
+            line-height: 0.48rem;
+            color: #A5A5B2; }
+          .address .address-info .address-detail .exchange .exchange-info .second {
+            width: 4.53333rem;
+            height: 0.45333rem;
+            background: none no-repeat;
+            margin-top: 0rem;
+            margin-left: 0.17333rem;
+            font-size: 0.29333rem;
+            line-height: 0.45333rem;
+            color: #A5A5B2; }
+          .address .address-info .address-detail .exchange .exchange-info .ex-true {
+            position: absolute;
+            right: 0.26667rem;
+            top: 0;
+            width: 1.33333rem;
+            height: 1.33333rem;
+            background: none no-repeat;
+            font-size: 0.32rem;
+            line-height: 1.33333rem;
+            color: #A5A5B2; }
+        .address .address-info .address-detail .exchange .exchange-no {
+          width: 8rem;
+          height: 1.28rem;
+          background: none no-repeat;
+          font-size: 0.32rem;
+          line-height: 1.28rem;
+          color: #A5A5B2;
+          text-align: center; }
+  .address .save {
+    position: absolute;
+    left: 0.26667rem;
+    bottom: 0.53333rem;
+    width: 8.10667rem;
+    height: 0.8rem;
+    background: url(../images/save.png) no-repeat;
+    background-size: contain;
+    text-align: center;
+    font-size: 0.34667rem;
+    line-height: 0.74667rem;
+    color: #fff; }
+
+.exchange-diag {
+  display: none;
+  position: absolute;
+  left: 0.08rem;
+  top: 20%;
+  width: 9.86667rem;
+  height: 9.01333rem;
+  background: none no-repeat;
+  z-index: 10; }
+  .exchange-diag .goods {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 9.86667rem;
+    height: 9.01333rem;
+    background: none no-repeat; }
+  .exchange-diag .card-30 {
+    position: absolute;
+    top: 3.86667rem;
+    left: 3.56rem;
+    width: 2.74667rem;
+    height: 1.6rem;
+    background: none no-repeat; }
+  .exchange-diag .detail {
+    display: none;
+    position: absolute;
+    top: 5.86667rem;
+    left: 0rem;
+    color: #fff;
+    width: 100%;
+    height: 0.6rem;
+    background: none no-repeat;
+    font-size: 0.42667rem;
+    line-height: 0.6rem;
+    text-align: center; }
+    .exchange-diag .detail b {
+      color: #F8D271; }
+  .exchange-diag .lucking {
+    display: none;
+    position: absolute;
+    top: 5.86667rem;
+    left: 0rem;
+    color: #fff;
+    width: 100%;
+    height: 0.6rem;
+    background: none no-repeat;
+    font-size: 0.42667rem;
+    line-height: 0.6rem;
+    text-align: center;
+    position: absolute;
+    top: 5.86667rem;
+    left: 0rem; }
+  .exchange-diag .complete {
+    display: block;
+    position: absolute;
+    top: 5.86667rem;
+    left: 0rem;
+    color: #fff;
+    width: 100%;
+    height: 0.6rem;
+    background: none no-repeat;
+    font-size: 0.42667rem;
+    line-height: 0.6rem;
+    text-align: center;
+    position: absolute;
+    top: 5.86667rem;
+    left: 0rem; }
+  .exchange-diag .change-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0.49333rem;
+    width: 100%;
+    height: 1rem;
+    background: none no-repeat; }
+    .exchange-diag .change-btn a:nth-of-type(1) {
+      width: 3.33333rem;
+      height: 1rem;
+      background: none no-repeat;
+      background: #ccc;
+      text-align: center;
+      font-size: 0.45333rem;
+      line-height: 1rem;
+      margin-left: 1.17333rem;
+      color: #261A38;
+      border-radius: 0.06667rem; }
+    .exchange-diag .change-btn a:nth-of-type(2) {
+      width: 3.33333rem;
+      height: 1rem;
+      background: none no-repeat;
+      background: #F8D271;
+      text-align: center;
+      font-size: 0.45333rem;
+      line-height: 1rem;
+      margin-left: 0.74667rem;
+      color: #DA3231;
+      border-radius: 0.06667rem; }
+
+@media only screen and (min-width: 760px) {
+  .address {
+    position: absolute;
+    top: 9.6%; } }
+.iScrollVerticalScrollbar {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 5px;
+  height: 200px;
+  border-radius: 0.02667rem; }
+
+.iSrollVerticalScrollbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  wdith: 5px;
+  height: 100%; }
+
+.iScrollIndicator {
+  background: #efefef;
+  opacity: .3; }
+
+section {
+  width: 10rem;
+  height: 14.66667rem;
+  background: none no-repeat; }
+  section .head-first {
+    width: 100%;
+    height: 1.6rem;
+    background: #fff no-repeat; }
+    section .head-first .guess-header {
+      width: 6rem; }
+      section .head-first .guess-header .header-border {
+        width: 1.2rem;
+        height: 1.4rem;
+        background: none no-repeat;
+        border-radius: 50%;
+        margin-top: 0.2rem;
+        margin-left: 0.26667rem;
+        overflow: hidden; }
+        section .head-first .guess-header .header-border img {
+          display: inline-block;
+          width: 1.2rem;
+          height: 1.2rem;
+          background: none no-repeat; }
+      section .head-first .guess-header #login {
+        display: none;
+        width: 1.6rem;
+        height: 0.72rem;
+        background: none no-repeat;
+        margin-top: 0.41333rem;
+        margin-left: 0.38667rem; }
+        section .head-first .guess-header #login img {
+          display: inline-block;
+          width: 1.6rem;
+          height: 0.72rem;
+          background: none no-repeat; }
+      section .head-first .guess-header #login {
+        display: block; }
+      section .head-first .guess-header .myGuess {
+        display: none;
+        margin-left: 0.21333rem; }
+        section .head-first .guess-header .myGuess .myText {
+          width: 2.66667rem;
+          height: 0.69333rem;
+          background: none no-repeat; }
+          section .head-first .guess-header .myGuess .myText b {
+            height: 0.69333rem;
+            font-size: 0.34667rem;
+            line-height: 0.85333rem;
+            color: #4A4A4A; }
+          section .head-first .guess-header .myGuess .myText img {
+            width: 0.4rem;
+            height: 0.4rem;
+            background: none no-repeat;
+            margin-top: 0.21333rem;
+            margin-left: 0.16rem; }
+        section .head-first .guess-header .myGuess .gold {
+          width: 4.29333rem;
+          height: 0.90667rem;
+          background: none no-repeat;
+          position: relative; }
+          section .head-first .guess-header .myGuess .gold .gold-bg {
+            position: absolute;
+            top: 0.08rem;
+            left: 0rem;
+            width: 3.73333rem;
+            height: 0.6rem;
+            background: #8C339B no-repeat;
+            border-radius: 0.26667rem; }
+          section .head-first .guess-header .myGuess .gold .mongy-group-01 {
+            position: relative;
+            z-index: 1;
+            width: 1.76rem;
+            height: 0.66667rem;
+            background: none no-repeat; }
+            section .head-first .guess-header .myGuess .gold .mongy-group-01 #gold-small {
+              width: 0.32rem;
+              height: 0.33333rem;
+              background: none no-repeat;
+              margin-top: 0.21333rem;
+              margin-left: 0.10667rem;
+              margin-right: 0.10667rem; }
+            section .head-first .guess-header .myGuess .gold .mongy-group-01 #money-change {
+              font-size: 0.26667rem;
+              line-height: 0.8rem;
+              color: #F8D271; }
+          section .head-first .guess-header .myGuess .gold .mongy-group-02 {
+            position: relative;
+            z-index: 1;
+            width: 1.73333rem;
+            height: 0.53333rem;
+            background: none no-repeat; }
+            section .head-first .guess-header .myGuess .gold .mongy-group-02 #gold-big {
+              width: 0.46667rem;
+              height: 0.33333rem;
+              background: none no-repeat;
+              margin-top: 0.2rem;
+              margin-left: 0rem;
+              margin-right: 0.08rem; }
+            section .head-first .guess-header .myGuess .gold .mongy-group-02 #gold-change {
+              font-size: 0.26667rem;
+              line-height: 0.8rem;
+              color: #F8D271;
+              vertical-align: middle; }
+          section .head-first .guess-header .myGuess .gold .more {
+            width: 0.73333rem;
+            height: 0.73333rem;
+            background: none no-repeat;
+            position: relative;
+            z-index: 1; }
+    section .head-first nav {
+      width: 4rem;
+      height: 100%;
+      background: none no-repeat; }
+      section .head-first nav .righ {
+        width: 0.73333rem;
+        height: 1.4rem;
+        background: none no-repeat; }
+      section .head-first nav .head-duty {
+        width: 0.73333rem;
+        height: 1.4rem;
+        background: none no-repeat;
+        padding-right: 0.30667rem;
+        padding-left: 0.26667rem;
+        padding-top: 0.2rem; }
+        section .head-first nav .head-duty img {
+          width: 0.73333rem;
+          height: 0.73333rem;
+          background: none no-repeat; }
+        section .head-first nav .head-duty b {
+          width: 0.73333rem;
+          height: 0.56rem;
+          background: none no-repeat;
+          font-size: 0.26667rem;
+          line-height: 0.56rem;
+          text-align: center;
+          color: #4A4A4A; }
+      section .head-first nav .head-prize {
+        width: 0.73333rem;
+        height: 1.4rem;
+        background: none no-repeat;
+        padding-right: 0.26667rem;
+        padding-left: 0.26667rem;
+        padding-top: 0.2rem; }
+        section .head-first nav .head-prize img {
+          width: 0.73333rem;
+          height: 0.73333rem;
+          background: none no-repeat; }
+        section .head-first nav .head-prize b {
+          width: 0.73333rem;
+          height: 0.56rem;
+          background: none no-repeat;
+          font-size: 0.26667rem;
+          line-height: 0.56rem;
+          text-align: center;
+          color: #4A4A4A; }
+      section .head-first nav .head-Ranking {
+        width: 0.86667rem;
+        height: 1.4rem;
+        background: none no-repeat;
+        padding-right: 0.26667rem;
+        padding-left: 0.26667rem;
+        padding-top: 0.2rem; }
+        section .head-first nav .head-Ranking img {
+          width: 0.73333rem;
+          height: 0.73333rem;
+          background: none no-repeat; }
+        section .head-first nav .head-Ranking b {
+          width: 0.73333rem;
+          height: 0.56rem;
+          background: none no-repeat;
+          font-size: 0.26667rem;
+          line-height: 0.56rem;
+          text-align: center;
+          color: #4A4A4A; }
+  section #banner {
+    width: 100%;
+    height: 4rem;
+    background: none no-repeat; }
+    section #banner .pic-banner {
+      width: 20rem;
+      height: 4rem;
+      background: none no-repeat; }
+      section #banner .pic-banner a img {
+        width: 10rem;
+        height: 4rem;
+        background: none no-repeat; }
+  section #head-content {
+    width: 10rem;
+    height: 14.66667rem;
+    background: none no-repeat; }
+    section #head-content .win-prize {
+      width: 10rem;
+      height: 1.13333rem;
+      background: none no-repeat; }
+      section #head-content .win-prize .win-text {
+        width: 1.6rem;
+        height: 0.53333rem;
+        background: none no-repeat;
+        margin-top: 0.33333rem;
+        margin-left: 0.33333rem; }
+      section #head-content .win-prize .win-show {
+        margin-left: 0.36rem;
+        font-size: 0.34667rem;
+        line-height: 1.12rem;
+        color: #fff; }
+  section .head-list {
+    padding-right: 0.4rem;
+    padding-left: 0.4rem; }
+    section .head-list .list-link {
+      width: 100%;
+      height: 2rem;
+      background: none no-repeat; }
+      section .head-list .list-link .one {
+        width: 4.61333rem;
+        height: 2rem;
+        background: none no-repeat; }
+        section .head-list .list-link .one img {
+          width: 3.29333rem;
+          height: 1.57333rem;
+          background: none no-repeat;
+          margin-top: 0.2rem; }
+        section .head-list .list-link .one .four {
+          width: 3.93333rem;
+          height: 1.57333rem;
+          background: none no-repeat; }
+        section .head-list .list-link .one .six {
+          width: 3.93333rem;
+          height: 1.57333rem;
+          background: none no-repeat; }
+      section .head-list .list-link .pic-line {
+        height: 1.33333rem;
+        margin-top: 0.32rem; }
+      section .head-list .list-link .two {
+        width: 4.56rem;
+        height: 2rem;
+        background: none no-repeat; }
+        section .head-list .list-link .two img {
+          margin-left: 0.4rem;
+          width: 4.16rem;
+          height: 1.57333rem;
+          background: none no-repeat;
+          margin-top: 0.2rem; }
+        section .head-list .list-link .two .l2-1 {
+          width: 3.30667rem;
+          height: 1.57333rem;
+          background: none no-repeat; }
+        section .head-list .list-link .two .five {
+          width: 3.65333rem;
+          height: 1.57333rem;
+          background: none no-repeat; }
+      section .head-list .list-link .out {
+        width: 4.53333rem;
+        height: 2rem;
+        background: none no-repeat; }
+
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  padding-left: 0.53333rem;
+  padding-right: 0.53333rem;
+  padding-top: 0.37333rem; }
+  footer nav {
+    position: relative; }
+    footer nav a {
+      padding-left: 1.14667rem;
+      font-size: 0.32rem;
+      line-height: 0.77333rem;
+      color: #fff; }
+    footer nav .footer-bg {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 0.77333rem;
+      background: #fff no-repeat;
+      opacity: .2; }
+
+#wrapper {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 50px; }
+
+/*# sourceMappingURL=main.css.map */

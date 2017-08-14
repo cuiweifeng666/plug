@@ -1,0 +1,537 @@
+@-webkit-keyframes move {}
+* {
+  touch-action: none; }
+
+#myCanve {
+  position: absolute;
+  z-index: 1000; }
+
+em {
+  font-style: normal; }
+
+body {
+  position: relative;
+  z-index: 0; }
+
+.border-1 {
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #f3f5f7;
+  width: 100%;
+  content: ''; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both; }
+
+i {
+  color: #000;
+  font-style: normal;
+  font-size: .4rem; }
+
+.red {
+  background: red;
+  position: absolute;
+  z-index: 1001; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.7);
+    transform: scaleY(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-1px::after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(0.3); } }
+.border-1px {
+  position: relative; }
+
+.border-1px::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 1px solid #A941E3;
+  width: 100%;
+  content: ''; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.7);
+    transform: scaleX(0.7); } }
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-left::after {
+    -webkit-transform: scaleX(0.3);
+    transform: scaleX(0.3); } }
+.border-left {
+  position: relative; }
+
+.border-left::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-left: 1px solid #A941E3;
+  height: 100%;
+  content: ''; }
+
+.bg {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  z-index: -9999; }
+
+html, body {
+  position: relative;
+  height: 100%; }
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background: none no-repeat;
+  z-index: -9999; }
+
+.ranking-head {
+  display: none;
+  position: absolute;
+  left: 0.37333rem;
+  top: 9.5%;
+  z-index: 10;
+  width: 9.26667rem;
+  height: 14.88rem;
+  background: none no-repeat; }
+  .ranking-head .rank-bg {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 9.26667rem;
+    height: 14.88rem;
+    background: none no-repeat; }
+  .ranking-head .close {
+    position: absolute;
+    right: -0.4rem;
+    top: 1.33333rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: none no-repeat; }
+  .ranking-head .ranking-title {
+    position: absolute;
+    left: 5.6%;
+    top: 2.78667rem;
+    width: 8rem;
+    height: 0.64rem;
+    background: none no-repeat;
+    padding: 0.08rem 0.09333rem 0.08rem 0.09333rem; }
+    .ranking-head .ranking-title .title {
+      position: relative;
+      z-index: 3;
+      width: 2.66667rem;
+      height: 0.64rem;
+      background: none no-repeat;
+      color: #fff;
+      text-align: center; }
+      .ranking-head .ranking-title .title em {
+        font-size: 0.32rem;
+        line-height: 0.64rem;
+        width: 2.66667rem;
+        height: 0.64rem;
+        background: none no-repeat; }
+    .ranking-head .ranking-title .rank-head {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 8.18667rem;
+      height: 0.8rem;
+      background: none no-repeat; }
+  .ranking-head .ranking-content {
+    position: absolute;
+    top: 4rem;
+    left: 0.22667rem;
+    width: 8.8rem;
+    height: auto; }
+    .ranking-head .ranking-content .ranking-detail {
+      position: relative;
+      width: 8.8rem;
+      height: 1.33333rem;
+      background: none no-repeat;
+      margin-bottom: 0.2rem; }
+      .ranking-head .ranking-content .ranking-detail .rank-img {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 8.8rem;
+        height: 1.4rem;
+        background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail .text {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.41333rem;
+        margin-left: 0.32rem;
+        margin-right: 0.16rem;
+        font-size: 0.32rem;
+        line-height: 0.52rem;
+        width: 0.52rem;
+        height: 0.52rem;
+        background: #fff no-repeat;
+        text-align: center;
+        color: #44154E;
+        opacity: .4; }
+      .ranking-head .ranking-content .ranking-detail .rank-order {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.33333rem;
+        margin-left: 0.16rem;
+        width: 0.82667rem;
+        height: 0.66667rem;
+        background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail .head-pic {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.13333rem;
+        margin-left: 0.21333rem;
+        width: 1.06667rem;
+        height: 1.06667rem;
+        background: none no-repeat;
+        border-radius: 50%; }
+        .ranking-head .ranking-content .ranking-detail .head-pic img {
+          position: absolute;
+          top: 0rem;
+          left: 0rem;
+          width: 1.06667rem;
+          height: 1.06667rem;
+          background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail em {
+        position: relative;
+        z-index: 1;
+        margin-top: 0rem;
+        margin-left: 0.30667rem;
+        font-size: 0.32rem;
+        line-height: 1.33333rem;
+        width: 2.16rem;
+        height: 1.25333rem;
+        background: none no-repeat;
+        color: #fff; }
+      .ranking-head .ranking-content .ranking-detail .gold {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.46667rem;
+        margin-left: 0rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: none no-repeat; }
+      .ranking-head .ranking-content .ranking-detail i {
+        position: relative;
+        z-index: 1;
+        margin-top: 0rem;
+        margin-left: 0.12rem;
+        font-size: 0.32rem;
+        line-height: 1.33333rem;
+        width: 1.94667rem;
+        height: 1.25333rem;
+        background: none no-repeat;
+        color: #F8D271; }
+      .ranking-head .ranking-content .ranking-detail .card {
+        position: relative;
+        z-index: 1;
+        margin-top: 0.4rem;
+        margin-left: 0rem;
+        width: 1.14667rem;
+        height: 0.66667rem;
+        background: none no-repeat; }
+
+header {
+  width: 10rem;
+  height: 1.33333rem;
+  background: none no-repeat; }
+  header .head-bg {
+    z-index: -4;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 10rem;
+    height: 1.33333rem;
+    background: #fff no-repeat;
+    opacity: .2; }
+  header .head-money {
+    position: relative;
+    margin-left: 0.4rem;
+    margin-top: 0.30667rem;
+    width: 3.73333rem;
+    height: 0.8rem;
+    background: none no-repeat; }
+    header .head-money span {
+      position: absolute;
+      top: 0.05333rem;
+      left: 0;
+      width: 3.33333rem;
+      height: 0.66667rem;
+      background: #BC9ABD no-repeat;
+      opacity: .3;
+      border-radius: 0.29333rem; }
+    header .head-money .head-gold {
+      position: relative;
+      z-index: 1;
+      margin-top: 0.16rem;
+      margin-left: 0.16rem;
+      width: 0.41333rem;
+      height: 0.41333rem;
+      background: none no-repeat; }
+    header .head-money em {
+      position: relative;
+      z-index: 1;
+      margin-left: 0.13333rem;
+      font-size: 0.21333rem;
+      line-height: 0.72rem;
+      color: #f7d171; }
+    header .head-money .fill {
+      position: relative;
+      z-index: 1;
+      right: 0;
+      width: 0.73333rem;
+      height: 0.73333rem;
+      background: none no-repeat; }
+  header .about {
+    padding-top: 0.25333rem;
+    padding-left: 0rem;
+    padding-right: 0.09333rem; }
+    header .about a {
+      width: 1.77333rem;
+      height: 0.82667rem;
+      background: none no-repeat;
+      margin-right: 0.13333rem; }
+      header .about a img {
+        width: 1.77333rem;
+        height: 0.82667rem;
+        background: none no-repeat; }
+
+section .rotate-img {
+  position: absolute;
+  left: 0;
+  bottom: 80%;
+  width: 10rem;
+  height: 1.33333rem;
+  background: none no-repeat;
+  text-align: center; }
+  section .rotate-img img {
+    position: absolute;
+    top: 0rem;
+    left: 2.82667rem;
+    width: 4.33333rem;
+    height: 1.33333rem;
+    background: none no-repeat; }
+section .circle-rotate {
+  width: 7.70667rem;
+  height: 7.70667rem;
+  background: none no-repeat;
+  position: absolute;
+  left: 1.14667rem;
+  bottom: 30%; }
+  section .circle-rotate .bg-bottom {
+    position: absolute;
+    top: 0.86667rem;
+    left: 0.86667rem;
+    width: 5.97333rem;
+    height: 5.97333rem;
+    background: none no-repeat; }
+  section .circle-rotate .bg-circle {
+    position: absolute;
+    top: 0.45333rem;
+    left: 0.45333rem;
+    width: 6.78667rem;
+    height: 6.78667rem;
+    background: none no-repeat; }
+  section .circle-rotate .bg-border {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 7.72rem;
+    height: 7.72rem;
+    background: none no-repeat; }
+  section .circle-rotate .point {
+    position: absolute;
+    top: 2.24rem;
+    left: 2.88rem;
+    width: 1.93333rem;
+    height: 2.58667rem;
+    background: none no-repeat;
+    z-index: 1; }
+  section .circle-rotate .rotate-area {
+    z-index: 0;
+    position: absolute;
+    top: 0.88rem;
+    left: 0.88rem;
+    width: 5.96rem;
+    height: 5.96rem;
+    background: none no-repeat; }
+    section .circle-rotate .rotate-area .text {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      z-index: 2000;
+      width: 5.96rem;
+      height: 5.96rem;
+      background: none no-repeat; }
+      section .circle-rotate .rotate-area .text i {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        width: 1rem;
+        height: 0.26667rem;
+        background: none no-repeat;
+        font-size: 0.16rem;
+        line-height: 0.26667rem;
+        color: #ffd71a; }
+      section .circle-rotate .rotate-area .text .select {
+        color: #fff; }
+    section .circle-rotate .rotate-area #mycanvas, section .circle-rotate .rotate-area #my-01 {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 5.96rem;
+      height: 5.96rem;
+      background: none no-repeat;
+      z-index: 0; }
+    section .circle-rotate .rotate-area #mycanvas {
+      z-index: 1; }
+    section .circle-rotate .rotate-area .rotate-pic {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 5.96rem;
+      height: 5.96rem;
+      background: none no-repeat; }
+  section .circle-rotate .click {
+    position: absolute;
+    top: 2.88rem;
+    left: 2.88rem;
+    width: 1.93333rem;
+    height: 1.93333rem;
+    background: none no-repeat;
+    z-index: 100; }
+  section .circle-rotate .orig-pointer {
+    position: absolute;
+    top: -0.28rem;
+    left: 2.10667rem;
+    width: 3.45333rem;
+    height: 1.58667rem;
+    background: none no-repeat; }
+section .bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+  section .bottom .white-text {
+    position: absolute;
+    right: 0rem;
+    bottom: 3.6rem;
+    width: 10rem;
+    height: 0.66667rem;
+    background: none no-repeat; }
+  section .bottom .info-text {
+    position: absolute;
+    right: 0;
+    bottom: 3.6rem;
+    width: 10rem;
+    height: 0.49333rem;
+    background: none no-repeat;
+    font-size: 0.34667rem;
+    line-height: 0.49333rem;
+    text-align: center;
+    color: #fff; }
+  section .bottom .game {
+    position: absolute;
+    left: 0rem;
+    bottom: 0; }
+    section .bottom .game .btn {
+      position: absolute;
+      left: 0;
+      bottom: 1.6rem;
+      width: 10rem;
+      height: 1.33333rem;
+      background: none no-repeat; }
+      section .bottom .game .btn a {
+        position: absolute;
+        width: 2.93333rem;
+        height: 1.33333rem;
+        background: none no-repeat; }
+        section .bottom .game .btn a img {
+          position: absolute;
+          top: 0rem;
+          left: 0rem;
+          width: 2.93333rem;
+          height: 1.33333rem;
+          background: none no-repeat; }
+        section .bottom .game .btn a b {
+          position: relative;
+          z-index: 1;
+          margin-top: 0.06667rem;
+          display: block;
+          text-align: center;
+          width: 100%;
+          font-size: 0.4rem;
+          line-height: 0.53333rem;
+          height: 40;
+          color: #951D5B; }
+        section .bottom .game .btn a strong {
+          position: relative;
+          z-index: 1;
+          display: block;
+          text-align: center;
+          width: 100%;
+          font-size: 0.32rem;
+          line-height: 0.4rem;
+          color: #951D5B; }
+      section .bottom .game .btn .small {
+        left: 15.7%; }
+      section .bottom .game .btn .big {
+        left: 55.1%; }
+    section .bottom .game .bottom-text {
+      position: absolute;
+      bottom: 0;
+      left: 0.6rem;
+      width: 8.8rem;
+      height: 1.33333rem;
+      background: none no-repeat; }
+      section .bottom .game .bottom-text .bottom-color {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 8.8rem;
+        height: 1.28rem;
+        background: none no-repeat; }
+      section .bottom .game .bottom-text .select {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 2.93333rem;
+        height: 1.17333rem;
+        background: none no-repeat; }
+      section .bottom .game .bottom-text #bot-tex {
+        width: 100%;
+        height: 100%;
+        background: none no-repeat;
+        position: relative;
+        z-index: 200; }
+        section .bottom .game .bottom-text #bot-tex em {
+          width: 2.93333rem;
+          height: 1.17333rem;
+          background: none no-repeat;
+          font-size: 0.4rem;
+          line-height: 1.33333rem;
+          color: #F8D271;
+          text-align: center; }
+
+/*# sourceMappingURL=circle.css.map */

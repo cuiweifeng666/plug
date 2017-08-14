@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>商城</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="../css/share.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/SaveDatas.js"></script>
+    <script>
+
+    $(document).ready(function($){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+
+    })
+    </script>
+  </head>
+  <body id="">
+      <div class="tan"></div>
+      
+      <header class="head-first-text">
+             <span class="back"></span>
+              每日任务
+      </header>
+      <section>
+      <img src="../images/share-bg.png" id="" class="bg" />
+        <div class="monkey-group">
+          <img src="../images/monkey.png" id="" class="monkey" />
+          <img src="../images/share-btn.png" id="" class="share-btn" />
+          <div class="monkey-sign">好友登录后,您可以在个人中心中奖【通知】中看到</div>
+        </div>
+        
+        <div class="monkey-info">
+          <img src="../images/txt.png" id="" class="" />
+          <b class="person">1</b>
+          <b class="person-money">1880</b>
+        </div>
+        <div class="swaper">
+          <img src="../images/two.png" id="" class="swaper-pic" />
+          <img src="../images/close.png" id="" class="close" />
+        </div>
+      </section>
+      <footer>
+        <div class="href-sign">
+            <a href="" class="link friend ">
+              <img src="../images/friend.png" id="" class="" />
+              <b class="">分享至朋友圈</b>
+            </a>
+            <a href="" class="link weixin ">
+              <img src="../images/talk.png" id=""  />
+              <b >分享至微信</b>
+            </a>
+            <a href="" class="link qq ">
+              <img src="../images/QQ.png" id=""  />
+              <b >分享至QQ</b>
+            </a>
+            <a href="" class="link talk ">
+              <img src="../images/swap.png" id=""  />
+              <b >swap.png</b>
+            </a>
+        </div>
+        <div class="cancel">
+          取消
+        </div>
+      </footer>
+     <script type="text/javascript" src="../js/sign.js"></script>
+  </body>
+  </html>

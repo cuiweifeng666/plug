@@ -1,0 +1,221 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>幸运大转盘</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="../css/circle.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <!-- <script type="text/javascript" src="../js/swiper.min.js"></script> -->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/awardRotate.js"></script>
+    <script type="text/javascript" src="../js/SaveDatas.js"></script>
+   
+    <script>
+
+    $(document).ready(function($){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        // document.addEventListener('touchstart', function(e) {
+        //     e.preventDefault();
+        // });
+
+    })
+    </script>
+  </head>
+  <body id="">
+  
+      <img src="../images/circle-bg.png" id="" class="bg">
+      <div class="ranking-head">
+        <img src="../images/rank-bg.png" id="" class="rank-bg" />
+        <img src="../images/close.png" id="" class="close" />
+         <div class="ranking-title clearfix">
+            <img src="../images/rank-head.png" id="" class="rank-head" />
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="../images/" id="" class="" /> -->
+            </span>
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="../images/" id="" class="" /> -->
+            </span>
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="../images/" id="" class="" /> -->
+            </span>
+         </div>
+         <div class="ranking-content">
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <img src="../images/first.png" id="" class="rank-order fl" />
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+                <img src="../images/30.png" id="" class="fl card" />
+            </div>
+
+             <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <img src="../images/second.png" id="" class="rank-order  fl" />
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class=" fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class=" fl">1422.01万</i >
+                <img src="../images/50.png" id="" class="fl card" />
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <img src="../images/second.png" id="" class="rank-order fl" />
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class=" fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+                <img src="../images/100-card.png" id="" class=" fl card" />
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+             <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+         </div>
+      </div>
+     <header>
+        <div class="head-bg"></div>
+        
+       <div class="head-money clearfix fl">
+            <span class="fl head-circle" ></span>
+            <img class="fl head-gold" src="../images/Bitmap-Copy.png">
+            <em class="fl ">123000</em>
+            <img id="" class="fr fill"  src="../images/fill.png" />
+        </div>
+
+        <div class="fr about">
+          <a href="javascript:;" class="fr">
+            <img src="../images/pai.png" id="" class=" fr" />
+          </a>
+          <a href="javascript:;" class="fr">
+            <img src="../images/setting.png" id="" class="fr" />
+          </a>
+          <a href="javascript:;" class="fr">
+            <img src="../images/help2.png" id="" class="fr" />
+          </a>
+        </div>
+     </header>
+     <section>
+     <p class="rotate-img">
+          <img src="../images/lucy-text.png" id="" class="" />
+        </p>
+
+     <div class="circle-rotate">
+        <img src="../images/goods.png" id="" class="bg-bottom" />
+        <img src="../images/dipan.png" id="" class="bg-circle" />
+        <img src="../images/head-ori.png" id="" class="bg-border" />
+        <img src="../images/pointer1.png" id="" class="point" />
+        <div class="rotate-area">
+          <img src="../images/goods.png" id="" class="rotate-pic" />
+          <canvas id="mycanvas"></canvas>
+          <canvas id="my-01"></canvas>
+          <div class="text"></div>
+        </div>
+        
+        <span class="click"></span>
+         <img src="../images/head-1.png" id="" class="orig-pointer" />
+     </div>
+     
+        
+       
+       <div class="bottom">
+          <img src="../images/white.png" id="" class="white-text" />
+          <div class="info-text">每日免费送一次，本月已送出18,388,888彩豆</div>
+          <div class="game">
+            <div class="btn">
+                <a href="javascript:;" class="small">
+                   <img src="../images/btn-yellow.png" id="" class="yellow" />
+                   <b>五连抽</b>
+                   <strong>450000彩豆</strong>
+                </a>
+                <a href="javascript:;" class="big">
+                   <img src="../images/btn-yellow.png" id="" class="yellow" />
+                   <b>十连抽</b>
+                   <strong>850000彩豆</strong>
+                </a>
+            </div>
+            <div class="bottom-text">
+                <img src="../images/bottom-color.png" id="" class="bottom-color " />
+                <img src="../images/select-color.png" id="" class="select" />
+                <div class="bottom-money clearfix" id="bot-tex">
+                <em class="text01 fl">1000彩豆</em>
+                <em class="text02 fl">10000彩豆</em>
+                <em class="text03 fl">100000彩豆</em>
+                </div>
+            </div>
+          </div>
+       </div>
+     </section>
+     <script type="text/javascript" src="../js/circle.js"></script>
+  </body>
+  </html>

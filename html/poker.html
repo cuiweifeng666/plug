@@ -1,0 +1,278 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>扑克游戏</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="../css/poker.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+     
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script>
+
+    $(document).ready(function($){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+
+    })
+    </script>
+  </head>
+  <body id="">
+      <img src="../images/bg-shop.png" id="" class="bg" />
+       <div class="ranking-head">
+        <img src="../images/rank-bg.png" id="" class="rank-bg" />
+        <img src="../images/close.png" id="" class="close" />
+         <div class="ranking-title clearfix">
+            <img src="../images/rank-head.png" id="" class="rank-head" />
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="../images/" id="" class="" /> -->
+            </span>
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="../images/" id="" class="" /> -->
+            </span>
+            <span class="title fl">
+              <em class="fl">日排行</em>
+              <!-- <img src="../images/" id="" class="" /> -->
+            </span>
+         </div>
+         <div class="ranking-content">
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <img src="../images/first.png" id="" class="rank-order fl" />
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+                <img src="../images/30.png" id="" class="fl card" />
+            </div>
+
+             <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <img src="../images/second.png" id="" class="rank-order  fl" />
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class=" fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class=" fl">1422.01万</i >
+                <img src="../images/50.png" id="" class="fl card" />
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <img src="../images/second.png" id="" class="rank-order fl" />
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class=" fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+                <img src="../images/100-card.png" id="" class=" fl card" />
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+             <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+            <div class="ranking-detail">
+                <img src="../images/name.png" id="" class="rank-img" />
+                <span class="text fl" >4</span>
+                <b class="head-pic fl">
+                  <img src="../images/head1.png" id="" class="" />
+                </b>
+                <em class="fl">Tantainic</em>
+                <img src="../images/Bitmap-Copy.png" id="" class="gold fl" />
+                <i class="fl">1422.01万</i>
+            </div>
+         </div>
+      </div>
+      <header>
+          <p></p>
+         <div class="gold-group fl">
+            <p></p>
+            <img src="../images/Bitmap-Copy.png" id="" class="gold-m fl" />
+            <b class="fl">123034</b>
+            <img src="../images/fill.png" id="" class="more" />
+         </div>
+         <div class="right-con fr" id="ranking">
+           <a href="javascript:;" class="fl">
+             <img src="../images/help2.png" id="" class="ranking fl" />
+           </a>
+           <a href="javascript:;" class="fl">
+             <img src="../images/pai.png" id="" class="ranking fl" />
+           </a>
+           <a href="javascript:;" class="fl">
+             <img src="../images/setting.png" id="" class="ranking fl" />
+           </a>
+          </div>
+      </header>
+      <section>
+          <div class="con-head clearfix">恭喜：“彩票最牛”在幸运PC金蛋竞猜中赢到1000金豆</div>
+          <div class="poker-area01 area fl">
+              <b></b>
+              <img src="../images/red.png" id="" class="red-pic" />
+          </div>
+          <div class="poker-area02 area fl">
+              <b></b>
+              <img src="../images/win7.png" id="" class="win7" />
+          </div>
+          <div class="poker-area03 fl area">
+              <b></b>
+              <img src="../images/black.png" id="" class="black" />
+          </div>
+          <div class="middle clearfix">
+            <div class="left fl">
+              <div class="poker-area04 fl area">
+                  <b></b>
+                  <img src="../images/big-win.png" id="" class="big-win" />
+              </div>
+              <div class="poker-area05 fl area">
+                  <b></b>
+                  <img src="../images/single-win.png" id="" class="single-win" />
+              </div>
+            </div>
+            <div class="fl right">
+              <div class="poker-area06 fr area">
+                  <b></b>
+                  <img src="../images/sm-win.png" id="" class="sm-win" />
+              </div>              
+              <div class="poker-area07 fr area">
+                  <b></b>
+                  <img src="../images/double-win.png" id="" class="double-win" />
+              </div>
+              </div>
+            <div class="middle-center">
+                <div class="middle-text">
+                  7出现时，只有押注7的赢
+                </div>
+                <div class="middle-con">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="282" height="380" id="svg01">
+            <defs>
+             <radialGradient id="linear" cx="152%" cy="161%" r="182%" fx="200%" fy="152%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#9ab1ff"/>
+              <stop offset="20%"   stop-color="yellow"/>
+              <stop offset="40%"   stop-color="#ff8000"/>
+               <stop offset="60%"   stop-color="#fa140a"/>
+              <stop offset="100%" stop-color="#716bf6"/>
+            </radialGradient>
+          </defs>
+            <path stroke-opacity="1" fill-opacity="0" id="svg_11" d="m140.82763,6.7205c40.37184,-0.54013 82.88403,0.14449 123.80493,0.1c7.8978,1.65742 10.30969,4.42222 10.33452,16.94004l-0.00162,329.11229c-0.15532,3.48008 -1.93746,6.10921 -4.04498,7.81229c-1.7464,1.56484 -4.04968,2.64164 -6.97554,2.46077l-245.8531,-0.0742c-8.93298,-0.08136 -11.18093,-7.92231 -11.01407,-11.02581l-0.17798,-331.17798c0.28424,-6.41983 3.98276,-13.08624 9.97007,-14.0474l123.89989,-0.10011" stroke-width="10" stroke="url(#linear)" fill="#000000"/>
+              </svg>
+                  <div class="imgs porker">
+                  <img src="../images/porker01.png" id="" class=" flip out" />
+                    <img src="../images/porker.png" id="" class=" flip " />
+                    
+                  </div>
+                    <!-- <img src="../images/porker01.png" id="" class="porker ro-02" /> -->
+                </div>
+                <div class="middle-pokers">
+                    <b></b>
+                    <img src="../images/1p.png" id="" class="porker-1 fl" />
+                    <img src="../images/2p.png" id="" class="porker-1 fl" />
+                    <img src="../images/3p.png" id="" class="porker-1 fl" />
+                    <img src="../images/4p.png" id="" class="porker-1 fl" />
+                    <img src="../images/5p.png" id="" class="porker-1 fl" />
+                    <img src="../images/6p.png" id="" class="porker-2 fl" />
+                </div>
+                
+                <a href="javascript:;" class="bottom-txt">
+                    查看更多走势>>
+                </a>
+            </div>
+              
+          </div>
+          <div class="bottom clearfix">
+              <div class="poker-area08 area fl ">
+                  <img src="../images/win01.png" id="" class="win-pic" />
+              </div>
+              <div class="poker-area09 area ce fl">
+                  <img src="../images/win02.png" id="" class="win-pic" />
+              </div>
+              <div class="poker-area10 area ce fl">
+                  <img src="../images/win03.png" id="" class="win-pic" />
+              </div>
+              <div class="poker-area011 area ce fl">
+                  <img src="../images/win04.png" id="" class="win-pic" />
+              </div> 
+          </div>
+      </section>
+      <p class="time-clear">10</p>
+      <footer class="clearfix foot-bot">
+          <b class="bg-bottom"></b>
+          <div class="bot-cont">
+          <a href="javascript:;" class="bottom-btn fl">
+            <img src="../images/help-porker.png" id="" class="fl" />
+          </a>
+          <a href="javascript:;" class="bottom-btn fl">
+            <img src="../images/10btn.png" id=""  class="fl"  />
+          </a>
+          <a href="javascript:;" class="bottom-btn fl">
+            <img src="../images/100btn.png" id=""  class="fl" />
+          </a>
+          <a href="javascript:;" class="bottom-btn fl">
+            <img src="../images/1000btn.png" id=""  class="fl" />
+          </a>
+          <a href="javascript:;" class="bottom-btn fl">
+            <img src="../images/all-btn.png" id=""  class="fl" />
+          </a>
+           <a href="javascript:;" class="bottom-btn fl last">
+            <img src="../images/cancel-porker.png" id=""  class="fl" />
+          </a>
+          </div>
+      </footer>
+     <script type="text/javascript" src="../js/poker.js"></script>
+  </body>
+  </html>

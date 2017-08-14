@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>道具购买</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="../css/buy.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/SaveDatas.js"></script>
+   
+    <script>
+
+    $(document).ready(function($){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+
+    })
+    </script>
+  </head>
+  <body id="">
+      
+      <header class="head-first-text">
+            <div class="head-back">
+                    <span class="back"></span>
+            </div>
+           道具购买
+      </header>
+      <section>
+         <header class="pay-head">
+           <div class="text1">
+             购买<b>10</b>元宝，支付<span>10</span>元
+           </div>
+           <div class="text2">
+             您将先充值为元宝，充值后自动兑换为道具
+           </div>
+         </header>
+         <ul class="pay">
+           <li class="pay-list border-1px">
+             <a href="javascript:;" class="clearfix">
+               <img src="../images/pay1.png" id="" class="weixin fl" />
+               <div class="text-bord  fl">
+               <span class="text1 fl">微信支付</span>
+               <span class="text2 fl">使用微信支付,安全快捷</span>
+               </div>
+               <img src="../images/will.png" class="select">
+             </a>
+           </li>
+           <li class="pay-list border-1px">
+             <a href="javascript:;" class="clearfix">
+               <img src="../images/pay2.png" id="" class="weixin fl" />
+               <div class="text-bord  fl">
+               <span class="text1 fl">支付宝支付</span>
+               <span class="text2 fl">支付宝支付WAP或安全支付方式完成支付</span>
+               </div>
+               <img src="../images/will.png" class="select">
+             </a>
+           </li>
+           <li class="pay-list border-1px">
+             <a href="javascript:;" class="clearfix">
+               <img src="../images/pay3.png" id="" class="weixin fl" />
+               <div class="text-bord  fl">
+               <span class="text1 fl">微信支付</span>
+               <span class="text2 fl">使用微信支付,安全快捷</span>
+               </div>
+               <img src="../images/will.png" class="select">
+             </a>
+           </li>
+         </ul>
+         <a href="javascript:;" class="pay-btn">确认支付</a>
+         <div class="info-text">
+            <span>购买道具说明：</span>
+            <em class="info01">1.原版的用途为兑换道具，不可投注。</em>
+            <em class="info02">2.赠送的彩豆可以进行精彩或兑换礼品。</em>
+            <em class="info03">3.在购买的过程中如出现问题，请致电精彩游戏平台中心。</em>
+            <em class="info04">4.客服电话：400-816-8876</em>
+         </div>
+      </section>
+     <script type="text/javascript" src="../js/buy.js"></script>
+  </body>
+  </html>

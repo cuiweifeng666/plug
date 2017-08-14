@@ -1,0 +1,493 @@
+$rem:1rem;
+@mixin  size($width,$height,$back){
+	width:$width;
+	height:$height;
+	background:$back no-repeat;
+}
+@mixin bgs($width){
+	background-size:$width/75*$rem 100%;
+}
+@mixin margin($top,$left){
+	margin-top:$top/75*$rem;
+	margin-left:$left/75*$rem;
+}
+@mixin pad($top,$left){
+	padding-top:$top/75*$rem;
+	padding-left:$left/75*$rem;
+}
+@mixin font($font,$line){
+	font-size:$font/75*$rem;
+	line-height:$line/75*$rem;
+}
+@mixin border($color){
+	
+}
+@mixin po($top,$left){
+	position:absolute;
+	top:$top/75*$rem;
+	left:$left/75*$rem;
+}
+@mixin border-1px($color){
+    left: 0;
+    bottom: 0;
+    border-top:1px solid $color;
+    width: 100%;
+    content: '';
+    }
+
+ @-webkit-keyframes move {
+ 	0% {
+ 	
+ 	}
+ 	30% {
+ 	
+ 	}
+ }
+ * { touch-action: none; }
+ #myCanve {
+ 	position:absolute;
+ 	z-index:1000;
+ }
+em {
+	font-style:normal;
+}
+body {
+	position:relative;
+	z-index:0;
+}
+.border-1{
+	@include border-1px(#f3f5f7);
+} 
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix{
+	content:'';
+	display:block;
+	clear:both;
+}
+i {
+	color:#000;
+	font-style:normal;
+	font-size:.4rem;
+}
+.red {
+	background:red;
+	position:absolute;
+	z-index:1001;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-aspect-ratio: 1.5){
+ .border-1px::after {
+    -webkit-transform : scaleY(0.7);
+    transform : scaleY(0.7);
+}
+}
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-aspect-ratio: 2) {
+  .border-1px::after {
+    -webkit-transform : scaleY(0.3);
+    transform : scaleY(0.3);
+    }
+    }
+ @media (-webkit-min-device-pixel-ratio:3),(min-device-aspect-ratio: 3) {
+  .border-1px::after {
+    -webkit-transform : scaleY(0.3);
+    transform : scaleY(0.3);
+    }
+    }
+ .border-1px{
+  position : relative;}
+	.border-1px::after {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-top:1px solid #A941E3;
+	width: 100%;
+	content: '';}
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-aspect-ratio: 1.5){
+ .border-left::after {
+    -webkit-transform : scaleX(0.7);
+    transform : scaleX(0.7);
+}
+}
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-aspect-ratio: 2) {
+  .border-left::after {
+    -webkit-transform : scaleX(0.3);
+    transform : scaleX(0.3);
+    }
+    }
+ @media (-webkit-min-device-pixel-ratio:3),(min-device-aspect-ratio: 3) {
+  .border-left::after {
+    -webkit-transform : scaleX(0.3);
+    transform : scaleX(0.3);
+    }
+    }
+ .border-left{
+  position : relative;}
+	.border-left::after {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-left:1px solid #A941E3;
+	height: 100%;
+	content: '';}
+
+.bg {
+	@include po(0,0);
+	z-index:-9999;
+}
+ html, body {
+        position: relative;
+        height: 100%;
+    }
+ .bg 	{
+ 	@include size(100%,100%,none);
+ 	z-index:-9999;
+ }
+ .ranking-head {
+		display:none;
+		position:absolute;
+		left:28/75*$rem;
+		top:9.5%;
+		z-index:10;
+		@include size(695/75*$rem,1116/75*$rem,none);
+	.rank-bg {
+		@include po(0,0);
+		@include size(695/75*$rem,1116/75*$rem,none);
+	}
+	.close {
+		position:absolute;
+		right:-30/75*$rem;
+		top:100/75*$rem;
+		@include size(60/75*$rem,60/75*$rem,none);
+	}
+	.ranking-title {
+		position:absolute;
+		left:5.6%;
+		top:209/75*$rem;
+		@include size(600/75*$rem,48/75*$rem,none);
+		padding:6/75*$rem 7/75*$rem 6/75*$rem 7/75*$rem;
+		.title {
+			position:relative;
+			z-index:3;
+			@include size(200/75*$rem,48/75*$rem,none);
+			color:#fff;
+			text-align:center;
+			em {
+				@include font(24,48);
+				@include size(200/75*$rem,48/75*$rem,none);
+			}
+			}
+		.rank-head {
+			@include po(0,0);
+			@include size(614/75*$rem,60/75*$rem,none);
+		}
+	}
+	.ranking-content {
+			@include po(300,17);
+			width:660/75*$rem;
+			height:auto;
+
+		.ranking-detail {
+			position:relative;
+			@include size(660/75*$rem,100/75*$rem,none);
+			margin-bottom:15/75*$rem;
+			.rank-img {
+				@include po(0,0);
+				@include size(660/75*$rem,105/75*$rem,none);
+			}
+			.text {
+				position:relative;
+				z-index:1;
+				@include margin(31,24);
+				margin-right:12/75*$rem;
+				@include font(24,39);
+				@include size(39/75*$rem,39/75*$rem,#fff);
+				text-align:center;
+				color:#44154E;
+				opacity:.4;
+			}
+			.rank-order {
+				position:relative;
+				z-index:1;
+				@include margin(25,12);
+				@include size(62/75*$rem,50/75*$rem,none);
+			}
+			.head-pic {
+				position:relative;
+				z-index:1;
+				@include margin(10,16);
+				@include size(80/75*$rem,80/75*$rem,none);
+				border-radius:50%;
+				 img {
+				 	@include po(0,0);
+				 	@include size(80/75*$rem,80/75*$rem,none);
+				 }
+			}
+			em {
+				position:relative;
+				z-index:1;
+				@include margin(0,23);
+				@include font(24,100);
+				@include size(162/75*$rem,94/75*$rem,none);
+				color:#fff;
+			}
+			.gold
+			 {
+				position:relative;
+				z-index:1;
+				@include margin(35,0);
+				@include size(30/75*$rem,30/75*$rem,none);
+			}
+			i {
+				position:relative;
+				z-index:1;
+				@include margin(0,9);
+				@include font(24,100);
+				@include size(146/75*$rem,94/75*$rem,none);
+				color:#F8D271;
+			}
+			.card {
+				position:relative;
+				z-index:1;
+				@include margin(30,0);
+				@include size(86/75*$rem,50/75*$rem,none);
+			}
+		}
+	}
+}
+header {
+@include size(750/75*$rem,100/75*$rem,none);
+		.head-bg {
+			z-index:-4;
+			@include po(0,0);
+			@include size(750/75*$rem,100/75*$rem,#fff);
+			opacity:.2;
+		}
+		.head-money {
+					position:relative;
+					margin-left:30/75*$rem;
+					margin-top:23/75*$rem;
+					@include size(280/75*$rem,60/75*$rem,none);
+					span {
+						position:absolute;
+						top:4/75*$rem;
+						left:0;
+						@include size(250/75*$rem,50/75*$rem,#BC9ABD);
+						opacity:.3;
+						border-radius:22/75*$rem;
+					}
+					.head-gold {
+						position:relative;
+						z-index:1;
+						@include margin(12,12);
+						@include size(31/75*$rem,31/75*$rem,none);
+					}
+					em {
+						position:relative;
+						z-index:1;
+						margin-left:10/75*$rem;
+						@include font(16,54);
+						color:#f7d171;
+					}
+					.fill {
+						position:relative;
+						z-index:1;
+						right:0;
+						@include size(55/75*$rem,55/75*$rem,none);
+					}
+					
+				}
+			.about {
+				@include pad(19,0);
+				padding-right:7/75*$rem;
+				a {
+					@include size(133/75*$rem,62/75*$rem,none);
+					margin-right:10/75*$rem;	
+					img {
+						@include size(133/75*$rem,62/75*$rem,none);
+					}
+				}
+			}
+  		}
+
+  	section {
+
+  		.rotate-img{
+  			position:absolute;
+  			left:0;
+  			bottom:80%;
+  			@include size(750/75*$rem,100/75*$rem,none);
+  			text-align:center;
+  			img {
+  				@include po(0,212);
+  				@include size(325/75*$rem,100/75*$rem,none);
+  			}
+  		}
+  		.circle-rotate 	{
+  			@include size(578/75*$rem,578/75*$rem,none);
+  			position:absolute;
+  			left:86/75*$rem;
+  			bottom:30%;
+  			.bg-bottom {
+  				@include po(65,65);
+  				@include size(448/75*$rem,448/75*$rem,none);
+  			}
+  			.bg-circle {
+  				@include po(34,34);
+  				@include size(509/75*$rem,509/75*$rem,none);
+  			}
+  			.bg-border {
+  				@include po(0,0);
+  				@include size(579/75*$rem,579/75*$rem,none);
+  			}
+  			.point {
+  				@include po(168,216);
+  				@include size(145/75*$rem,194/75*$rem,none);
+  				z-index:1;
+  			}
+  			.rotate-area {
+  				z-index:0;
+				@include po(66,66);
+  				@include size(447/75*$rem,447/75*$rem,none);
+
+	  			.text {
+	  				@include po(0,0);
+	  				z-index:2000;
+		  			@include size(447/75*$rem,447/75*$rem,none);
+		  			i {
+		  			@include po(0,0);
+		  			@include size(75/75*$rem,20/75*$rem,none);
+		  			font-size:12/75*$rem;
+		  			line-height:20/75*$rem;
+		  			color:#ffd71a;
+		  			}
+		  		.select {
+		  			color:#fff;
+		  		}
+	  			}
+		  		#mycanvas,#my-01{
+		  			@include po(0,0);
+		  			@include size(447/75*$rem,447/75*$rem,none);
+		  			z-index:0;
+		  		} 
+		  		#mycanvas {
+		  			z-index:1;
+		  		}
+		  		#my-01 {}
+		  		.rotate-pic {
+		  			@include po(0,0);
+		  			@include size(447/75*$rem,447/75*$rem,none);
+		  		}
+	  		}
+	  		.click {	
+	  			@include po(216,216);
+  				@include size(145/75*$rem,145/75*$rem,none);
+  					z-index:100;
+	  		}
+	  		.orig-pointer {
+	  			@include po(-21,158);
+	  			@include size(259/75*$rem,119/75*$rem,none);
+	  		}
+  		}
+  		.bottom {
+  		position:absolute;
+  		left:0;
+  		bottom:0;
+  			.white-text {
+  				position:absolute;
+  				right:0/75*$rem;
+  				bottom:270/75*$rem;
+  				@include size(750/75*$rem,50/75*$rem,none);
+  			}
+  			.info-text {
+  				position:absolute;
+  				right:0;
+  				bottom:270/75*$rem;
+  				@include size(750/75*$rem,37/75*$rem,none);
+  				@include font(26,37);
+  				text-align:center;
+  				color:#fff;
+  			}
+  			.game {
+  				position:absolute;
+  				left:0/75*$rem;
+  				bottom:0;
+  				.btn {
+  					position:absolute;
+  					left:0;
+  					bottom:120/75*$rem;
+  					@include size(750/75*$rem,100/75*$rem,none);
+  					a {
+  						position:absolute;
+  						@include size(220/75*$rem,100/75*$rem,none);
+  						img {
+  							@include po(0,0);
+  							@include size(220/75*$rem,100/75*$rem,none);
+  						}
+  						b {	
+  							position:relative;
+  							z-index:1;
+  							margin-top:5/75*$rem;
+  							display:block;
+  							text-align:center;
+  							width:100%;
+  							@include font(30,40);
+  							height:40;
+  							color:#951D5B;
+  						}
+  						strong {
+  							position:relative;
+  							z-index:1;
+  							display:block;
+  							text-align:center;
+  							width:100%;
+  							@include font(24,30);
+  							color:#951D5B;
+  						}
+  					}
+  					.small {
+  						left:15.7%;	
+  					}
+  					.big {
+  						left:55.1%;	
+  					}
+  				}
+  				.bottom-text {
+  					position:absolute;
+		  			bottom:0;
+		  			left:45/75*$rem;
+		  			@include size(660/75*$rem,100/75*$rem,none);
+		  				.bottom-color {
+		  					position:absolute;
+		  					left:0;
+		  					bottom:0;
+		  					@include size(660/75*$rem,96/75*$rem,none);
+		  				}
+		  				.select {
+		  					position:absolute;
+		  					left:0;
+		  					bottom:0;
+		  					@include size(220/75*$rem,88/75*$rem,none);
+		  				}
+		  				#bot-tex {
+		  					@include size(100%,100%,none);
+		  					position:relative;
+		  					z-index:200;
+			  				em {
+			  					@include size(220/75*$rem,88/75*$rem,none);
+			  					@include font(30,100);
+			  					color:#F8D271;
+			  					text-align:center;
+			  				}
+		  				}
+		  			}
+
+  			}	
+
+  		}
+  	}
