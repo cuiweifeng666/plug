@@ -5,11 +5,6 @@
   to {
     stroke-dashoffset: -1300;
     stroke-dasharray: -1300; } }
-#svg01 {
-  stroke-dasharray: 1300;
-  stroke-dashoffset: 1300;
-  animation: dash 10s linear; }
-
 @-webkit-keyframes move {}
 @-webkit-keyframes rotating {
   0% {
@@ -55,6 +50,7 @@ body {
   display: block;
   clear: both; }
 
+.area
 .red {
   background: red;
   position: absolute;
@@ -117,153 +113,180 @@ body {
   height: 100%;
   background: none no-repeat; }
 
+.loading {
+  width: 100%;
+  height: 0.2rem;
+  background: none no-repeat;
+  position: absolute;
+  left: 0;
+  top: 40%; }
+
 .ranking-head {
   display: none;
-  position: absolute;
-  left: 0.37333rem;
-  top: 9.5%;
-  z-index: 10;
   width: 9.26667rem;
   height: 14.88rem;
-  background: none no-repeat; }
+  background: none no-repeat;
+  position: absolute;
+  top: 0.66667rem;
+  left: 0.37333rem;
+  z-index: 100000; }
   .ranking-head .rank-bg {
+    width: 9.26667rem;
+    height: 14.66667rem;
+    background: none no-repeat;
     position: absolute;
     top: 0rem;
-    left: 0rem;
-    width: 9.26667rem;
-    height: 14.88rem;
-    background: none no-repeat; }
+    left: 0rem; }
   .ranking-head .close {
-    position: absolute;
-    right: -0.4rem;
-    top: 1.33333rem;
     width: 0.8rem;
     height: 0.8rem;
-    background: none no-repeat; }
+    background: none no-repeat;
+    position: absolute;
+    right: -0.4rem;
+    top: 1.38667rem; }
   .ranking-head .ranking-title {
     position: absolute;
-    left: 5.6%;
     top: 2.78667rem;
-    width: 8rem;
-    height: 0.64rem;
+    left: 0.56rem;
+    width: 8.18667rem;
+    height: 0.8rem;
     background: none no-repeat;
-    padding: 0.08rem 0.09333rem 0.08rem 0.09333rem; }
-    .ranking-head .ranking-title .title {
-      position: relative;
-      z-index: 3;
-      width: 2.66667rem;
-      height: 0.64rem;
-      background: none no-repeat;
-      color: #fff;
-      text-align: center; }
-      .ranking-head .ranking-title .title em {
-        font-size: 0.32rem;
-        line-height: 0.64rem;
-        width: 2.66667rem;
-        height: 0.64rem;
-        background: none no-repeat; }
+    color: #fff;
+    font-size: 0.26667rem;
+    line-height: 0.53333rem; }
     .ranking-head .ranking-title .rank-head {
       position: absolute;
       top: 0rem;
       left: 0rem;
-      width: 8.18667rem;
-      height: 0.8rem;
+      width: 100%;
+      height: 100%;
       background: none no-repeat; }
-  .ranking-head .ranking-content {
-    position: absolute;
-    top: 4rem;
-    left: 0.22667rem;
-    width: 8.8rem;
-    height: auto; }
-    .ranking-head .ranking-content .ranking-detail {
+    .ranking-head .ranking-title .title {
+      text-align: center;
       position: relative;
+      width: 2.69333rem;
+      height: 0.64rem;
+      background: none no-repeat; }
+      .ranking-head .ranking-title .title img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2.77333rem;
+        height: 0.77333rem;
+        background: 0 no-repeat; }
+      .ranking-head .ranking-title .title em {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: none no-repeat;
+        font-size: 0.32rem;
+        line-height: 0.74667rem; }
+    .ranking-head .ranking-title .title:nth-of-type(2) {
+      left: -0.04rem; }
+      .ranking-head .ranking-title .title:nth-of-type(2) img {
+        display: none; }
+    .ranking-head .ranking-title .title:nth-of-type(3) {
+      top: 0.06667rem;
+      left: 0.01333rem; }
+      .ranking-head .ranking-title .title:nth-of-type(3) img {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: none no-repeat; }
+      .ranking-head .ranking-title .title:nth-of-type(3) em {
+        font-size: 0.32rem;
+        line-height: 0.66667rem; }
+  .ranking-head .ranking-content {
+    width: 100%;
+    height: auto;
+    background: none no-repeat;
+    position: absolute;
+    top: 3.81333rem;
+    left: 0rem; }
+    .ranking-head .ranking-content .ranking-detail {
       width: 8.8rem;
       height: 1.33333rem;
       background: none no-repeat;
-      margin-bottom: 0.2rem; }
+      margin-top: 0.18667rem;
+      margin-left: 0.22667rem;
+      position: relative; }
       .ranking-head .ranking-content .ranking-detail .rank-img {
+        width: 8.8rem;
+        height: 1.38667rem;
+        background: none no-repeat;
         position: absolute;
         top: 0rem;
-        left: 0rem;
-        width: 8.8rem;
-        height: 1.4rem;
-        background: none no-repeat; }
+        left: 0rem; }
+      .ranking-head .ranking-content .ranking-detail .rank-order {
+        width: 0.84rem;
+        height: 0.66667rem;
+        background: none no-repeat;
+        position: absolute;
+        top: 0.33333rem;
+        left: 0.16rem; }
       .ranking-head .ranking-content .ranking-detail .text {
-        position: relative;
-        z-index: 1;
-        margin-top: 0.41333rem;
-        margin-left: 0.32rem;
-        margin-right: 0.16rem;
-        font-size: 0.32rem;
-        line-height: 0.52rem;
         width: 0.52rem;
         height: 0.52rem;
         background: #fff no-repeat;
+        position: absolute;
+        top: 0.45333rem;
+        left: 0.32rem;
         text-align: center;
-        color: #44154E;
-        opacity: .4; }
-      .ranking-head .ranking-content .ranking-detail .rank-order {
-        position: relative;
-        z-index: 1;
-        margin-top: 0.33333rem;
-        margin-left: 0.16rem;
-        width: 0.82667rem;
-        height: 0.66667rem;
-        background: none no-repeat; }
+        font-size: 0.32rem;
+        line-height: 0.52rem;
+        opacity: .3;
+        color: #3A0C40; }
       .ranking-head .ranking-content .ranking-detail .head-pic {
-        position: relative;
-        z-index: 1;
-        margin-top: 0.13333rem;
-        margin-left: 0.21333rem;
         width: 1.06667rem;
         height: 1.06667rem;
         background: none no-repeat;
-        border-radius: 50%; }
+        position: absolute;
+        top: 0.13333rem;
+        left: 1.2rem;
+        border-radius: 50%;
+        overflow: hidden; }
         .ranking-head .ranking-content .ranking-detail .head-pic img {
-          position: absolute;
-          top: 0rem;
-          left: 0rem;
+          display: inline-block;
           width: 1.06667rem;
           height: 1.06667rem;
           background: none no-repeat; }
       .ranking-head .ranking-content .ranking-detail em {
-        position: relative;
-        z-index: 1;
-        margin-top: 0rem;
-        margin-left: 0.30667rem;
-        font-size: 0.32rem;
-        line-height: 1.33333rem;
         width: 2.16rem;
-        height: 1.25333rem;
+        height: 0.32rem;
         background: none no-repeat;
+        position: absolute;
+        top: 0.49333rem;
+        left: 2.53333rem;
+        font-size: 0.32rem;
+        line-height: 0.4rem;
         color: #fff; }
       .ranking-head .ranking-content .ranking-detail .gold {
-        position: relative;
-        z-index: 1;
-        margin-top: 0.46667rem;
-        margin-left: 0rem;
         width: 0.4rem;
         height: 0.4rem;
-        background: none no-repeat; }
-      .ranking-head .ranking-content .ranking-detail i {
-        position: relative;
-        z-index: 1;
-        margin-top: 0rem;
-        margin-left: 0.12rem;
-        font-size: 0.32rem;
-        line-height: 1.33333rem;
-        width: 1.94667rem;
-        height: 1.25333rem;
         background: none no-repeat;
-        color: #F8D271; }
+        position: absolute;
+        top: 0.46667rem;
+        left: 4.74667rem; }
+      .ranking-head .ranking-content .ranking-detail i {
+        width: 1.89333rem;
+        height: 0.4rem;
+        background: none no-repeat;
+        position: absolute;
+        top: 0.45333rem;
+        left: 5.33333rem;
+        font-size: 0.32rem;
+        line-height: 0.4rem;
+        font-style: normal;
+        color: #F8D271;
+        font-weight: bold; }
       .ranking-head .ranking-content .ranking-detail .card {
-        position: relative;
-        z-index: 1;
-        margin-top: 0.4rem;
-        margin-left: 0rem;
         width: 1.14667rem;
         height: 0.66667rem;
-        background: none no-repeat; }
+        background: none no-repeat;
+        position: absolute;
+        top: 0.4rem;
+        left: 7.14667rem; }
 
 header {
   width: 10rem;
@@ -307,7 +330,8 @@ header {
       height: 0.66667rem;
       background: none no-repeat;
       font-size: 0.34667rem;
-      line-height: 0.66667rem; }
+      line-height: 0.66667rem;
+      color: #fff; }
     header .gold-group .more {
       position: absolute;
       right: 0rem;
@@ -357,6 +381,8 @@ section {
     left: 0;
     width: 100%;
     height: 100%; }
+  section .area b {
+    position: absolute; }
   section .bottom-txt {
     font-size: 0.00267rem;
     line-height: 0.00867rem; }
@@ -377,6 +403,15 @@ section {
     border: 0.01rem dashed #5D2C77;
     position: relative;
     z-index: 3; }
+    section .area p {
+      color: #fff;
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+      display: block;
+      position: absolute;
+      left: 0;
+      text-align: center;
+      width: 100%; }
   section .left {
     width: 100%;
     height: 50%;
@@ -385,7 +420,7 @@ section {
 .time-clear {
   position: absolute;
   /*left:0%;*/
-  top: 52%;
+  top: 46%;
   z-index: 6;
   text-align: center;
   font-size: 1.33333rem;

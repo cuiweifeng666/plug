@@ -31,19 +31,20 @@
     <script type="text/javascript" src="../js/zepto.js"></script>
     <script type="text/javascript" src="../js/swiper.min.js"></script>
     <script>
-
     $(document).ready(function($){
         var t = $(document).width()/10;
         $("html").css("font-size",t);
         document.addEventListener('touchstart', function(e) {
             e.preventDefault();
         });
-
     })
     </script>
   </head>
   <body id="">
       <img src="../images/bg-shop.png" id="" class="bg" />
+        <div class="loading">
+            <img src="../images/temp6" id="" class="" />
+        </div>
        <div class="ranking-head">
         <img src="../images/rank-bg.png" id="" class="rank-bg" />
         <img src="../images/close.png" id="" class="close" />
@@ -51,15 +52,15 @@
             <img src="../images/rank-head.png" id="" class="rank-head" />
             <span class="title fl">
               <em class="fl">日排行</em>
-              <!-- <img src="../images/" id="" class="" /> -->
+              <img src="../images/harf-circle.png" id="" class="" />
             </span>
             <span class="title fl">
               <em class="fl">日排行</em>
-              <!-- <img src="../images/" id="" class="" /> -->
+              <img src="../images/harf-rect.png" id="" class="" />
             </span>
             <span class="title fl">
               <em class="fl">日排行</em>
-              <!-- <img src="../images/" id="" class="" /> -->
+              <img src="../images/ba.png" id="" class="" />
             </span>
          </div>
          <div class="ranking-content">
@@ -88,7 +89,7 @@
             </div>
             <div class="ranking-detail">
                 <img src="../images/name.png" id="" class="rank-img" />
-                <img src="../images/second.png" id="" class="rank-order fl" />
+                <img src="../images/third.png" id="" class="rank-order fl" />
                 <b class="head-pic fl">
                   <img src="../images/head1.png" id="" class="" />
                 </b>
@@ -109,7 +110,7 @@
             </div>
             <div class="ranking-detail">
                 <img src="../images/name.png" id="" class="rank-img" />
-                <span class="text fl" >4</span>
+                <span class="text fl" >5</span>
                 <b class="head-pic fl">
                   <img src="../images/head1.png" id="" class="" />
                 </b>
@@ -119,7 +120,7 @@
             </div>
              <div class="ranking-detail">
                 <img src="../images/name.png" id="" class="rank-img" />
-                <span class="text fl" >4</span>
+                <span class="text fl" >6</span>
                 <b class="head-pic fl">
                   <img src="../images/head1.png" id="" class="" />
                 </b>
@@ -129,7 +130,7 @@
             </div>
             <div class="ranking-detail">
                 <img src="../images/name.png" id="" class="rank-img" />
-                <span class="text fl" >4</span>
+                <span class="text fl" >7</span>
                 <b class="head-pic fl">
                   <img src="../images/head1.png" id="" class="" />
                 </b>
@@ -164,34 +165,46 @@
           <div class="poker-area01 area fl">
               <b></b>
               <img src="../images/red.png" id="" class="red-pic" />
+              <img src="" class="has">
+              <p></p>
           </div>
           <div class="poker-area02 area fl">
-              <b></b>
               <img src="../images/win7.png" id="" class="win7" />
+              <img src="" class="has">
           </div>
           <div class="poker-area03 fl area">
               <b></b>
               <img src="../images/black.png" id="" class="black" />
+              <img src="" class="has">
+              <p></p>
           </div>
           <div class="middle clearfix">
             <div class="left fl">
               <div class="poker-area04 fl area">
                   <b></b>
                   <img src="../images/big-win.png" id="" class="big-win" />
+                  <img src="" class="has">
+                  <p></p>
               </div>
               <div class="poker-area05 fl area">
                   <b></b>
                   <img src="../images/single-win.png" id="" class="single-win" />
+                  <img src="" class="has">
+                  <p></p>
               </div>
             </div>
             <div class="fl right">
               <div class="poker-area06 fr area">
                   <b></b>
                   <img src="../images/sm-win.png" id="" class="sm-win" />
+                  <img src="" class="has">
+                  <p></p>
               </div>              
               <div class="poker-area07 fr area">
                   <b></b>
                   <img src="../images/double-win.png" id="" class="double-win" />
+                  <img src="" class="has">
+                  <p></p>
               </div>
               </div>
             <div class="middle-center">
@@ -199,7 +212,7 @@
                   7出现时，只有押注7的赢
                 </div>
                 <div class="middle-con">
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="282" height="380" id="svg01">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="282" height="380" id="svg01" xml:space="preserve">
             <defs>
              <radialGradient id="linear" cx="152%" cy="161%" r="182%" fx="200%" fy="152%" gradientUnits="userSpaceOnUse">
               <stop offset="0%"   stop-color="#9ab1ff"/>
@@ -214,7 +227,6 @@
                   <div class="imgs porker">
                   <img src="../images/porker01.png" id="" class=" flip out" />
                     <img src="../images/porker.png" id="" class=" flip " />
-                    
                   </div>
                     <!-- <img src="../images/porker01.png" id="" class="porker ro-02" /> -->
                 </div>
@@ -236,16 +248,28 @@
           </div>
           <div class="bottom clearfix">
               <div class="poker-area08 area fl ">
+                  <b></b>
                   <img src="../images/win01.png" id="" class="win-pic" />
+                  <img src="" class="has">
+                  <p></p>
               </div>
               <div class="poker-area09 area ce fl">
+                  <b></b>
                   <img src="../images/win02.png" id="" class="win-pic" />
+                   <img src="" class="has">
+                   <p></p>
               </div>
               <div class="poker-area10 area ce fl">
+                  <b></b>
                   <img src="../images/win03.png" id="" class="win-pic" />
+                  <img src="" class="has">
+                  <p></p>
               </div>
               <div class="poker-area011 area ce fl">
+                  <b></b>
                   <img src="../images/win04.png" id="" class="win-pic" />
+                  <img src="" class="has">
+                  <p></p>
               </div> 
           </div>
       </section>

@@ -44,19 +44,15 @@ $rem:1rem;
 }
 @keyframes dash {
   from {
-            stroke-dashoffset: -0;
-             stroke-dasharray:-1300;
-          }
-         to {
-            stroke-dashoffset: -1300;
-             stroke-dasharray:-1300;
-          }
+        stroke-dashoffset: -0;
+         stroke-dasharray:-1300;
+      }
+     to {
+        stroke-dashoffset: -1300;
+         stroke-dasharray:-1300;
+      }
 }
-#svg01 {
-	stroke-dasharray: 1300;
-	stroke-dashoffset: 1300;
-	animation: dash 10s linear 
-}	
+
 @mixin border-1px($color){
     left: 0;
     bottom: 0;
@@ -118,6 +114,7 @@ body {
 	display:block;
 	clear:both;
 }
+.area
 .red {
 	background:red;
 	position:absolute;
@@ -129,6 +126,7 @@ body {
     transform : scaleY(0.7);
 }
 }
+
 @media (-webkit-min-device-pixel-ratio: 2),(min-device-aspect-ratio: 2) {
   .border-1px::after {
     -webkit-transform : scaleY(0.3);
@@ -142,20 +140,20 @@ body {
     }
     }
  .border-1px{
-  position : relative;}
-	.border-1px::after {
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	border-top:1px solid #A941E3;
-	width: 100%;
-	content: '';}
-@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-aspect-ratio: 1.5){
- .border-left::after {
-    -webkit-transform : scaleX(0.7);
-    transform : scaleX(0.7);
-}
+	  position : relative;}
+		.border-1px::after {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-top:1px solid #A941E3;
+		width: 100%;
+		content: '';}
+		@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-aspect-ratio: 1.5){
+		 .border-left::after {
+		    -webkit-transform : scaleX(0.7);
+		    transform : scaleX(0.7);
+		}
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),(min-device-aspect-ratio: 2) {
@@ -186,118 +184,129 @@ body {
 	z-index:-9999;
 	@include size(100%,100%,none);
 }
-
+.loading {
+	@include size(100%,15/75*$rem,none);
+	position:absolute;
+	left:0;
+	top:40%;
+}
 .ranking-head {
 		display:none;
-		position:absolute;
-		left:28/75*$rem;
-		top:9.5%;
-		z-index:10;
 		@include size(695/75*$rem,1116/75*$rem,none);
-	.rank-bg {
-		@include po(0,0);
-		@include size(695/75*$rem,1116/75*$rem,none);
-	}
-	.close {
-		position:absolute;
-		right:-30/75*$rem;
-		top:100/75*$rem;
-		@include size(60/75*$rem,60/75*$rem,none);
-	}
-	.ranking-title {
-		position:absolute;
-		left:5.6%;
-		top:209/75*$rem;
-		@include size(600/75*$rem,48/75*$rem,none);
-		padding:6/75*$rem 7/75*$rem 6/75*$rem 7/75*$rem;
-		.title {
-			position:relative;
-			z-index:3;
-			@include size(200/75*$rem,48/75*$rem,none);
-			color:#fff;
-			text-align:center;
-			em {
-				@include font(24,48);
-				@include size(200/75*$rem,48/75*$rem,none);
-			}
-			}
-		.rank-head {
-			@include po(0,0);
+		@include po(50,28);
+		z-index:100000;
+		.rank-bg {
+			@include size(695/75*$rem,1100/75*$rem,none);
+			@include po(0,0);	
+		}
+		.close {
+			@include size(60/75*$rem,60/75*$rem,none);
+			position:absolute;
+			right:-30/75*$rem;
+			top:104/75*$rem;
+		}
+		.ranking-title {
+			@include po(209,42);
 			@include size(614/75*$rem,60/75*$rem,none);
-		}
-	}
-	.ranking-content {
-			@include po(300,17);
-			width:660/75*$rem;
-			height:auto;
-
-		.ranking-detail {
-			position:relative;
-			@include size(660/75*$rem,100/75*$rem,none);
-			margin-bottom:15/75*$rem;
-			.rank-img {
+			.rank-head {
 				@include po(0,0);
-				@include size(660/75*$rem,105/75*$rem,none);
+				@include size(100%,100%,none);
 			}
-			.text {
-				position:relative;
-				z-index:1;
-				@include margin(31,24);
-				margin-right:12/75*$rem;
-				@include font(24,39);
-				@include size(39/75*$rem,39/75*$rem,#fff);
+			color:#fff;
+			@include font(20,40);
+			.title {
 				text-align:center;
-				color:#44154E;
-				opacity:.4;
-			}
-			.rank-order {
 				position:relative;
-				z-index:1;
-				@include margin(25,12);
-				@include size(62/75*$rem,50/75*$rem,none);
+				@include size(202/75*$rem,48/75*$rem,none);
+				img {
+					position:absolute;
+					left:0;
+					top:0;
+					@include size(208/75*$rem,58/75*$rem,0)
+				}
+				em {
+					position:relative;
+					z-index:1;
+					@include size(100%,100%,none);
+					@include font(24,56);
+				}
 			}
-			.head-pic {
-				position:relative;
-				z-index:1;
-				@include margin(10,16);
-				@include size(80/75*$rem,80/75*$rem,none);
-				border-radius:50%;
-				 img {
-				 	@include po(0,0);
-				 	@include size(80/75*$rem,80/75*$rem,none);
-				 }
+			.title:nth-of-type(2){
+				left:-3/75*$rem;
+				img {
+					display:none;
+				}
 			}
-			em {
-				position:relative;
-				z-index:1;
-				@include margin(0,23);
-				@include font(24,100);
-				@include size(162/75*$rem,94/75*$rem,none);
-				color:#fff;
-			}
-			.gold
-			 {
-				position:relative;
-				z-index:1;
-				@include margin(35,0);
-				@include size(30/75*$rem,30/75*$rem,none);
-			}
-			i {
-				position:relative;
-				z-index:1;
-				@include margin(0,9);
-				@include font(24,100);
-				@include size(146/75*$rem,94/75*$rem,none);
-				color:#F8D271;
-			}
-			.card {
-				position:relative;
-				z-index:1;
-				@include margin(30,0);
-				@include size(86/75*$rem,50/75*$rem,none);
+			.title:nth-of-type(3){
+
+				img {
+				display:none;
+				@include size(100%,100%,none);
+				}
+				top:5/75*$rem;
+				left:1/75*$rem;
+				em {
+					@include font(24,50);
+				}
 			}
 		}
-	}
+		.ranking-content {
+			@include size(100%,auto,none);
+			@include po(286,0);
+			.ranking-detail {
+				@include size(660/75*$rem,100/75*$rem,none);
+				@include margin(14,17);
+				position:relative;
+				.rank-img 	{	
+						@include size(660/75*$rem,104/75*$rem,none);
+						@include po(0,0);
+					}
+				.rank-order {
+					@include size(63/75*$rem,50/75*$rem,none);
+					@include po(25,12);
+				}
+				.text {
+					@include size(39/75*$rem,39/75*$rem,#fff);
+					@include po(34,24);
+					text-align:center;
+					@include font(24,39);
+					opacity:.3;
+					color:#3A0C40;
+				}
+				.head-pic {
+					@include size(80/75*$rem,80/75*$rem,none);
+					@include po(10,90);
+					border-radius:50%;
+					overflow:hidden;
+					img {
+						display:inline-block;
+						@include size(80/75*$rem,80/75*$rem,none);
+					}
+				}
+				em {
+					@include size(162/75*$rem,24/75*$rem,none);
+					@include po(37,190);
+					@include font(24,30);
+					color:#fff;
+				}
+				.gold {
+					@include size(30/75*$rem,30/75*$rem,none);
+					@include po(35,356);
+				}
+				i {
+					@include size(142/75*$rem,30/75*$rem,none);
+					@include po(34,400);
+					@include font(24,30);
+					font-style:normal;
+					color:#F8D271;
+					font-weight:bold;
+				}
+				.card {
+					@include size(86/75*$rem,50/75*$rem,none);
+					@include po(30,536);
+				}
+			}
+		}
 }
 header {
 	@include size(750/75*$rem,100/75*$rem,none);
@@ -324,6 +333,7 @@ header {
 			@include margin(0,8);
 			@include size(173/75*$rem,50/75*$rem,none);
 			@include font(26,50);
+			color:#fff;
 		}
 		.more {
 			position:absolute;
@@ -376,6 +386,9 @@ header {
       	width: 100%;
       	height: 100%;
       }
+      .area b{
+      	position:absolute;
+      }
       .bottom-txt {
       	@include font(.2,.65);
       }
@@ -403,7 +416,16 @@ header {
 		    	box-sizing:border-box;
 		    	border:0.01rem dashed #5D2C77;
 		    	position:relative;
-		    	z-index:3
+		    	z-index:3;
+		    	p {
+		    		color:#fff;
+                    @include font(60,60);
+                    display:block;
+                    position:absolute;
+                    left:0;
+                    text-align:center;
+                    width:100%;
+		    	}
 			}
 		.left {
 			@include size(100%,50%,none);
@@ -412,7 +434,7 @@ header {
 	.time-clear {
 			position:absolute;
 			/*left:0%;*/
-			top:52%;
+			top:46%;
 			z-index:6;
 			text-align:center;
 			@include font(100,400);

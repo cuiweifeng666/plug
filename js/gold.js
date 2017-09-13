@@ -4,7 +4,6 @@ Zepto(function($){
 		'transform':'scale(1.4)  translateZ(0)',
 		'transformOrign':'center'
 	})
-	  var socket = new WebSocket("ws://192.168.2.129:8080");
 	var t = $(window).height();
 	var t1 =  $('body>header').height();
 	var f1 =  $('body>footer').height();
@@ -182,7 +181,7 @@ Zepto(function($){
 		  	left:39*scaleSmall,
 		  })
 		   
-		      $('.win-first-01').css({
+		   $('.win-first-01').css({
 		  	top:35*scaleSmall,
 		  })
 		    $('.win-first-02').css({
@@ -271,8 +270,8 @@ Zepto(function($){
 		  	height:18*scaleSmall,
 		  	top:119*scaleSmall,
 		  	left:172*scaleSmall,
-		  })
-		      $('.win-02>img').eq(3).css({
+		   })
+		     $('.win-02>img').eq(3).css({
 		     width:78*scaleSmall,
 		  	height:20*scaleSmall,
 		  	top:166*scaleSmall,
@@ -375,11 +374,14 @@ Zepto(function($){
 		 
 	}//生成页面
 
-	// $('.plug').css({
-	// 	transform:'scale(1)',
-	// 	'-webkit-transform':'scale(1)',
-	// 	transition:'.5s'
-	// })
+	function plug(index,index2){
+		$('.plug').css({
+		transform:'scale(1)',
+		'-webkit-transform':'scale(1)',
+		transition:'.5s'
+		})
+	}
+	
 	function plugPic(){
 		$('.plug').css({
 		transform:'scale(0)',
@@ -389,12 +391,14 @@ Zepto(function($){
 	}
 	var chooseBtn = $('.choose');
  	chooseBtn.on('tap',function(e){
-     	clearBtn();
+ 		if(control){
+     		clearBtn();
     		$(e.target).css({
-            '-webkit-transform':'scale(1.4) translateZ(0)',
-             transform:'scale(1.4) translateZ(0)',
-            transition:".4s",
-        }).addClass('active')
+	            '-webkit-transform':'scale(1.4) translateZ(0)',
+	             transform:'scale(1.4) translateZ(0)',
+	            transition:".4s",
+        	}).addClass('active')
+    	}
    	 })//底部的按钮切换
    
    function clearBtn(){
@@ -518,33 +522,89 @@ Zepto(function($){
                opacity:1,
                 transition:'0s',
            })
-
          }  
 
         $('.cancel').on('tap',function(){
-          $('.start').show();
-          into();
+          resest();
         })
 
+    function resest(){
+    	$('.start').show();
+      	into();
+      	play = userGold.createGold()
+  		computer = moveFilmer.moveGold()
+    }
+    function num(n){
+    	$('.text-num').show().html(n)
+    }
+     var control = true;//按钮是否可点击
    $('.cancel').on('tap',function(){
-   		$('.choose').css({
-   			'-webkit-transform':'scale(1) translateZ(0)',
-             transform:'scale(1) translateZ(0)',
-            transition:".3s",
-   		}).eq(0).css({
-   			'-webkit-transform':'scale(1.4) translateZ(0)',
-             transform:'scale(1.4) translateZ(0)',
-            transition:".3s",
-   		})
+   		if(control){
+	   		$('.choose').css({
+	   			'-webkit-transform':'scale(1) translateZ(0)',
+	             transform:'scale(1) translateZ(0)',
+	            transition:".3s",
+	   		}).eq(0).css({
+	   			'-webkit-transform':'scale(1.4) translateZ(0)',
+	             transform:'scale(1.4) translateZ(0)',
+	            transition:".3s",
+	   		})
+   		}
    })
     $('#myCanve').get(0).width=$(window).width()  
      $('#myCanve').get(0).height=$(window).height() 
 
-   window.requestAnimFrame=(function(){
+    $('.rank01').on('tap',function(){
+    	$('.ranking-head').show();	
+    })
+    $('.ranking-head>.close').on('tap',function(){
+    	$('.ranking-head').hide();
+    })
+    function loading(){
+    	$('.loading').css({
+    		opacity:1,
+    		zIndex:2000,
+    		transition:'1s'
+    	})	
+    }
+    function loadingHide(){
+    	$('.loading').css({
+    		opacity:0,
+    		zIndex:2,
+    		transition:'500ms'
+    	})	
+    }
+     function controlBtn(control){
+     	if(control){
+     		$('.choose').css({
+   			'-webkit-transform':'scale(1) translateZ(0)',
+             transform:'scale(1) translateZ(0)',
+            transition:".3s",
+	   		}).eq(0).css({
+	   			'-webkit-transform':'scale(1.4) translateZ(0)',
+	             transform:'scale(1.4) translateZ(0)',
+	            transition:".3s",
+	   		})
+     	} else {
+     		$('.choose').css({
+   			'-webkit-transform':'scale(1) translateZ(0)',
+             transform:'scale(1) translateZ(0)',
+            transition:".3s",
+	   		})
+     	}
+     }
+     function trend(m){
+     	$('.tr-pic').eq(7).attr({
+     		src:m
+     	})
+     	$('.tr-pic').eq(7).before($('.tr-pic').eq(0))
+     }
+     // trend('../images/tr2.png');
+	window.requestAnimFrame=(function(){
  	 return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element) {
       return window.setTimeout(callback, 1000 / 50);
-    };
-})();  
+	    };
+	})();  
          var bs =
               {
      		 group:[$('.win-01').eq(1),$('.win-02').eq(1),$('.win-03').eq(1),$('.win-04').eq(1),$('.win-05').eq(1),$('.win-06').eq(1),$('.win-07').eq(1),$('.win-08').eq(1),$('.win-09').eq(1)],
@@ -557,12 +617,7 @@ Zepto(function($){
               }
            // var ctx = document.getElementById("myCanve").getContext('2d');
           var  ctx = document.getElementById("myCanve").getContext('2d')
-        socket.onopen = function(){
-   		
-	   }
-	   socket.onmessage = function(e){
-	   		// int(e);
-	   }
+          var  ctx1 = document.getElementById("myCanve1").getContext('2d')
         
      function selfDis(m){
        	this.choose = bs.group[m]
@@ -570,10 +625,10 @@ Zepto(function($){
        	this.chooseL = choose.offset().left;
          this.chooseT = choose.offset().top;
          this.chooseH = choose.offset().height;
-            return {
-            left:parseInt(this.chooseL+Math.random()*this.chooseW*0.4+10),
-            top:parseInt(this.chooseT+Math.random()*this.chooseH*0.6+20),
-            }
+        return {
+        left:parseInt(this.chooseL+Math.random()*this.chooseW*0.4+10),
+        top:parseInt(this.chooseT+Math.random()*this.chooseH*0.6+20),
+        }
         }
        var moveFilmer = {
        		moveGold:function(){
@@ -595,6 +650,7 @@ Zepto(function($){
 				   	var top = parseInt($('.head-start').offset().top+20); 
 				   	return {x:left,y:top};
        			}
+       			move.winArea = {main:4,area:0}
        			move.userCount = function(m){ //奖金币初始位置，目标位置，速度加入到数组中
        				for (var i = 0; i < m.length; i++) {
        						var s = selfDis(m[i])
@@ -608,22 +664,22 @@ Zepto(function($){
 						move.speed.unshift({x:xL,y:yT});
    					}
        			}
-       			move.aggregation = function(m,t,i){
+       			move.aggregation = function(){
        				for (var i =0;i < move.fillArray.length;i++) {
-       					if(m){
+       					if(move.winArea.area){
        						var num=Math.floor(move.target.length/3)
        						if(i<=num){
-       							var s=selfDis(4);
+       							var s=selfDis(move.winArea.area);
 	       						move.target[i].left = s.left;
 								move.target[i].top = s.top;
        						}
        						if(i>num){
-       							var s=selfDis(2);
+       							var s=selfDis(move.winArea.main);
 	       						move.target[i].left = s.left;
 								move.target[i].top = s.top;
        						}
        					} else {
-       						var s=selfDis(2);
+       						var s=selfDis(move.winArea.main);
        						move.target[i].left = s.left;
 							move.target[i].top = s.top;
        					}
@@ -632,24 +688,24 @@ Zepto(function($){
 						}
 							
        			}
-       			move.star = function(m,t){//中奖，且中奖位置是否存在俩个
+       			move.star = function(){//中奖，且中奖位置是否存在俩个
        				var n = 0;
        				var time=setInterval(function(){
-       				bs.group[m].css({
+       				bs.group[move.winArea.main].css({
        					background:'red',
        					opacity:1,
        					transition:'0s'
        				})
        					n++;
 	       				setTimeout(function(){
-	       					bs.group[m].css({
+	       					bs.group[move.winArea.main].css({
 	       					background:'red',
 	       					opacity:0,
 	       					transition:'0s'
 	       					})
        					if(n==4){
        						clearInterval(time)
-       						bs.group[m].css({
+       						bs.group[move.winArea.main].css({
 		       					opacity:1,
 		       					background:'',
 		       					transition:'0s'
@@ -657,23 +713,23 @@ Zepto(function($){
 	       					}
 	       				},300)
        				},600)
-       				if(t){
+       				if(move.winArea.area){
        					var timer2=setInterval(function(){
-	       				bs.group[t].css({
+	       				bs.group[move.winArea.area].css({
 	       					background:'red',
 	       					opacity:1,
 	       					transition:'0s'
 	       				})
 	       					n++;
 		       				setTimeout(function(){
-		       					bs.group[t].css({
+		       					bs.group[move.winArea.area].css({
 		       					background:'red',
 		       					opacity:0,
 		       					transition:'0s'
 		       					})
 	       					if(n==4){
 	       						clearInterval(timer2)
-	       						bs.group[t].css({
+	       						bs.group[move.winArea.area].css({
 			       					opacity:1,
 			       					background:'',
 			       					transition:'0s'
@@ -692,10 +748,24 @@ Zepto(function($){
 						move.speed[i].x = (move.target[i].left - move.fillArray[i].x)/50;
 						move.speed[i].y = (move.target[i].top - move.fillArray[i].y)/50;					
 					}
-					// move.target[i].num = 1;
 					//调用收集金币动画
        			} 
-       			move.orWin = function(m,i){
+       			move.info = [233,434,5,4,56,6,65,7,7]//每次金币的数量动画
+       			move.text = function(){
+       				ctx.font="20px Arial";
+       				ctx.fillStyle = "#fff";
+       				for (var i = 0; i < 9; i++) {
+       					var width = ctx.measureText(move.info[i])
+       					var textX = bs.group[i].offset().left +(bs.group[i].offset().width - width.width)/2
+       					var textY = bs.group[i].offset().top +20  
+       					// if(setOf){
+       					// 	 console.log(textX,textY,move.info,width)
+       					// }
+       					// ctx.fillText(move.info[i],(obj.chooseL+obj.chooseW-width),(obj.chooseT+obj.chooseH-20))
+       					ctx.fillText(move.info[i],textX,textY)
+       				}
+       			}
+       			move.orWin = function(m){
        				for (var i =0;i < move.fillArray.length;i++) {
        					if(m){
        						 move.win=Math.floor(move.target.length/4)
@@ -717,11 +787,21 @@ Zepto(function($){
        						// console.log(move.target)
 							move.speed[i].x = (move.target[i].left - move.fillArray[i].x)/50;
 							move.speed[i].y = (move.target[i].top - move.fillArray[i].y)/50;
-							move.back = 3;
+							// move.back = 3;
        				}
-       				}
+       			}
        			move.draw = function(){//每次调用的绘图函数
        				for (var i =0;i < move.fillArray.length; i++) {
+       						move.text();
+       						// console.log(new selfDis(2))
+       						// console.log(move.text())
+       						// ctx.fillStyle = "#fff"
+       						// ctx.fillText("sdfjlk",200,330)
+       						if(move.back === -1){
+       							ctx1.drawImage(move.img, move.target[i].x, move.target[i].y ,10 ,10);
+       							move.fillArray[i].x = move.target[i].x;
+       							move.fillArray[i].y = move.target[i].y;
+       						}
        						if(move.back === 0){
 	       						 if( move.target[i].top <= move.fillArray[i].y){
 	       							// move.fillArray[i].x = move.target[i].left;
@@ -729,9 +809,11 @@ Zepto(function($){
 	       							ctx.drawImage(move.img, move.target[i].left, move.target[i].top ,10 ,10);
 	       							// if(move.target[i].num == 0){
 	       								// setTimeout(function(){
-	       									// move.backMoney();
-	       									// move.back = 1;
+	       								// 	move.backMoney();
+	       								// 	move.back = 1;
+
 	       								// },1000)
+	       							// 	move.target[i].num = 1; 
 	       							// }
 	       							//金币开始往获奖位置走
 	       						} else {
@@ -744,9 +826,9 @@ Zepto(function($){
 	       						if( move.target[i].top <= move.fillArray[i].y){
 	       							ctx.drawImage(move.img, move.target[i].left, move.target[i].top ,10 ,10);
 	       							// setTimeout(function(){
-	       									move.aggregation(m=1,t,i);
-	       									move.star(2,t=4);
-	       									move.back =2;
+	       							// 	move.back =2;
+	       							// 		move.aggregation(m=1,t);
+	       							// 		move.star(2,t=4);
 	       							// },2000)
 	       							// move.aggrega	tion(m=1,t);//金币到获奖区域
 	       						} else {
@@ -758,7 +840,7 @@ Zepto(function($){
        						if(move.back === 2){//金币到获奖区域
 	       						if( move.target[i].top >= move.fillArray[i].y){
 	       							ctx.drawImage(move.img, move.target[i].left, move.target[i].top ,10 ,10);
-	       								move.orWin(m=1,i);//从获奖区域到（可能没中头像），和顶部初始点
+	       								// move.orWin(m=1);//从获奖区域到（可能没中头像），和顶部初始点
 	       						} else {
 	       							ctx.drawImage(move.img, move.fillArray[i].x, move.fillArray[i].y ,10 ,10);
 		       						move.fillArray[i].x += move.speed[i].x;
@@ -766,14 +848,15 @@ Zepto(function($){
 	       						}
        						}
        						if(move.back === 3){//从获奖区域到（可能没中头像），和顶部初始点
+       							// if( move.target[i].top <= move.fillArray[i].y){
 	       						if((i<=move.win && move.target[i].top <=  move.fillArray[i].y)||(i>move.win && move.target[i].top >=  move.fillArray[i].y)||(move.win == -1 && move.target[i].top >=  move.fillArray[i].y)){
 	       								ctx.drawImage(move.img, move.target[i].left, move.target[i].top ,10 ,10);
-	       								computer ={};
-	       								computerOnoff = false;
+	       								computer =false;
+	       								// computerOnoff = false;
 	       							}else {
 	       								ctx.drawImage(move.img, move.fillArray[i].x, move.fillArray[i].y ,10 ,10);
-				       						move.fillArray[i].x += move.speed[i].x;
-				       						move.fillArray[i].y += move.speed[i].y;
+				       					move.fillArray[i].x += move.speed[i].x;
+				       					move.fillArray[i].y += move.speed[i].y;
 	       						} 
        						}
        				}
@@ -791,8 +874,7 @@ Zepto(function($){
        				user.target = [];
        				user.state = 0;
        				user.num = 0;
-       				user.add = function(select,loc,m){
-       					// if(!onoff){
+       				user.add = function(select,m){
        					for (var i = 0; i <= select; i++) {
        						var s = selfDis(m)
 	       					user.target.unshift(s)
@@ -806,8 +888,8 @@ Zepto(function($){
    						}
        				}
        				user.userBack=function(i){
-							user.target[i].left = parseInt($('.contect').offset().left+10);
-							user.target[i].top = parseInt($('.contect').offset().top+10);
+							user.target[i].left = parseInt($('.head-start').offset().left+20);
+							user.target[i].top = parseInt($('.head-start').offset().top+20);
 							user.speed[i].x = (user.target[i].left - user.arrayFill[i].x)/50;
 							user.speed[i].y = (user.target[i].top -  user.arrayFill[i].y)/50;
 							
@@ -816,31 +898,28 @@ Zepto(function($){
        					for(var i = 0; i<user.arrayFill.length; i++){
        						if(user.state===0 ){
 	       						if(user.arrayFill[i].y<=user.target[i].top){
-	       							
+	       							// user.target[i].onoff = true;
 	       							ctx.drawImage(user.img, user.arrayFill[i].x,user.arrayFill[i].y,10,10);
-	       							if(user.target[i].onoff){
-	       									user.userBack(i);
-	       									user.target[i].onoff = false;
-	       								setTimeout(function(){
-	       									user.state===1;
-	       								},2000)
-	       							}
+	       							user.userBack(i);
+   									// if(i == user.arrayFill.length-1 ){
+   									// user.state = 2;
+   									// }
+	       								// user.state = 1;
 	       						} else {
 		       						ctx.drawImage(user.img, user.arrayFill[i].x,user.arrayFill[i].y,10,10);
 		       						user.arrayFill[i].x += user.speed[i].x;
 		       						user.arrayFill[i].y += user.speed[i].y;
-	       					// 	console.log(i+'===='+user.speed[i].x+'===='+user.arrayFill[i].x)
 	       						}
        						}
        						if(user.state===1 ){
-       							if(user.arrayFill[i].y<=user.target[i].top){
-	       							ctx.drawImage(user.img, user.arrayFill[i].x,user.arrayFill[i].y,10,10);
-	       						} else {
-		       						ctx.drawImage(user.img, user.arrayFill[i].x,user.arrayFill[i].y,10,10);
+       							if(user.arrayFill[i].y>=user.target[i].top){
+       								ctx.drawImage(user.img, user.arrayFill[i].x,user.arrayFill[i].y,10,10);
+       								play = false
+       							}else {
+       								ctx.drawImage(user.img, user.arrayFill[i].x,user.arrayFill[i].y,10,10);
 		       						user.arrayFill[i].x += user.speed[i].x;
 		       						user.arrayFill[i].y += user.speed[i].y;
-		       						console.log(i+'==='+user.arrayFill[i].x+"==="+user.speed[i].x)
-		       					}
+       							}
        						}
        					}
        				}
@@ -849,39 +928,65 @@ Zepto(function($){
        	     }
        function restart(){
        		ctx.clearRect(0,0,$(window).width(), $(window).height());
-       		// if(playOnoff){
+       		if(play){
        			play.draw();
-       		// }
-       		// if(computerOnoff){
-       			// computer.draw();
-       		// }
+       		}
+       		if(computer){
+       			computer.draw();
+       		}
        		requestAnimFrame(restart);
        }
+       function mathCount(m){
+       		for(var i= 0;i< m.length; i++) {
+       			if(m.length >= 4){
+       				
+       			}
+       		}
+       }
+
        var play = userGold.createGold(),playOnoff = true;
        var computer = moveFilmer.moveGold(),computerOnoff=true;
        var setOf = true;
        var n = 0;
-       var userArr = [1,3,6,4,0,6,5,7,3,1,3,6,4,0,6,5,7,3]
+       var userArr = [1,3,6,4,0,6,5,7,3,1,3,6,4,0,6,5,7,3];
+        restart();	
        $('.rect').on('singleTap',function(e){
-       		if(playOnoff){
+       		if(control){
        		if($(e.target).closest('.rect')){
                 var m=$(e.target).index();
                 var selectObj=$('.m-my').find('.active');
                 var select=$('.m-my').find('.active').index();
                 var u  = Math.floor($('.m-my').find('.active').offset().left)+Math.floor($('.m-my').find('.active').width()/2)-20
                 var g = Math.floor($('.m-my').find('.active').offset().top -20 +parseInt($('.m-my').find('.active').height()/2))
-               play.add(select,6,m);
-               // computer.userCount(userArr);
+               if(play&&play.state === 0){
+              		play.add(select,m);
+               }
+               if(computer&&(computer.back == 0||computer.back == -1)){
+              	 computer.userCount(userArr);
+               }
                if(setOf){
-	               	restart();
+	               
 	               	setOf = false;
 	               }
                }
-           		if(n==4){
-       				computer.backMoney();
-       				computer.back = 1;
-	       		}	
-	       		n++;
+     //           setTimeout(function(){
+     //           	computer.backMoney();
+	    //    		computer.back = 1;
+	    //    		computer.text = function(){
+	    //    		}
+	    //    		play.state = 1;
+     //           },3000)
+     //           setTimeout(function(){
+     //           		computer.winArea = {main:4,area:5}
+     //           		computer.aggregation();
+					// computer.star();
+					// computer.back =2;
+     //           },4000)
+     //           setTimeout(function(){
+     //           		computer.orWin(m=1);
+     //           		computer.back =3;
+     //           },5000)
+               
             }
        })
    

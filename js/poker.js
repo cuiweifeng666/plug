@@ -15,11 +15,21 @@ Zepto(function($){
     		left:half/2,
     		height:h,
     	})
+        var s = h/400;
+        var t = h-s*h
+        console.log(s)
+         $('.ranking-head').css({
+            transform:'scale('+s+') translateZ(0) translateY(-'+t+'px)',
+            '-webkit-transform':'scale('+s+') translateZ(0) translateY(-'+t+'px)',
+            'transform-origin':'center',
+            bottom:10+'%'
+          })
     }else {
     	var t=h-$('section').height();
     	$('section').css({
     		top:t/2,
     	})
+        // console.log(2)
     }
     $('.con-head').css({
     	width:100+"%",
@@ -33,6 +43,10 @@ Zepto(function($){
     	width:26.7+"%",
     	height:23.72+"%",
     	marginLeft:2.7+"%",
+    })
+    $('.area b').css({
+        width:100+"%",
+        height:100+"%",
     })
     $('.red-pic').css({
     	width:40+"%",
@@ -184,10 +198,8 @@ Zepto(function($){
       var tl=$('#svg01').width()
       $('#svg_11').css({
       	positon:'absolute',
-      	// left:'-20%',
-      	transform:'scaleX('+(tl/wl-.022)+') scaleY('+(tl/wl-.004)+')',
-      	WebkitTransform:'scaleX('+(tl/wl-.022)+') scaleY('+(tl/wl-.004)+')',
-
+      	transform:'scaleX('+(tl/wl-.02)+') scaleY('+(tl/wl-.004)+')',
+      	'-webkit-transform':'scaleX('+(tl/wl-.02)+') scaleY('+(tl/wl-.004)+')',
       })
       $('.bottom-txt').css({
       	display:'block',
@@ -199,10 +211,27 @@ Zepto(function($){
     	lineHeight:'.65rem',
     	color:'#9676A7',
     	marginTop:'1.3%'
-      })
+      })      
       $('.time-clear').css({
       	left:(w-$('.time-clear').width())/2,
       })
+     
+    // $('#svg01').css({
+    //    'stroke-dasharray': 1300,
+    //     'stroke-dashoffset': 1300,
+    //     animation:'dash 10s linear',
+    //     '-webkit-animation':'dash 10s linear',
+    //     transition:'10s'
+    // })
+    function startFilm(){
+            $('#svg01').css({
+               'stroke-dasharray': 1300,
+                'stroke-dashoffset': 1300,
+                animation:'dash 10s linear',
+                '-webkit-animation':'dash 10s linear',
+             })
+    }
+    startFilm();
    // 在前面显示的元素，隐藏在后面的元素
 		var eleBack = null, eleFront = null,
 		//     // 纸牌元素们 
@@ -221,40 +250,73 @@ Zepto(function($){
 		    });
 		};
 		funBackOrFront();
+  		
+        function changePorker(t){//反面获奖扑克
+            eleFront.addClass("out").removeClass("in");
+            $(".porker>img").eq(0).css({
+             display:'block'
+            })
+            $(".porker>img").eq(0).attr({
+             src:t.porker
+            })
+                setTimeout(function() {
+                    eleBack.addClass("in").removeClass("out");
+                    // 重新确定正反元素
+                    funBackOrFront();
+                }, 225);
+            }
+        function backPorker(){//返回正面扑克
+            eleFront.addClass("out").removeClass("in");
+            $(".porker>img").eq(0).css({
+             display:'block'
+            })
+            setTimeout(function() {
+                    eleBack.addClass("in").removeClass("out");
+                    // 重新确定正反元素
+                    funBackOrFront();
+                }, 225);
+        }
+        setTimeout(function(){
+                changePorker({porker:'../images/1-02.png'});
+                setTimeout(function(){
+                   backPorker(); 
+                },1000)
+        },5000);
 
-  		var t = 10,timeAdd=null;
-  		timeAdd = setInterval(function(){
-  			t--;
-  			if(t==0){
-  				$('.time-clear').html(10)
-  				$(".porker>img").eq(0).css({
-		    	display:'block'
-		    })
-  				clearInterval(timeAdd);
-	  			 eleFront.addClass("out").removeClass("in");
-			    setTimeout(function() {
-			        eleBack.addClass("in").removeClass("out");
-			//         // 重新确定正反元素
-			        funBackOrFront();
-			    }, 225);
-			    return false;
-  				
-  				t=0
-  			}
-  				$('.time-clear').html(t)
-  		},1000)
+        
+        var small = ["../images/1p.png","../images/3p.png","../images/3p.png","../images/4p.png","../images/6p.png"];
+        function smallLoad(){//刚进来获取到信息
+            small.forEach(function(item,index){
+                if(index !== 4){
+                    $('.middle-pokers>img').eq(index).attr({
+                        src:item
+                    })
+                } else if (index === 4) {
+                    $('.middle-pokers>img').eq(index+1).attr({
+                        src:item
+                    })
+                }
+            })
+        }
+        // smallLoad();
+        function trend(newImage){//每次的胜负走势
+            $('.middle-pokers').find('img').eq(5).attr({src:newImage})
+        }
+        trend("../images/1-02.png")
   		var ch=$('.bottom-btn>img').height()
-  		var bch = ch*1.4
-  		console.log(ch)
+  		var bch = ch*1.4,tch = ch*1.2
+        var clone = null;
+        var arr2 = [10,100,1000,'全部'];
   		$('.bot-cont').on('tap',function(e){
   				if($(e.target).closest('.bottom-btn')){
-  						$('.bottom-btn>img').css({
-  							transform:'scale(1) translateY(0)',
-							'-webkit-transform':'scale(1) translateY(0)' ,
-							'-webkit-transform-origin':'center',
-							transition: '500ms'
-  						})
-  						var t=$(e.target).closest('.bottom-btn').index();
+  						 var t=$(e.target).closest('.bottom-btn').index();
+                        if(t>0 && t<5){
+                            $('.bottom-btn>img').css({
+                            transform:'scale(1) translateY(0)',
+                            '-webkit-transform':'scale(1) translateY(0)' ,
+                            '-webkit-transform-origin':'center',
+                            transition: '500ms'
+                        })
   						$('.bottom-btn').eq(t).find('img').css({
   							transform:'scale(1.4) translateY('+-(bch-ch)/4+'px) translateZ(0)',
 							'-webkit-transform':'scale(1.4) translateY('+-(bch-ch)/4+'px) translateZ(0)' ,
@@ -262,6 +324,12 @@ Zepto(function($){
 							transition: '500ms',
 							"-webkit-transition":'500ms'
   						})
+                        $(".bottom-btn").removeClass('active');
+                             var m=$(e.target).parent().addClass('active');
+                             clone = $('.bottom-btn').eq(t).addClass('active').find('img').attr('src')
+                             // console.log(clone.find('img').attr('src'))
+                        }
+                       
   				}
   		})
 
@@ -273,17 +341,109 @@ Zepto(function($){
                 }
                 if(m==1){
                     $('.ranking-head').show();
-                    $('.ranking-head>.close').on('tap',function(){
-                           $('.ranking-head').hide();
-                    })
+                    $('.middle-con ').hide();
                 }
                 if(m==2){
                     console.log(1)
                 }
             }
         })
+        $('.ranking-head>.close').on('tap',function(){
+            $('.ranking-head').hide();
+            $('.middle-con').show();
+        })
 
         function ranking(){
             
         }
+        reset();
+        function reset(){
+            $('.bottom-btn').eq(1).addClass('active').find('img').css({
+                            transform:'scale(1.4) translateY('+-(bch-ch)/4+'px) translateZ(0)',
+                            '-webkit-transform':'scale(1.4) translateY('+-(bch-ch)/4+'px) translateZ(0)' ,
+                            '-webkit-transform-origin':'center',
+                            transition: '0s'
+                        });
+            clone = $('.bottom-btn').eq(1).addClass('active').find('img').attr('src')
+            console.log($('.bottom-btn').eq(1).addClass('active').find('img'))
+        }
+        $('.area').on('singleTap',function(){
+            if($(this).parent().closest('.area')){
+                var m = $(this).closest('.area');
+               $('.area').forEach(function(item,index){
+                   if(item == m[0]&&index !=1){
+                    itemChange(item)
+                    $(item).find('.has').attr({
+                        src:clone     
+                    }).css({
+                        position:'absolute',
+                        width:$(item).width()/2,
+                        height:$(item).width()/2,
+                        opacity:'1',
+                        left: $(item).width()/2-$(item).width()/4,
+                        top:$(item).height()/2-$(item).height()/3
+                    });
+                    $(item).find('p').css({
+                        top:$(item).height()/2+$(item).height()/9,
+                        fontSize:$(item).width()/5,
+                        opacity:1
+                    })
+                    var sel =$('.bot-cont').find('.active').index();
+                    $(item).find('p').html(arr2[sel-1])
+                   }
+               })
+            }
+        })
+        function itemChange(item){
+            $(item).find('b').css({
+                background:'#000',
+                opacity:.3,
+                transition:'.3s'
+            })
+
+        }
+        function clearBtn(){
+            $('.area').find('b').css({
+                opacity:'0'
+            })
+            $('.area').find('.has').attr("src","").css({
+                opacity:'0'
+            })
+            $('.area').find('p').css({
+                opacity:0
+            })
+        }
+         $('.bottom-btn').eq(5).on('tap',function(){//取消
+               clearBtn()
+               btnMove(this)
+         })
+         $('.bottom-btn').eq(0).on('tap',function(){//帮助
+               btnMove(this)
+         })
+         function btnMove(item){//取消按钮帮助按钮的效果
+             $(item).css({
+                transform:'scale(1.2) translateY('+-(tch-ch)/4+'px) translateZ(0)',
+                '-webkit-transform':'scale(1.2) translateY('+-(tch-ch)/4+'px) translateZ(0)' ,
+                '-webkit-transform-origin':'center',
+                transition: '0.3s'
+             })
+             setTimeout(function(){
+                  $(item).css({
+                transform:'scale(1) translateY(0) translateZ(0)',
+                '-webkit-transform':'scale(1) translateY(0) translateZ(0)' ,
+                '-webkit-transform-origin':'center',
+                transition: '0.3s'
+                })
+             },300)
+         }
+         // win(3)
+         function win(num){
+             $('.area').find('b').eq(num).css({
+                background:"#DA3231",
+                opacity:'1',
+                transition:'300ms',
+                zIndex:-1
+             })
+         }
+        
 })

@@ -57,4 +57,12 @@
     	var time1 = date.getTime()
     	return time1
     }
+    function Time(){
+        var date = new Date();
+        var  minutes = date.getMinutes();
+        minutes = minutes < 9 ? '0'+minutes : minutes;
+        var hours = date.getHours();
+        hours = hours  < 9 ? '0' + hours : hours;
+        return  hours + ':' + minutes;  
+    }
     

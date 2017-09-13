@@ -1,0 +1,167 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>摇奖选号</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- qq强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+
+    <!-- uc强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- qq强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- uc应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- qq应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端end -->
+    <link rel="stylesheet" type="text/css" href="../css/shake.css">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <script type="text/javascript" src="../js/zepto.js"></script>
+    <script type="text/javascript" src="../js/SaveDatas.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script>
+    $(document).ready(function($){
+        var t = $(document).width()/10;
+        $("html").css("font-size",t);
+        document.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+    })
+    </script>
+ </head>
+ <body>
+    <header class="head-first-text">
+            <div class="head-back">
+                    <span class="back"></span>
+            </div>
+           道具购买
+      </header>
+      <div id="navBar" class="clearfix">
+                <div class="bg"></div>
+                <a href="javascript:;" class="fl sphere active">
+                    <img src="../images/ssq.png" class="fl" />
+                </a>
+                <a href="javascript:;" class="fl lotto">
+                    <img src="../images/dlt.png" class="fl" />
+                </a>
+                <a href="javascript:;" class="fl max">
+                    <img src="../images/fcsd.png" class="fl" />
+                </a>
+                <a href="javascript:;" class="fl array">
+                    <img src="../images/pls.png" class="fl" />
+                </a>
+                <a href="javascript:;" class="fl lecai">
+                    <img src="../images/qlc.png" class="fl" />
+                </a>
+                <a href="javascript:;" class="fl qixing">
+                    <img src="../images/qxc.png" class="fl" />
+                </a>
+            </div>
+ 	<img src="../images/ima.jpg" class="ima" />
+       <div class="swiper-container swiper-container2 ch" >
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+         	<canvas id="shake"></canvas>
+         	<canvas id="circle"></canvas>
+            <canvas id="winCircle"></canvas>
+            <div class="moveGroup">
+                <img src="../images/Group-49.png" id="winNumber0" class="circle1" />
+                <img src="../images/Group-49.png" id="winNumber1" class="circle1" />
+                <img src="../images/Group-49.png" id="winNumber2" class="circle1" />
+                <img src="../images/Group-49.png" id="winNumber3" class="circle1" />
+                <img src="../images/Group-49.png" id="winNumber4" class="circle1" />
+                <img src="../images/Group-49.png" id="winNumber5" class="circle1" />
+                <img src="../images/Group-49.png" id="winNumber6" class="circle1" />
+                
+            </div>
+         	<section>
+         	
+         	<img src="../images/befault.png" id="" class="beautiful" />
+         	<div class="btn_group clearfix">
+         		<b class="fl shake_btn">自动摇奖</b>
+         		<b class="fl clone_btn">复制号码</b>
+         	</div>
+         	</section>
+         	<footer>
+         		<div class="footer-bg"></div>
+         		<ul>
+         			<li class="list clearfix">
+         				<div class="win fl">
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+                            <img src="../images/Group-49.png" id="" class="" />
+         				</div>
+                        <b class="fr">复制号码</b>
+         				<p class="fr">自动摇奖<i>14:00</i></p>
+         				
+         			</li>
+         			<li class="list clearfix">
+         				<div class="win fl">
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+                            <img src="../images/Group-49.png" id="" class="" />
+         				</div>
+         				<b class="fr">复制号码</b>
+                        <p class="fr">自动摇奖<i>14:00</i></p>
+         			</li>
+         			<li class="list clearfix">
+         				<div class="win fl">
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+                            <img src="../images/Group-49.png" id="" class="" />
+         				</div>
+         				<b class="fr">复制号码</b>
+                        <p class="fr">自动摇奖<i>14:00</i></p>
+         			</li>
+         			<li class="list clearfix">
+         				<div class="win fl">
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+         					
+         				</div>
+         				<b class="fr">复制号码</b>
+                        <p class="fr">自动摇奖<i>14:00</i></p>
+         			</li>
+         			<li class="list clearfix">
+         				<div class="win fl">
+         					<img src="../images/Group-49.png" id="" class="" />
+         					<img src="../images/Group-49.png" id="" class="" />
+
+         				</div>
+         				<b class="fr">复制号码</b>
+                        <p class="fr">自动摇奖<i>14:00</i></p>
+         			</li>
+         		</ul>
+         	</footer>
+            </div>
+                <!-- Add Scroll Bar -->
+            </div>
+         <div class="swiper-scrollbar swiper-scrollbar2 "></div>
+        </div>
+ 	<script type="text/javascript" src="../js/shake.js"></script>
+ </body>
+</html>
