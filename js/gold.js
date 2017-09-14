@@ -620,15 +620,15 @@ Zepto(function($){
           var  ctx1 = document.getElementById("myCanve1").getContext('2d')
         
      function selfDis(m){
-       	this.choose = bs.group[m]
+       	this.choose = bs.group[m];
        	this.chooseW = choose.offset().width;
        	this.chooseL = choose.offset().left;
          this.chooseT = choose.offset().top;
          this.chooseH = choose.offset().height;
         return {
-        left:parseInt(this.chooseL+Math.random()*this.chooseW*0.4+10),
-        top:parseInt(this.chooseT+Math.random()*this.chooseH*0.6+20),
-        }
+	        left:parseInt(this.chooseL+Math.random()*this.chooseW*0.4+10),
+	        top:parseInt(this.chooseT+Math.random()*this.chooseH*0.6+20),
+       	 }
         }
        var moveFilmer = {
        		moveGold:function(){
@@ -851,8 +851,9 @@ Zepto(function($){
        							// if( move.target[i].top <= move.fillArray[i].y){
 	       						if((i<=move.win && move.target[i].top <=  move.fillArray[i].y)||(i>move.win && move.target[i].top >=  move.fillArray[i].y)||(move.win == -1 && move.target[i].top >=  move.fillArray[i].y)){
 	       								ctx.drawImage(move.img, move.target[i].left, move.target[i].top ,10 ,10);
-	       								computer =false;
-	       								// computerOnoff = false;
+	       								// computer =function(){
+	       								// };
+	       								computerOnoff = false;
 	       							}else {
 	       								ctx.drawImage(move.img, move.fillArray[i].x, move.fillArray[i].y ,10 ,10);
 				       					move.fillArray[i].x += move.speed[i].x;

@@ -246,8 +246,8 @@ Zepto(function($){
 		drawColor:function(){
 			var store = {};
 			store.level = 90;
-			store.num =31;
-			store.vertical = 140;
+			store.num =30;
+			store.vertical = 75;
 			store.levelAdd = function(t){
 				if(t%10 == 0) {
 					return store.level = 90;
@@ -258,7 +258,6 @@ Zepto(function($){
 			}
 	
 			store.state = 0;
-			// store.speed = [];
 			store.onoff = false;
 			store.verticalAdd = function(t){//对球球进行排列
 				if(t%10 == 0&&t!==0) {
@@ -269,7 +268,7 @@ Zepto(function($){
 			}
 			store.origin = [];
 			// store.img = new Image();
-			store.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+			store.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png','../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png','../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
 			// store.img.src = "../images/Group-49.png";
 			store.draw = function(){
 				for(var i = 0; i< store.num;i++) {
@@ -281,24 +280,21 @@ Zepto(function($){
 						store.img = new Image();
 						store.img.src = store.origin[i].src;
 						// console.log(store.img.src)
-						ctx1.drawImage(store.img,store.origin[i].x,store.origin[i].y,20,20);
+						ctx2.drawImage(store.img,store.origin[i].x,store.origin[i].y,20,20);
 						if(i==store.num-1){
 							// store.state = 1;
 						}
 					}
 					if(store.state == 1){//下落到瓶口
-						if(store.origin[i].y <= 195) {
+						// if(store.onoff){
+							// store.pics.slice(10);}
+							// console.log(store.pics.length)
+						if(store.origin[0].y >= 100){
 							store.img = new Image();
 							store.img.src = store.origin[i].src;
-							ctx1.drawImage(store.img,store.origin[i].x,store.origin[i].y,20,20);
-							store.drop(i);
-							store.every(i);
+							ctx2.drawImage(store.img,store.origin[i].x,store.origin[i].y,20,20);
 						} else {
-							if(store.collision(i)){
-								store.restart(i)//开始自由运动
-							}
-							store.origin[i].x +=store.origin[i].velocityx;
-							store.origin[i].y +=store.origin[i].velocityy;
+							store.origin[i].y++;
 							store.img = new Image();
 							store.img.src = store.origin[i].src;
 							ctx1.drawImage(store.img,store.origin[i].x,store.origin[i].y,20,20);
@@ -308,14 +304,28 @@ Zepto(function($){
 			return store;
 		}
 	}
-	var jkl= rank.drawColor();
-	console.log(jkl)
+	var virtual;
+	// = rank.drawColor();
+	// 	restart2() 
+	// 	dropCircle()
+	// console.log(jkl)
 	var run = square.drawColor();
 	// run.draw()
 	function restart(){
 		ctx1.clearRect(0,0,474,800);
 		run.draw();
 		requestAnimFrame(restart);
+	}
+	function restart2(){
+		ctx2.clearRect(0,0,474,800);
+		virtual.draw();
+		requestAnimFrame(restart2);
+	}
+	function dropCircle(){
+		virtual.pics=virtual.pics.slice(10);
+		 virtual.num = virtual.pics.length;
+		virtual.state = 1;
+		virtual.origin = virtual.origin.slice(10);
 	}
 	window.onload = function(){
 		restart();
@@ -430,8 +440,8 @@ Zepto(function($){
 			
 			var s =	setInterval(function(){
 				$('#winNumber'+i).attr('src','../img/s'+count(31)+'.png');
-				console.log(q.arr3)
-				console.log(i)
+				// console.log(q.arr3)
+				// console.log(i)
 					$('#winNumber'+i).css({
 						display:'block',
 						animation:'movegold'+i+' 1s forwards',
@@ -546,6 +556,7 @@ Zepto(function($){
 			q.arr4 = [];
 			q.onOff = false;			
 			clearWindow();
+			virtual.state = 1;
 			if(run.state == 1){//每次重复点击的时候且已经执行完毕重新生成
 				run =square.drawColor();
 				run.state = 0;
@@ -555,7 +566,7 @@ Zepto(function($){
 			setTimeout(function(){
 				run.state = 1
 			},40)
-			
+			// dropCircle()
 			var s =	setInterval(function(){
 				$('#winNumber'+i).attr('src','../img/d'+oneNum(10)+'.png');
 					$('#winNumber'+i).css({
@@ -572,6 +583,7 @@ Zepto(function($){
 						run.num = 10;
 						run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
 						setTimeout(function(){
+							dropCircle()
 							run.state = 1;
 						},100)
 					},200)
@@ -584,6 +596,7 @@ Zepto(function($){
 						// console.log(q.num);
 						i = 0;
 						clearInterval(s);
+						cancelRequestAnimFrame(virtual);
 					}
 				},2500)
 			}
@@ -593,6 +606,7 @@ Zepto(function($){
 			q.arr4 = [];
 			q.onOff = false;			
 			clearWindow();
+			virtual.state = 1;
 			if(run.state == 1){//每次重复点击的时候且已经执行完毕重新生成
 				run =square.drawColor();
 				run.state = 0;
@@ -620,6 +634,7 @@ Zepto(function($){
 						run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
 						setTimeout(function(){
 							run.state = 1;
+							dropCircle()
 						},100)
 					},200)
 					if(i===3){//红球执行完毕开始弄篮球
@@ -631,6 +646,7 @@ Zepto(function($){
 						// console.log(q.num);
 						i = 0;
 						clearInterval(s);
+						cancelRequestAnimFrame(virtual);
 					}
 				},2500)
 			}
@@ -716,6 +732,7 @@ Zepto(function($){
 						// console.log(q.num);
 						i = 0;
 						clearInterval(s);
+						cancelRequestAnimFrame(virtual);
 					}
 				},2500)
 			}
@@ -732,32 +749,48 @@ Zepto(function($){
 			if ($('#navBar>a').eq(0).hasClass("active")){
 				run =square.drawColor();
 				run.num = 31;
+				// if (virtual) {
+				// 	virtual = false
+				// }
+				vertical = false
+				cancelRequestAnimFrame(restart2)
 				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png','../img/s31.png'];
 			} else if( $('#navBar>a').eq(1).hasClass("active")	){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 35;
+				cancelRequestAnimFrame(false)
+				// restart2 = false;
+				// vertical = false;
 				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png','../img/s31.png','../img/s32.png','../img/s33.png','../img/s34.png','../img/s35.png'];
 			} else if ( $('#navBar>a').eq(2).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
 				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+				virtual= rank.drawColor();
+				restart2() 
 			} else if ( $('#navBar>a').eq(3).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
 				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+				 virtual= rank.drawColor();
+				restart2()
 			} else if ( $('#navBar>a').eq(4).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 30;
+				vertical = false
+				// cancelRequestAnimFrame(virtual)
 				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png'];
 			} else if ( $('#navBar>a').eq(5).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
 				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+				 virtual= rank.drawColor();
+				restart2()
 			}
 
 
