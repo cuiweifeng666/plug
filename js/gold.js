@@ -553,6 +553,10 @@ Zepto(function($){
    })
     $('#myCanve').get(0).width=$(window).width()  
      $('#myCanve').get(0).height=$(window).height() 
+      $('#myCanve1').get(0).width=$(window).width()  
+     $('#myCanve1').get(0).height=$(window).height() 
+     $('#myCanve2').get(0).width=$(window).width()  
+     $('#myCanve2').get(0).height=$(window).height() 
 
     $('.rank01').on('tap',function(){
     	$('.ranking-head').show();	
@@ -599,6 +603,9 @@ Zepto(function($){
      	})
      	$('.tr-pic').eq(7).before($('.tr-pic').eq(0))
      }
+     Array.prototype.remove = function(index) {
+			Array.prototype.sel = this.splice(index, 1);
+		};
      // trend('../images/tr2.png');
 	window.requestAnimFrame=(function(){
  	 return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element) {
@@ -618,6 +625,7 @@ Zepto(function($){
            // var ctx = document.getElementById("myCanve").getContext('2d');
           var  ctx = document.getElementById("myCanve").getContext('2d')
           var  ctx1 = document.getElementById("myCanve1").getContext('2d')
+          var  ctx2 = document.getElementById("myCanve2").getContext('2d')
         
      function selfDis(m){
        	this.choose = bs.group[m];
@@ -626,8 +634,8 @@ Zepto(function($){
          this.chooseT = choose.offset().top;
          this.chooseH = choose.offset().height;
         return {
-	        left:parseInt(this.chooseL+Math.random()*this.chooseW*0.4+10),
-	        top:parseInt(this.chooseT+Math.random()*this.chooseH*0.6+20),
+	        left:parseInt(this.chooseL+Math.random()*this.chooseW*0.4+Math.random()*this.chooseW*0.5),
+	        top:parseInt(this.chooseT+Math.random()*this.chooseH*0.5+Math.random()*this.chooseW*0.4),
        	 }
         }
        var moveFilmer = {
@@ -636,6 +644,7 @@ Zepto(function($){
        			move.fillArray = [];
        			move.target = [];
        			move.speed = [];
+       			move.remove = [];
        			move.back =0;
        			move.win = -1;
        			move.img = new Image();
@@ -658,11 +667,14 @@ Zepto(function($){
 	       					move.fillArray.unshift(move.loc())
 	       				}
    					for (var i = m.length-1; i > -1; i--) {
-   						move.target[i].num = 0;
+   						// move.target[i].num = 0;
 						var xL = (move.target[i].left-move.fillArray[i].x)/50;
 						var yT = (move.target[i].top-move.fillArray[i].y)/50;
 						move.speed.unshift({x:xL,y:yT});
    					}
+       			}
+       			move.middleSpace = function(){
+       				
        			}
        			move.aggregation = function(){
        				for (var i =0;i < move.fillArray.length;i++) {
@@ -740,11 +752,11 @@ Zepto(function($){
 	       			}
        			}
        			move.backMoney = function(){ //金币回流到底部中间位置
-       				var t=move.center()
+       				var t=move.center();
        				for (var i =0;i < move.fillArray.length;i++) {
 						move.target[i].left = t.x;
 						move.target[i].top = t.y;
-						// console.log(move.speed[i])
+						// console.log(move.speed[i]);
 						move.speed[i].x = (move.target[i].left - move.fillArray[i].x)/50;
 						move.speed[i].y = (move.target[i].top - move.fillArray[i].y)/50;					
 					}
@@ -752,8 +764,9 @@ Zepto(function($){
        			} 
        			move.info = [233,434,5,4,56,6,65,7,7]//每次金币的数量动画
        			move.text = function(){
-       				ctx.font="20px Arial";
-       				ctx.fillStyle = "#fff";
+       				ctx2.clearRect(0,0,$(window).width(),$(window).height())
+       				ctx2.font="20px Arial";
+       				ctx2.fillStyle = "#fff";
        				for (var i = 0; i < 9; i++) {
        					var width = ctx.measureText(move.info[i])
        					var textX = bs.group[i].offset().left +(bs.group[i].offset().width - width.width)/2
@@ -762,7 +775,7 @@ Zepto(function($){
        					// 	 console.log(textX,textY,move.info,width)
        					// }
        					// ctx.fillText(move.info[i],(obj.chooseL+obj.chooseW-width),(obj.chooseT+obj.chooseH-20))
-       					ctx.fillText(move.info[i],textX,textY)
+       					ctx2.fillText(move.info[i],textX,textY)
        				}
        			}
        			move.orWin = function(m){
@@ -792,13 +805,13 @@ Zepto(function($){
        			}
        			move.draw = function(){//每次调用的绘图函数
        				for (var i =0;i < move.fillArray.length; i++) {
-       						move.text();
+       						// move.text();
        						// console.log(new selfDis(2))
        						// console.log(move.text())
        						// ctx.fillStyle = "#fff"
        						// ctx.fillText("sdfjlk",200,330)
        						if(move.back === -1){
-       							ctx1.drawImage(move.img, move.target[i].x, move.target[i].y ,10 ,10);
+       							ctx.drawImage(move.img, move.target[i].x, move.target[i].y ,10 ,10);
        							move.fillArray[i].x = move.target[i].x;
        							move.fillArray[i].y = move.target[i].y;
        						}
@@ -806,15 +819,13 @@ Zepto(function($){
 	       						 if( move.target[i].top <= move.fillArray[i].y){
 	       							// move.fillArray[i].x = move.target[i].left;
 	       							// move.fillArray[i].y = move.target[i].top;
-	       							ctx.drawImage(move.img, move.target[i].left, move.target[i].top ,10 ,10);
-	       							// if(move.target[i].num == 0){
-	       								// setTimeout(function(){
-	       								// 	move.backMoney();
-	       								// 	move.back = 1;
-
-	       								// },1000)
-	       							// 	move.target[i].num = 1; 
-	       							// }
+	       							move.text();
+	       							// move.remove.push(move.target[i]);
+	       							move.target.remove(i);
+	       							move.fillArray.remove(i);
+	       							move.remove.push(move.target.sel);	       							
+	       							ctx1.drawImage(move.img, move.remove[(move.remove.length-1)].left, move.remove[(move.remove.length-1)].top ,10 ,10);
+	       							// move.fillArray[i].move = false;
 	       							//金币开始往获奖位置走
 	       						} else {
 		       						ctx.drawImage(move.img, move.fillArray[i].x, move.fillArray[i].y ,10 ,10);
@@ -905,7 +916,7 @@ Zepto(function($){
    									// if(i == user.arrayFill.length-1 ){
    									// user.state = 2;
    									// }
-	       								// user.state = 1;
+	       							// user.state = 1;
 	       						} else {
 		       						ctx.drawImage(user.img, user.arrayFill[i].x,user.arrayFill[i].y,10,10);
 		       						user.arrayFill[i].x += user.speed[i].x;
@@ -965,18 +976,14 @@ Zepto(function($){
                if(computer&&(computer.back == 0||computer.back == -1)){
               	 computer.userCount(userArr);
                }
-               if(setOf){
-	               
-	               	setOf = false;
-	               }
-               }
-     //           setTimeout(function(){
-     //           	computer.backMoney();
-	    //    		computer.back = 1;
-	    //    		computer.text = function(){
-	    //    		}
-	    //    		play.state = 1;
-     //           },3000)
+               setTimeout(function(){
+               	computer.target=computer.fillArray =computer.remove;
+               	computer.backMoney();
+               	console.log(computer);
+               	ctx1.clearRect(0,0,$(window).width(),$(window).height());
+	       		computer.back = 1;
+	       		play.state = 1;
+               },3000)
      //           setTimeout(function(){
      //           		computer.winArea = {main:4,area:5}
      //           		computer.aggregation();
@@ -987,6 +994,7 @@ Zepto(function($){
      //           		computer.orWin(m=1);
      //           		computer.back =3;
      //           },5000)
+     			}
                
             }
        })

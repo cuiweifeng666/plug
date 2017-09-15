@@ -6,22 +6,22 @@ Zepto(function($){
 	var ctx = document.getElementById('shake').getContext('2d');	
 	// $('#shake').width(74/75+'rem').height(80/75+'rem');
 	var ctx1 = document.getElementById('circle').getContext('2d');
-	var ctx2 = document.getElementById('winCircle').getContext('2d');
+	// var ctx2 = document.getElementById('winCircle').getContext('2d');
 	var w = $(document).width()
 	var wh = $(document).height()
 	var fh = wh-$("footer").height()
-	console.log(w,wh,fh)
+	// console.log(w,wh,fh)
 	var s = w/750;
 	var h =  $('#shake').height()
 	canvas.width = 474;
 	canvas.height = 800;
 	canvas2.width = 474;
 	canvas2.height = 800;
-	canvas3.width =474;
-	canvas3.height = 800;
+	// canvas3.width =474;
+	// canvas3.height = 800;
 	
 	var imgBg = new Image();
-	imgBg.src="../images/mashine.png";
+	imgBg.src="../img/mashine.png";
 	imgBg.onload = function(){
 		ctx.drawImage(imgBg,0,0,474,800)
 	}
@@ -39,8 +39,6 @@ Zepto(function($){
 	'-webkit-transform-origin-y':'top',
 	'-webkit-transform-origin-z':'center'
 	})
-
-	
 	
 	$('.beautiful').css({
 		wdith:210/75+'rem',
@@ -52,7 +50,7 @@ Zepto(function($){
 		
 	}
 	
-	var imgs = ["../images/mashine.png","../images/mashine.png"]
+	// var imgs = ["../images/mashine.png","../images/mashine.png"]
 	window.requestAnimFrame=(function(){
 		 	 return window.requestAnimationFrame||window.webkitRequestAnimationFrame||
 		 	 window.mozRequestAnimationFrame||window.oRequestAnimationFrame||
@@ -304,22 +302,17 @@ Zepto(function($){
 			return store;
 		}
 	}
-	var virtual;
-	// = rank.drawColor();
-	// 	restart2() 
-	// 	dropCircle()
-	// console.log(jkl)
+	var virtual = rank.drawColor(),sul,n;
 	var run = square.drawColor();
-	// run.draw()
 	function restart(){
 		ctx1.clearRect(0,0,474,800);
 		run.draw();
-		requestAnimFrame(restart);
+		n=requestAnimFrame(restart);
 	}
 	function restart2(){
 		ctx2.clearRect(0,0,474,800);
 		virtual.draw();
-		requestAnimFrame(restart2);
+		sul=requestAnimFrame(restart2);
 	}
 	function dropCircle(){
 		virtual.pics=virtual.pics.slice(10);
@@ -329,7 +322,15 @@ Zepto(function($){
 	}
 	window.onload = function(){
 		restart();
+		// restart2()
 	}
+	// cancelRequestAnimFrame(sul);
+	// cancelRequestAnimFrame(n);
+	// virtual =false
+	// restart2 = function(){
+	// }
+	// cancelRequestAnimFrame(n)
+	// cancelAnimationFrame(sul)
 	// var arr3 = [];
 	var q = {
 		arr3 : [],//红球
@@ -441,7 +442,6 @@ Zepto(function($){
 			var s =	setInterval(function(){
 				$('#winNumber'+i).attr('src','../img/s'+count(31)+'.png');
 				// console.log(q.arr3)
-				// console.log(i)
 					$('#winNumber'+i).css({
 						display:'block',
 						animation:'movegold'+i+' 1s forwards',
@@ -490,7 +490,6 @@ Zepto(function($){
 			q.arr4 = [];
 			q.onOff = false;			
 			clearWindow();
-			// $()
 			if(run.state == 1){//每次重复点击的时候且已经执行完毕重新生成
 				run =square.drawColor();
 				run.state = 0;
@@ -500,11 +499,9 @@ Zepto(function($){
 			setTimeout(function(){
 				run.state = 1;
 			},40);
-			
 			var s =	setInterval(function(){
 				$('#winNumber'+i).attr('src','../img/s'+count(35)+'.png');
-				// console.log(q.arr3)
-				// console.log(i)
+				// console.log(i);
 					$('#winNumber'+i).css({
 						display:'block',
 						animation:'movegold'+i+' 1s forwards',
@@ -522,7 +519,7 @@ Zepto(function($){
 							var litNum = 4;
 							setTimeout(function(){
 								run.state = 1;
-							},100)
+							},100);
 							var newlit = setInterval(function(){
 									++litNum;
 								var lint = littleCount(16);//生成一个篮球
@@ -566,7 +563,6 @@ Zepto(function($){
 			setTimeout(function(){
 				run.state = 1
 			},40)
-			// dropCircle()
 			var s =	setInterval(function(){
 				$('#winNumber'+i).attr('src','../img/d'+oneNum(10)+'.png');
 					$('#winNumber'+i).css({
@@ -593,10 +589,9 @@ Zepto(function($){
 						q.time = Time();//时间
 						replace2(q);//对下面列表中第一行列表进行替换；
 						// console.log(Time())
-						// console.log(q.num);
 						i = 0;
 						clearInterval(s);
-						cancelRequestAnimFrame(virtual);
+						// cancelRequestAnimFrame(virtual);
 					}
 				},2500)
 			}
@@ -646,7 +641,7 @@ Zepto(function($){
 						// console.log(q.num);
 						i = 0;
 						clearInterval(s);
-						cancelRequestAnimFrame(virtual);
+						// cancelRequestAnimFrame(virtual);
 					}
 				},2500)
 			}
@@ -682,7 +677,6 @@ Zepto(function($){
 						q.time = Time();//时间
 						replace(q);//对下面列表中第一行列表进行替换；
 						// console.log(Time())
-						// console.log(q.num);
 						i = 0;
 						clearInterval(s);
 					}
@@ -732,16 +726,16 @@ Zepto(function($){
 						// console.log(q.num);
 						i = 0;
 						clearInterval(s);
-						cancelRequestAnimFrame(virtual);
+						// cancelRequestAnimFrame(virtual);
 					}
 				},2500)
 			}
-
 	})
 	// $('.navBar>.fl').on('tab',function(e){
 	// 	// $(this).addClass()
 	// })
-	$('#navBar>a').on('tap',function(){
+	
+	$('#navBar>a').on('singleTap',function(){
 		if(q.onOff){
 			$('#navBar>a').removeClass('active');
 			$(this).addClass('active');	
@@ -749,39 +743,45 @@ Zepto(function($){
 			if ($('#navBar>a').eq(0).hasClass("active")){
 				run =square.drawColor();
 				run.num = 31;
-				// if (virtual) {
-				// 	virtual = false
-				// }
-				vertical = false
-				cancelRequestAnimFrame(restart2)
+				restart2 = false;
 				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png','../img/s31.png'];
 			} else if( $('#navBar>a').eq(1).hasClass("active")	){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 35;
-				cancelRequestAnimFrame(false)
-				// restart2 = false;
-				// vertical = false;
+				// cancelRequestAnimFrame(sul);
+				// virtual =false
+				// restart2 = function(){
+				// }
+				// virtual.draw = function(){
+				// }
+				// restart2();
 				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png','../img/s31.png','../img/s32.png','../img/s33.png','../img/s34.png','../img/s35.png'];
 			} else if ( $('#navBar>a').eq(2).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
 				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
-				virtual= rank.drawColor();
-				restart2() 
+				// virtual = rank.drawColor();
+				// restart2 = function(){
+				// 	ctx2.clearRect(0,0,474,800);
+				// 	virtual.draw();
+				// 	sul=requestAnimFrame(restart2);
+				// }
+				// restart2();
+				// console.log(3)
 			} else if ( $('#navBar>a').eq(3).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
 				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
-				 virtual= rank.drawColor();
-				restart2()
+				 // virtual= rank.drawColor();
+				// restart2()
 			} else if ( $('#navBar>a').eq(4).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 30;
-				vertical = false
+				// virtual = false
 				// cancelRequestAnimFrame(virtual)
 				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png'];
 			} else if ( $('#navBar>a').eq(5).hasClass("active")){
@@ -790,7 +790,7 @@ Zepto(function($){
 				run.num = 10;
 				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
 				 virtual= rank.drawColor();
-				restart2()
+				// restart2()
 			}
 
 

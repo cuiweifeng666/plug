@@ -1223,7 +1223,7 @@ header {
 			position:absolute;
 			left:30/75*$rem;
 			top:22/75*$rem;
-			@include size(25/75*$rem,42/75*$rem,url(../images/back.png));
+			@include size(25/75*$rem,42/75*$rem,url(../img/back.png));
 			background-size:contain;
 		}
 		@include font(36,88);

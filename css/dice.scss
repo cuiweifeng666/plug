@@ -48,9 +48,13 @@ $rem:1rem;
  	position:absolute;
  	z-index:200;
  }
+ #myCanve1 {
+ 	position:absolute;
+ 	z-index:202;
+ }
  #myCanve2 {
  	position:absolute;
- 	z-index:999;
+ 	z-index:201;
  }
 em {
 	font-style:normal;
@@ -129,6 +133,7 @@ body {
 #controls {
 	position:absolute;
 	z-index:-100000;
+	height:0;
 }
 @media (-webkit-min-device-pixel-ratio: 2),(min-device-aspect-ratio: 2) {
   .border-left::after {
