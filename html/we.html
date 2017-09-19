@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>商城</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+ </head>
+ <body>
+ <input type="text" name="">
+ <textarea id="content" rows="10" cols="60">这里是需要复制的内容</textarea>
+<input id="copy" type="button" data-clipboard-target="content" value="复制">
+
+
+<!-- 这里是JS代码部分 -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.min.js" ></script>
+<script type="text/javascript">
+// 将【复制】按钮充当复制数据的元素载体
+var clip = new ZeroClipboard( document.getElementById("copy") );
+</script>
+ </body>
+</html>

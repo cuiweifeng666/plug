@@ -2,10 +2,24 @@ Zepto(function($){
 	var canvas =  document.getElementById('shake');
 	var canvas2 =  document.getElementById('circle');
 	var canvas3 = document.getElementById('winCircle');
+	var borad0 = document.getElementById('img0');
+	var borad1 = document.getElementById('img1');
+	var borad2 = document.getElementById('img2');
+	var borad3 = document.getElementById('img3');
+	var borad4 = document.getElementById('img4');
+	var borad5 = document.getElementById('img5');
+	var borad6 = document.getElementById('img6');
 
 	var ctx = document.getElementById('shake').getContext('2d');	
 	// $('#shake').width(74/75+'rem').height(80/75+'rem');
 	var ctx1 = document.getElementById('circle').getContext('2d');
+	var cbx0 = document.getElementById('img0').getContext('2d')
+	var cbx1 = document.getElementById('img1').getContext('2d')
+	var cbx2 = document.getElementById('img2').getContext('2d')
+	var cbx3 = document.getElementById('img3').getContext('2d')
+	var cbx4 = document.getElementById('img4').getContext('2d')
+	var cbx5 = document.getElementById('img5').getContext('2d')
+	var cbx6 = document.getElementById('img6').getContext('2d')
 	// var ctx2 = document.getElementById('winCircle').getContext('2d');
 	var w = $(document).width()
 	var wh = $(document).height()
@@ -21,7 +35,7 @@ Zepto(function($){
 	// canvas3.height = 800;
 	
 	var imgBg = new Image();
-	imgBg.src="../img/mashine.png";
+	imgBg.src="../imgs/mashine.png";
 	imgBg.onload = function(){
 		ctx.drawImage(imgBg,0,0,474,800)
 	}
@@ -46,10 +60,10 @@ Zepto(function($){
 		right:30/75+'rem',
 		top:50/75+'rem'
 	})
-	function methods(){
-		
-	}
-	
+	$('.head-back').on('tap',function(){
+		window.history.back();	
+	})
+	// alert($('.beautiful').css())
 	// var imgs = ["../images/mashine.png","../images/mashine.png"]
 	window.requestAnimFrame=(function(){
 		 	 return window.requestAnimationFrame||window.webkitRequestAnimationFrame||
@@ -67,6 +81,12 @@ Zepto(function($){
 	        window.msCancelRequestAnimationFrame        ||
 	        clearTimeout
 	} )();
+	Array.prototype.remove = function(index) {
+			// var index = this.indexOf(val);
+			// if (index > -1) {
+			Array.prototype.sel = this.splice(index, 1);
+			// }
+		};
 	var square = {
 		drawColor:function(){
 			var store = {};
@@ -176,7 +196,7 @@ Zepto(function($){
 			}
 			store.origin = [];
 			// store.img = new Image();
-			store.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png','../img/s31.png']
+			store.pics = ['../imgs/s01.png','../imgs/s02.png','../imgs/s03.png','../imgs/s04.png','../imgs/s05.png','../imgs/s06.png','../imgs/s07.png','../imgs/s08.png','../imgs/s09.png','../imgs/s10.png','../imgs/s11.png','../imgs/s12.png','../imgs/s13.png','../imgs/s14.png','../imgs/s15.png','../imgs/s16.png','../imgs/s17.png','../imgs/s18.png','../imgs/s19.png','../imgs/s20.png','../imgs/s21.png','../imgs/s22.png','../imgs/s23.png','../imgs/s24.png','../imgs/s25.png','../imgs/s26.png','../imgs/s27.png','../imgs/s28.png','../imgs/s29.png','../imgs/s30.png','../imgs/s31.png']
 			// store.img.src = "../images/Group-49.png";
 			store.winImg = new Image();
 			store.win ={
@@ -186,7 +206,7 @@ Zepto(function($){
 				vy:.08,
 				op:1
 			};
-			store.winImg.src = "../images/Group3.png";
+			// store.winImg.src = "../images/Group3.png";
 
 			store.draw = function(){
 				for(var i = 0; i< store.num;i++) {
@@ -266,7 +286,7 @@ Zepto(function($){
 			}
 			store.origin = [];
 			// store.img = new Image();
-			store.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png','../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png','../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+			store.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png','../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png','../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 			// store.img.src = "../images/Group-49.png";
 			store.draw = function(){
 				for(var i = 0; i< store.num;i++) {
@@ -322,25 +342,24 @@ Zepto(function($){
 	}
 	window.onload = function(){
 		restart();
-		// restart2()
 	}
-	// cancelRequestAnimFrame(sul);
-	// cancelRequestAnimFrame(n);
-	// virtual =false
-	// restart2 = function(){
-	// }
-	// cancelRequestAnimFrame(n)
-	// cancelAnimationFrame(sul)
-	// var arr3 = [];
+	
 	var q = {
 		arr3 : [],//红球
 		arr4 : [],//篮球
 		onOff: true,//是否可以点击
 		num : -1,//抽到的数字
 		time : '',//抽到时的时间
-		Zindex : -1//哪种游戏
+		Zindex : -1,//哪种游戏
+		name:['双色球','大乐透','福彩3d','排列3','7乐彩','七星彩'],
+		getName:'',
+		
 	}
-	
+	var main = {
+		body:$('body').height(),
+		top:$('.btn_group').offset().top,
+		shake:[]
+	}
 	function count(maxNum){
 		var m =  Math.floor(Math.random()*maxNum)+1;
 		m = m<=9?'0'+m:m
@@ -362,9 +381,9 @@ Zepto(function($){
 	}
 	function oneNum(maxNum){
 		var m =  Math.floor(Math.random()*maxNum);
-		if (q.arr3.indexOf(m) !== -1){
-			return(oneNum(maxNum));
-		}
+		// if (q.arr3.indexOf(m) !== -1){
+		// 	return(oneNum(maxNum));
+		// }
 		q.arr3.push(m);
 		return m;
 	}
@@ -377,40 +396,135 @@ Zepto(function($){
  	function listEach(){
  		var m = '<div class="win fl">';
  		q.arr3.forEach(function(item,index){
- 			m += '<img src="../img/s'+q.arr3[index]+'.png" id="" class="" />';
+ 			m += '<img src="../imgs/s'+q.arr3[index]+'.png" id="" class="" />';
  		})
  		q.arr4.forEach(function(item,index){
- 			m += '<img src="../img/ss'+q.arr4[index]+'.png" id="" class="" />';
+ 			m += '<img src="../imgs/ss'+q.arr4[index]+'.png" id="" class="" />';
  		})
- 		m += '</div><b class="fr">复制号码</b><p class="fr">自动摇奖<i>'+q.time+'</i></p>';
+ 		m += '</div><b class="fr" ">复制号码</b><p class="fr">'+q.name[q.Zindex]+'<i>'+q.time+'</i></p>';
  		return m;
  	}
  	function listEach1(){
  		var m = '<div class="win fl">';
  		q.arr3.forEach(function(item,index){
- 			m += '<img src="../img/d'+q.arr3[index]+'.png" id="" class="" />';
+ 			m += '<img src="../imgs/d'+q.arr3[index]+'.png" id="" class="" />';
  		})
- 
- 		m += '</div><b class="fr">复制号码</b><p class="fr">自动摇奖<i>'+q.time+'</i></p>';
+ 		// console.log(q.Zindex)
+ 		m += '</div><b class="fr" >复制号码</b><p class="fr">'+q.name[q.Zindex]+'<i>'+q.time+'</i></p>';
  		return m;
  	}
+	 	$("footer").css({
+	 		display:'none'
+	 	})
 	function replace(arr3){
 		var newli = $("<li class='list clearfix'></li>",{
 			html:listEach(),
 		});
+		if($("footer>ul>li").length>0){
+			$("footer>ul>li:first-child").before(newli);
+		} else {
+			$("footer>ul").append(newli);
+			$("footer").css({
+			display:'block'
+			})
+		}		
+		if($("footer>ul li").length<6){//将列表设置高度
+			$('.footer-bg').css({
+				height:$('.list').length*56.2/75+'rem'
+			})
+			$('footer>ul').css({
+				height:$('.list').length*56.2/75+'rem'
+			})
+			main.shake.unshift(q.num)
+			$("footer").css({//列表位置定义
+				top: main.top + $('.btn_group').height() -$('header').height() ,
+				height:$('.footer-bg').height()+14,
+				position:'absolute'
+			});
+			var t = $('footer>ul').height()
+			if(Math.floor(main.top+ $("footer").height()) + $('.btn_group').height()>main.body){
+				$('.swiper-slide').height(main.top + $('.btn_group').height()+$('header').height()+t);
+				
+			}
+
+		swiper02 = new Swiper('.swiper-container2', {
+           	scrollbar: '.swiper-scrollbar',
+            direction: 'vertical',
+            slidesPerView: 'auto',
+	        mousewheelControl: true,
+	        freeMode: true,
+	        observer: true,
+	        scrollbarHide:true,
+	        scrollbarDraggable:true,
+	        watchSlidesProgress : true,
+        });
+			return;
+		}
+		main.shake.remove(4);
+			main.shake.unshift(q.num);
+			console.log(main.shake);
 		$("footer>ul>li:last-child").remove();
-		$("footer>ul>li:first-child").before(newli);
 	};
+	// console.log($('.btn_group').position().top)
 	function replace2(arr3){
 		var newli = $("<li class='list clearfix'></li>",{
 			html:listEach1(),
 		});
+		// $("footer>ul").append(newli);
+		// console.log($("footer>ul>li").length>0)
+		if($("footer>ul>li").length>0){
+			$("footer>ul>li:first-child").before(newli);
+		} else {
+			$("footer>ul").append(newli);
+			$("footer").css({
+			display:'block'
+			})
+		}
+		
+		
+		if($("footer>ul li").length<6){
+			$('.footer-bg').css({
+				height:$('.list').length*56.2/75+'rem'
+			})
+			$('footer>ul').css({
+				height:$('.list').length*56.2/75+'rem'
+			})
+			
+			$("footer").css({
+				top: main.top + $('.btn_group').height() -$('header').height() ,
+				height:$('.footer-bg').height()+14,
+				position:'absolute'
+			});
+			main.shake.unshift(q.num)
+			// console.log(main.top+ $("footer").height()+ $('.btn_group').height(),)
+			var t = $('footer>ul').height()
+			if(Math.floor(main.top+ $("footer").height()) + $('.btn_group').height()>main.body){
+				$('.swiper-slide').height(main.top + $('.btn_group').height()+$('header').height()+t);
+			}
+			// console.log(main.shake);
+			// $('.swiper-slide').height($('body').height()+$('.list').height());
+			 swiper02 = new Swiper('.swiper-container2', {
+           scrollbar: '.swiper-scrollbar',
+            direction: 'vertical',
+            slidesPerView: 'auto',
+	        mousewheelControl: true,
+	        freeMode: true,
+	        observer: true,
+	        scrollbarHide:true,
+	        scrollbarDraggable:true,
+	        watchSlidesProgress : true,
+        });
+			return;
+		}
+		main.shake.remove(4);
+			main.shake.unshift(q.num);
+			
 		$("footer>ul>li:last-child").remove();
-		$("footer>ul>li:first-child").before(newli);
+		
 	};
-	// replace();
-	console.log(new Date().getHours(),new Date().getMinutes())
-	// var winNUm = [],q.onOff = true;
+	// // replace();
+	// console.log(new Date().getHours(),new Date().getMinutes())
+	// // var winNUm = [],q.onOff = true;
 	$(".shake_btn").on('tap',function(){
 		var arr2 = $('#navBar>a');
 		
@@ -420,6 +534,25 @@ Zepto(function($){
 			}
 		})
 		
+		function searchI(){
+			$("#img"+i).css({
+					display:'block',
+			 		position:'absolute',
+			 		top:470/75 + 'rem',
+			 		left:280 /75 + 'rem'
+			 	})
+			var pic1 = new Image()
+				pic1.src='../imgs/s'+count(31)+'.png';
+				// pic1.onload = function(){
+				// 	time.printCan.drawImage(pic1,0,0,10,10)	
+				// }
+				time.pic1 = pic1
+				time.printCan =eval('cbx'+i),
+				time.printCan.drawImage(pic1,0,0,10,10)
+				time.file =  setInterval(topCircle,50)
+				time.borad = eval('borad'+i),
+		 		time.ele=$("#img"+i);
+		}
 		// start = false;
 		//重新生成函数
 		//清除下面的一抽到的奖球
@@ -428,93 +561,125 @@ Zepto(function($){
 			q.arr3 = [];
 			q.arr4 = [];
 			q.onOff = false;			
-			clearWindow();
+			clearCircle();
 			if(run.state == 1){//每次重复点击的时候且已经执行完毕重新生成
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 31;
-				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png','../img/s31.png'];
+				run.pics = ['../imgs/s01.png','../imgs/s02.png','../imgs/s03.png','../imgs/s04.png','../imgs/s05.png','../imgs/s06.png','../imgs/s07.png','../imgs/s08.png','../imgs/s09.png','../imgs/s10.png','../imgs/s11.png','../imgs/s12.png','../imgs/s13.png','../imgs/s14.png','../imgs/s15.png','../imgs/s16.png','../imgs/s17.png','../imgs/s18.png','../imgs/s19.png','../imgs/s20.png','../imgs/s21.png','../imgs/s22.png','../imgs/s23.png','../imgs/s24.png','../imgs/s25.png','../imgs/s26.png','../imgs/s27.png','../imgs/s28.png','../imgs/s29.png','../imgs/s30.png','../imgs/s31.png'];
 			}
 			setTimeout(function(){
 				run.state = 1;
 			},40);
 			
 			var s =	setInterval(function(){
-				$('#winNumber'+i).attr('src','../img/s'+count(31)+'.png');
-				// console.log(q.arr3)
-					$('#winNumber'+i).css({
-						display:'block',
-						animation:'movegold'+i+' 1s forwards',
-						'-moz-animation':'movegold'+i+' 1s forwards',
-						'-ms-animation':'movegold'+i+' 1s forwards',
-						'-webkit-animation':'movegold'+i+' 1s forwards',
-						})
+				// $('#winNumber'+i).attr('src','../imgs/s'+count(31)+'.png');
+				// // console.log(q.arr3)
+				// 	$('#winNumber'+i).css({
+				// 		display:'block',
+				// 		animation:'movegold'+i+' 1s forwards',
+				// 		'-moz-animation':'movegold'+i+' 1s forwards',
+				// 		'-ms-animation':'movegold'+i+' 1s forwards',
+				// 		'-webkit-animation':'movegold'+i+' 1s forwards',
+				// 		})
+				
+			 	searchI();
+		 		// scrollCircle.selet = scrollCircle.target[i]
+		 		// scrollCircle.choose = scrollCircle.pause[i]
+		 		// console.log(scrollCircle.selet)
 					++i;
 					if(i===6){//红球执行完毕开始弄篮球
 						clearInterval(s);
 						setTimeout(function(){
 							run = square.drawColor();//重新生成函数
-							run.pics = ['../img/ss01.png','../img/ss02.png','../img/ss03.png','../img/ss04.png','../img/ss05.png','../img/ss06.png','../img/ss07.png','../img/ss08.png','../img/ss09.png','../img/ss10.png','../img/ss11.png','../img/ss12.png','../img/ss13.png','../img/ss14.png','../img/ss15.png','../img/ss16.png'];
+							run.pics = ['../imgs/ss01.png','../imgs/ss02.png','../imgs/ss03.png','../imgs/ss04.png','../imgs/ss05.png','../imgs/ss06.png','../imgs/ss07.png','../imgs/ss08.png','../imgs/ss09.png','../imgs/ss10.png','../imgs/ss11.png','../imgs/ss12.png','../imgs/ss13.png','../imgs/ss14.png','../imgs/ss15.png','../imgs/ss16.png'];
 							run.num = 16;
-								setTimeout(function(){//重新拍好位置后进行动画
-								run.state = 1;
-								var lint = littleCount(12);//生成一个篮球
-								$('#winNumber'+i).attr('src','../img/ss'+lint+'.png')
-								setTimeout(function(){
-									$('#winNumber'+6).attr('src','../img/ss'+lint+'.png')
-									$('#winNumber'+6).css({
-										display:'block',
-										animation:'movegold'+6+' 1s forwards',
-										'-moz-animation':'movegold'+6+' 1s forwards',
-										'-ms-animation':'movegold'+6+' 1s forwards',
-										'-webkit-animation':'movegold'+6+' 1s forwards',
-										})
-									q.onOff = true;//可以再次点击
+							setTimeout(function(){//重新拍好位置后进行动画
+							run.state = 1;
+							},100)
+							var lint = littleCount(12);//生成一个篮球
+							setTimeout(function(){
+							$("#img"+6).css({
+								display:'block',
+						 		position:'absolute',
+						 		top:470/75 + 'rem',
+						 		left:280 /75 + 'rem'
+						 	})
+							 	var pic1 = new Image()
+								pic1.src='../imgs/ss'+lint+'.png';
+								time.pic1 = pic1
+								time.printCan =eval('cbx'+6),
+								time.printCan.drawImage(pic1,0,0,10,10)
+								time.file =  setInterval(topCircle,50)
+								time.borad = eval('borad'+6),
+						 		time.ele=$("#img"+6);
+						 // searchI();
+						 		setTimeout(function(){
+						 			q.onOff = true;//可以再次点击
 									q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
 									q.time = Time();//时间
 									replace(q);//对下面列表中第一行列表进行替换；
 									// console.log(Time())
 									// console.log(q.num);
 									i = 0;
-								},1000)
-							},100)
+						 		},1000)
+								
+							},1000)
 
 
-						},1000)
+						},2000)
 					}
-				},1000)
+				},3000)
 			}
 		if(q.Zindex === 1&&q.onOff){//左边列表对应按钮的active
 			var i = 0;
 			q.arr3 = [];
 			q.arr4 = [];
 			q.onOff = false;			
-			clearWindow();
+			clearCircle();
 			if(run.state == 1){//每次重复点击的时候且已经执行完毕重新生成
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 35;
-				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png','../img/s31.png','../img/s32.png','../img/s33.png','../img/s34.png','../img/s35.png'];
+				run.pics = ['../imgs/s01.png','../imgs/s02.png','../imgs/s03.png','../imgs/s04.png','../imgs/s05.png','../imgs/s06.png','../imgs/s07.png','../imgs/s08.png','../imgs/s09.png','../imgs/s10.png','../imgs/s11.png','../imgs/s12.png','../imgs/s13.png','../imgs/s14.png','../imgs/s15.png','../imgs/s16.png','../imgs/s17.png','../imgs/s18.png','../imgs/s19.png','../imgs/s20.png','../imgs/s21.png','../imgs/s22.png','../imgs/s23.png','../imgs/s24.png','../imgs/s25.png','../imgs/s26.png','../imgs/s27.png','../imgs/s28.png','../imgs/s29.png','../imgs/s30.png','../imgs/s31.png','../imgs/s32.png','../imgs/s33.png','../imgs/s34.png','../imgs/s35.png'];
 			}
 			setTimeout(function(){
 				run.state = 1;
 			},40);
 			var s =	setInterval(function(){
-				$('#winNumber'+i).attr('src','../img/s'+count(35)+'.png');
+				// $('#winNumber'+i).attr('src','../imgs/s'+count(35)+'.png');
 				// console.log(i);
-					$('#winNumber'+i).css({
+					// $('#winNumber'+i).css({
+					// 	display:'block',
+					// 	animation:'movegold'+i+' 1s forwards',
+					// 	'-moz-animation':'movegold'+i+' 1s forwards',
+					// 	'-ms-animation':'movegold'+i+' 1s forwards',
+					// 	'-webkit-animation':'movegold'+i+' 1s forwards',
+					// 	})
+					$("#img"+i).css({
 						display:'block',
-						animation:'movegold'+i+' 1s forwards',
-						'-moz-animation':'movegold'+i+' 1s forwards',
-						'-ms-animation':'movegold'+i+' 1s forwards',
-						'-webkit-animation':'movegold'+i+' 1s forwards',
-						})
+				 		position:'absolute',
+				 		top:470/75 + 'rem',
+				 		left:280 /75 + 'rem'
+				 	})
+				var pic1 = new Image()
+					pic1.src='../imgs/s'+count(35)+'.png';
+					// pic1.onload = function(){
+					// 	time.printCan.drawImage(pic1,0,0,10,10)	
+					// }
+					time.pic1 = pic1
+					time.printCan =eval('cbx'+i),
+					time.printCan.drawImage(pic1,0,0,10,10)
+					time.file =  setInterval(topCircle,50)
+					time.borad = eval('borad'+i),
+			 		time.ele=$("#img"+i);
+					
 					++i;
 					if(i===5){//红球执行完毕开始弄篮球
 						clearInterval(s);
 						setTimeout(function(){
 							run = square.drawColor();//重新生成函数
-							run.pics = ['../img/ss01.png','../img/ss02.png','../img/ss03.png','../img/ss04.png','../img/ss05.png','../img/ss06.png','../img/ss07.png','../img/ss08.png','../img/ss09.png','../img/ss10.png','../img/ss11.png','../img/ss12.png'];
+							run.pics = ['../imgs/ss01.png','../imgs/ss02.png','../imgs/ss03.png','../imgs/ss04.png','../imgs/ss05.png','../imgs/ss06.png','../imgs/ss07.png','../imgs/ss08.png','../imgs/ss09.png','../imgs/ss10.png','../imgs/ss11.png','../imgs/ss12.png'];
 							run.num = 12;
 							var litNum = 4;
 							setTimeout(function(){
@@ -523,73 +688,95 @@ Zepto(function($){
 							var newlit = setInterval(function(){
 									++litNum;
 								var lint = littleCount(16);//生成一个篮球
-									$('#winNumber'+litNum).attr('src','../img/ss'+lint+'.png')
-									$('#winNumber'+litNum).css({
+									$("#img"+litNum).css({
 										display:'block',
-										animation:'movegold'+litNum+' 1s forwards',
-										'-moz-animation':'movegold'+litNum+' 1s forwards',
-										'-ms-animation':'movegold'+litNum+' 1s forwards',
-										'-webkit-animation':'movegold'+litNum+' 1s forwards',
-										})
+								 		position:'absolute',
+								 		top:470/75 + 'rem',
+								 		left:280 /75 + 'rem'
+								 	})
+								var pic1 = new Image()
+									pic1.src='../imgs/ss'+lint+'.png';
+									// pic1.onload = function(){
+									// 	time.printCan.drawImage(pic1,0,0,10,10)	
+									// }
+									time.pic1 = pic1
+									time.printCan =eval('cbx'+litNum),
+									time.printCan.drawImage(pic1,0,0,10,10)
+									time.file =  setInterval(topCircle,50)
+									time.borad = eval('borad'+litNum),
+							 		time.ele=$("#img"+litNum);
 									if(litNum===6){
 										q.onOff = true;//可以再次点击
 										q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
 										q.time = Time();//时间
+										setTimeout(function(){
 										replace(q);//对下面列表中第一行列表进行替换；
+										},1000)
 										// console.log(Time())
 										// console.log(q.num);
 										i = 0;
 										clearInterval(newlit)
 										// litNum = 5;
 									}
-								},1000)
+								},2000)
 						},1000)
 					}
-				},1000)
+				},2000)
 			}
 			if(q.Zindex === 2 && q.onOff){//左边列表对应按钮的active
 			var i = 0;
 			q.arr3 = [];
 			q.arr4 = [];
 			q.onOff = false;			
-			clearWindow();
+			clearCircle();
 			virtual.state = 1;
 			if(run.state == 1){//每次重复点击的时候且已经执行完毕重新生成
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
-				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+				run.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 			}
 			setTimeout(function(){
 				run.state = 1
 			},40)
+			
 			var s =	setInterval(function(){
-				$('#winNumber'+i).attr('src','../img/d'+oneNum(10)+'.png');
-					$('#winNumber'+i).css({
+					$("#img"+i).css({
 						display:'block',
-						animation:'movegold'+i+' 1s forwards',
-						'-moz-animation':'movegold'+i+' 1s forwards',
-						'-ms-animation':'movegold'+i+' 1s forwards',
-						'-webkit-animation':'movegold'+i+' 1s forwards',
-						})
+				 		position:'absolute',
+				 		top:470/75 + 'rem',
+				 		left:280 /75 + 'rem'
+				 	})
+				var pic1 = new Image()
+					pic1.src='../imgs/d'+oneNum(10)+'.png';
+					// pic1.onload = function(){
+					// 	time.printCan.drawImage(pic1,0,0,10,10)	
+					// }
+					time.pic1 = pic1
+					time.printCan =eval('cbx'+i),
+					time.printCan.drawImage(pic1,0,0,10,10)
+					time.file =  setInterval(topCircle,50)
+					time.borad = eval('borad'+i),
+			 		time.ele=$("#img"+i);
 					++i;
 					setTimeout(function(){
 						run =square.drawColor();
 						run.state = 0;
 						run.num = 10;
-						run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+						run.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 						setTimeout(function(){
-							dropCircle()
 							run.state = 1;
+							dropCircle()
 						},100)
 					},200)
 					if(i===3){//红球执行完毕开始弄篮球
 						q.onOff = true;//可以再次点击
 						q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
 						q.time = Time();//时间
-						replace2(q);//对下面列表中第一行列表进行替换；
-						// console.log(Time())
-						i = 0;
+						//对下面列表中第一行列表进行替换；
+						setTimeout(function(){
+							replace2(q);	
+							},1000)					
 						clearInterval(s);
 						// cancelRequestAnimFrame(virtual);
 					}
@@ -600,33 +787,41 @@ Zepto(function($){
 			q.arr3 = [];
 			q.arr4 = [];
 			q.onOff = false;			
-			clearWindow();
+			clearCircle();
 			virtual.state = 1;
 			if(run.state == 1){//每次重复点击的时候且已经执行完毕重新生成
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
-				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+				run.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 			}
 			setTimeout(function(){
 				run.state = 1
 			},40)
-			
 			var s =	setInterval(function(){
-				$('#winNumber'+i).attr('src','../img/d'+oneNum(10)+'.png');
-					$('#winNumber'+i).css({
+					$("#img"+i).css({
 						display:'block',
-						animation:'movegold'+i+' 1s forwards',
-						'-moz-animation':'movegold'+i+' 1s forwards',
-						'-ms-animation':'movegold'+i+' 1s forwards',
-						'-webkit-animation':'movegold'+i+' 1s forwards',
-						})
+				 		position:'absolute',
+				 		top:470/75 + 'rem',
+				 		left:280 /75 + 'rem',
+				 	})
+				var pic1 = new Image()
+					pic1.src='../imgs/d'+oneNum(10)+'.png';
+					// pic1.onload = function(){
+					// 	time.printCan.drawImage(pic1,0,0,10,10)	
+					// }
+					time.pic1 = pic1
+					time.printCan =eval('cbx'+i),
+					time.printCan.drawImage(pic1,0,0,10,10)
+					time.file =  setInterval(topCircle,50)
+					time.borad = eval('borad'+i),
+			 		time.ele=$("#img"+i);
 					++i;
 					setTimeout(function(){
 						run =square.drawColor();
 						run.state = 0;
 						run.num = 10;
-						run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+						run.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 						setTimeout(function(){
 							run.state = 1;
 							dropCircle()
@@ -636,10 +831,10 @@ Zepto(function($){
 						q.onOff = true;//可以再次点击
 						q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
 						q.time = Time();//时间
-						replace2(q);//对下面列表中第一行列表进行替换；
-						// console.log(Time())
-						// console.log(q.num);
-						i = 0;
+						//对下面列表中第一行列表进行替换；
+						setTimeout(function(){
+							replace2(q);	
+							},1000)					
 						clearInterval(s);
 						// cancelRequestAnimFrame(virtual);
 					}
@@ -650,69 +845,89 @@ Zepto(function($){
 			q.arr3 = [];
 			q.arr4 = [];
 			q.onOff = false;			
-			clearWindow();
+			clearCircle();
 			if(run.state == 1){//每次重复点击的时候且已经执行完毕重新生成
 				run =square.drawColor();
 				run.state = 0;
-				run.num = 10;
-				run.pics =  ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png','../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png',];
+				run.num = 30;
+				run.pics =  ['../imgs/s01.png','../imgs/s02.png','../imgs/s03.png','../imgs/s04.png','../imgs/s05.png','../imgs/s06.png','../imgs/s07.png','../imgs/s08.png','../imgs/s09.png','../imgs/s10.png','../imgs/s11.png','../imgs/s12.png','../imgs/s13.png','../imgs/s14.png','../imgs/s15.png','../imgs/s16.png','../imgs/s17.png','../imgs/s18.png','../imgs/s19.png','../imgs/s20.png','../imgs/s21.png','../imgs/s22.png','../imgs/s23.png','../imgs/s24.png','../imgs/s25.png','../imgs/s26.png','../imgs/s27.png','../imgs/s28.png','../imgs/s29.png','../imgs/s30.png'];
 			}
 			setTimeout(function(){
 				run.state = 1
 			},40)
 			
 			var s =	setInterval(function(){
-				$('#winNumber'+i).attr('src','../img/s'+count(30)+'.png');
-					$('#winNumber'+i).css({
+				$("#img"+i).css({
 						display:'block',
-						animation:'movegold'+i+' 1s forwards',
-						'-moz-animation':'movegold'+i+' 1s forwards',
-						'-ms-animation':'movegold'+i+' 1s forwards',
-						'-webkit-animation':'movegold'+i+' 1s forwards',
-						})
+				 		position:'absolute',
+				 		top:470/75 + 'rem',
+				 		left:280 /75 + 'rem'
+				 	})
+				var pic1 = new Image()
+					pic1.src='../imgs/s'+count(30)+'.png';
+					// pic1.onload = function(){
+					// 	time.printCan.drawImage(pic1,0,0,10,10)	
+					// }
+					time.pic1 = pic1
+					time.printCan =eval('cbx'+i),
+					time.printCan.drawImage(pic1,0,0,10,10)
+					time.file =  setInterval(topCircle,50)
+					time.borad = eval('borad'+i),
+			 		time.ele=$("#img"+i);
 					++i;
 					if(i===7){//红球执行完毕开始弄篮球
 						q.onOff = true;//可以再次点击
 						q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
 						q.time = Time();//时间
+						setTimeout(function(){
 						replace(q);//对下面列表中第一行列表进行替换；
+						},1000)
 						// console.log(Time())
 						i = 0;
 						clearInterval(s);
 					}
-				},1000)
+				},2500)
 			}
 			if(q.Zindex === 5 && q.onOff){//左边列表对应按钮的active
 			var i = 0;
 			q.arr3 = [];
 			q.arr4 = [];
 			q.onOff = false;			
-			clearWindow();
+			clearCircle();
 			if(run.state == 1){//每次重复点击的时候且已经执行完毕重新生成
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
-				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+				run.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 			}
 			setTimeout(function(){
 				run.state = 1
 			},40)
 			
 			var s =	setInterval(function(){
-				$('#winNumber'+i).attr('src','../img/d'+oneNum(10)+'.png');
-					$('#winNumber'+i).css({
+					$("#img"+i).css({
 						display:'block',
-						animation:'movegold'+i+' 1s forwards',
-						'-moz-animation':'movegold'+i+' 1s forwards',
-						'-ms-animation':'movegold'+i+' 1s forwards',
-						'-webkit-animation':'movegold'+i+' 1s forwards',
-						})
+				 		position:'absolute',
+				 		top:470/75 + 'rem',
+				 		left:280 /75 + 'rem'
+				 	})
+				var pic1 = new Image()
+					pic1.src='../imgs/d'+oneNum(10)+'.png';
+					// pic1.onload = function(){
+					// 	time.printCan.drawImage(pic1,0,0,10,10)	
+					// }
+					time.pic1 = pic1
+					time.printCan =eval('cbx'+i),
+					time.printCan.drawImage(pic1,0,0,10,10)
+					time.file =  setInterval(topCircle,50)
+					time.borad = eval('borad'+i),
+			 		time.ele=$("#img"+i);
 					++i;
 					setTimeout(function(){
 						run =square.drawColor();
 						run.state = 0;
 						run.num = 10;
-						run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+						run.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 						setTimeout(function(){
 							run.state = 1;
 						},100)
@@ -721,7 +936,10 @@ Zepto(function($){
 						q.onOff = true;//可以再次点击
 						q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
 						q.time = Time();//时间
-						replace2(q);//对下面列表中第一行列表进行替换；
+						setTimeout(function(){
+							replace2(q);//对下面列表中第一行列表进行替换；
+						},1000)
+						
 						// console.log(Time())
 						// console.log(q.num);
 						i = 0;
@@ -731,50 +949,45 @@ Zepto(function($){
 				},2500)
 			}
 	})
-	// $('.navBar>.fl').on('tab',function(e){
-	// 	// $(this).addClass()
-	// })
-	
-	$('#navBar>a').on('singleTap',function(){
+
+	function clearCircle(){
+		for(var i=0; i<6; i++){
+			eval('cbx'+i).clearRect(0,0,20,20);
+			eval('cbx'+i).width = 10;
+			eval('cbx'+i).height = 10;
+			eval('borad'+i).width = 10;
+			eval('borad'+i).height = 10; 
+		}
+		$('.te').css({
+			display:'none',
+		})
+
+	}	
+	$('#navBar>a').on('tap',function(){
 		if(q.onOff){
 			$('#navBar>a').removeClass('active');
 			$(this).addClass('active');	
-			clearWindow();
+			clearCircle();
 			if ($('#navBar>a').eq(0).hasClass("active")){
 				run =square.drawColor();
 				run.num = 31;
 				restart2 = false;
-				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png','../img/s31.png'];
+				run.pics = ['../imgs/s01.png','../imgs/s02.png','../imgs/s03.png','../imgs/s04.png','../imgs/s05.png','../imgs/s06.png','../imgs/s07.png','../imgs/s08.png','../imgs/s09.png','../imgs/s10.png','../imgs/s11.png','../imgs/s12.png','../imgs/s13.png','../imgs/s14.png','../imgs/s15.png','../imgs/s16.png','../imgs/s17.png','../imgs/s18.png','../imgs/s19.png','../imgs/s20.png','../imgs/s21.png','../imgs/s22.png','../imgs/s23.png','../imgs/s24.png','../imgs/s25.png','../imgs/s26.png','../imgs/s27.png','../imgs/s28.png','../imgs/s29.png','../imgs/s30.png','../imgs/s31.png'];
 			} else if( $('#navBar>a').eq(1).hasClass("active")	){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 35;
-				// cancelRequestAnimFrame(sul);
-				// virtual =false
-				// restart2 = function(){
-				// }
-				// virtual.draw = function(){
-				// }
-				// restart2();
-				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png','../img/s31.png','../img/s32.png','../img/s33.png','../img/s34.png','../img/s35.png'];
+				run.pics = ['../imgs/s01.png','../imgs/s02.png','../imgs/s03.png','../imgs/s04.png','../imgs/s05.png','../imgs/s06.png','../imgs/s07.png','../imgs/s08.png','../imgs/s09.png','../imgs/s10.png','../imgs/s11.png','../imgs/s12.png','../imgs/s13.png','../imgs/s14.png','../imgs/s15.png','../imgs/s16.png','../imgs/s17.png','../imgs/s18.png','../imgs/s19.png','../imgs/s20.png','../imgs/s21.png','../imgs/s22.png','../imgs/s23.png','../imgs/s24.png','../imgs/s25.png','../imgs/s26.png','../imgs/s27.png','../imgs/s28.png','../imgs/s29.png','../imgs/s30.png','../imgs/s31.png','../imgs/s32.png','../imgs/s33.png','../imgs/s34.png','../imgs/s35.png'];
 			} else if ( $('#navBar>a').eq(2).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
-				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
-				// virtual = rank.drawColor();
-				// restart2 = function(){
-				// 	ctx2.clearRect(0,0,474,800);
-				// 	virtual.draw();
-				// 	sul=requestAnimFrame(restart2);
-				// }
-				// restart2();
-				// console.log(3)
+				run.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 			} else if ( $('#navBar>a').eq(3).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
-				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+				run.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 				 // virtual= rank.drawColor();
 				// restart2()
 			} else if ( $('#navBar>a').eq(4).hasClass("active")){
@@ -783,12 +996,12 @@ Zepto(function($){
 				run.num = 30;
 				// virtual = false
 				// cancelRequestAnimFrame(virtual)
-				run.pics = ['../img/s01.png','../img/s02.png','../img/s03.png','../img/s04.png','../img/s05.png','../img/s06.png','../img/s07.png','../img/s08.png','../img/s09.png','../img/s10.png','../img/s11.png','../img/s12.png','../img/s13.png','../img/s14.png','../img/s15.png','../img/s16.png','../img/s17.png','../img/s18.png','../img/s19.png','../img/s20.png','../img/s21.png','../img/s22.png','../img/s23.png','../img/s24.png','../img/s25.png','../img/s26.png','../img/s27.png','../img/s28.png','../img/s29.png','../img/s30.png'];
+				run.pics = ['../imgs/s01.png','../imgs/s02.png','../imgs/s03.png','../imgs/s04.png','../imgs/s05.png','../imgs/s06.png','../imgs/s07.png','../imgs/s08.png','../imgs/s09.png','../imgs/s10.png','../imgs/s11.png','../imgs/s12.png','../imgs/s13.png','../imgs/s14.png','../imgs/s15.png','../imgs/s16.png','../imgs/s17.png','../imgs/s18.png','../imgs/s19.png','../imgs/s20.png','../imgs/s21.png','../imgs/s22.png','../imgs/s23.png','../imgs/s24.png','../imgs/s25.png','../imgs/s26.png','../imgs/s27.png','../imgs/s28.png','../imgs/s29.png','../imgs/s30.png'];
 			} else if ( $('#navBar>a').eq(5).hasClass("active")){
 				run =square.drawColor();
 				run.state = 0;
 				run.num = 10;
-				run.pics = ['../img/d0.png','../img/d1.png','../img/d2.png','../img/d3.png','../img/d4.png','../img/d5.png','../img/d6.png','../img/d7.png','../img/d8.png','../img/d9.png'];
+				run.pics = ['../imgs/d0.png','../imgs/d1.png','../imgs/d2.png','../imgs/d3.png','../imgs/d4.png','../imgs/d5.png','../imgs/d6.png','../imgs/d7.png','../imgs/d8.png','../imgs/d9.png'];
 				 virtual= rank.drawColor();
 				// restart2()
 			}
@@ -814,74 +1027,133 @@ Zepto(function($){
 			},200)
 		}
 	})
-	
-	var methods = [function(){
-			for(var t = 0;t<6;t++){
-				count(31);
+	 	
+	 	var time = {
+		 	n:0,
+		 	file:null,
+		 	top:470,
+	 		left:280,
+	 		w:10,
+	 		h:10 ,
+	 		x1:0,
+	 		y1:0,
+	 		vx:1,
+	 		vy:2.5,
+	 		add:2.5,
+	 		ro:0,
+	 		sc:1,
+	 		rot:360,
+	 		borad:null,
+	 		printCan:null,
+	 		ele:$("#img0"),
+	 		pic1:null
+		 }
+
+		function topCircle(){
+			time.sc += .03;
+			time.borad.width = time.w * time.sc
+			time.borad.height = time.w * time.sc
+			// time.printCan.scale(time.sc,time.sc)
+			time.printCan.width = time.w * time.sc
+			time.printCan.height = time.w * time.sc	
+			var t = time.top += 6;
+			if(t >= 530) {
+				clearInterval(time.file);
+				time.file = null;
+				time.rot = 360;
+				time.sc = 1;
+				time.top = 470;
+				time.left = 280;
+				time.printCan.globalAlpha = 1;
+				time.printCan.width = time.borad.height = time.printCan.width = time.printCan.height =  10;
+				scrollCircle.m = setInterval(bottomFun,50)
 			}
-			littleCount(16);
-			q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
-			q.time = Time();//时间
-			replace(q);
-			 q.arr3 = []
-			  q.arr4 = []
-		},function(){
-			for(var t = 0;t<5;t++){
-				count(35);
+			time.ele.css({
+		 		position:'absolute',
+		 		top:(time.top += 2)/75 + 'rem',
+		 		left:(time.left += 10)/75 + 'rem'
+		 	})
+		 	// console.log(time.printCan)
+		 	time.printCan.globalAlpha = .5
+			time.printCan.translate(time.borad.width/2,time.borad.width/2);
+	 		time.rot -= 2
+			time.printCan.rotate(time.rot)	
+			time.printCan.translate(-time.borad.width/2,-time.borad.width/2)
+			time.printCan.drawImage(time.pic1,0,0,time.borad.width,time.borad.width)			 
+		}
+
+		var scrollCircle = {
+			target : [110,148,190,235,280,320,350],
+			pause:[20,18,35,27,25,23,21],
+			m:null,
+			w:20,
+			left:500,
+		}
+		
+			function bottomFun(){
+				time.borad.width = scrollCircle.w;
+				time.borad.height = scrollCircle.w
+				// time.printCan.scale(time.sc,time.sc)
+				time.printCan.width = scrollCircle.w
+				time.printCan.height = scrollCircle.w
+				time.ele.css({
+			 		position:'absolute',
+			 		top:(563)/75 + 'rem',
+			 		left:(scrollCircle.left -= 20)/75 + 'rem'
+			 	})
+			 	var m = time.ele.index()
+			 	if(scrollCircle.left < scrollCircle.target[m]){
+			 		time.printCan.translate(scrollCircle.w/2,scrollCircle.w/2);
+			 		time.rot %= 360;
+			 		scrollCircle.choose = scrollCircle.pause[m];
+			 		time.printCan.rotate(scrollCircle.choose);
+			 		time.printCan.translate(-scrollCircle.w/2,-scrollCircle.w/2)
+			 		time.printCan.drawImage(time.pic1,0,0,scrollCircle.w,scrollCircle.w)
+			 		scrollCircle.left = 500;
+			 		clearInterval(scrollCircle.m)
+			 		scrollCircle.m = null;
+			 	}
+				time.printCan.translate(scrollCircle.w/2,scrollCircle.w/2);
+		 			time.rot -= 1
+				time.printCan.rotate(time.rot)	
+				time.printCan.translate(-scrollCircle.w/2,-scrollCircle.w/2)
+				 time.printCan.drawImage(time.pic1,0,0,scrollCircle.w,scrollCircle.w)
 			}
-			littleCount(12);
-			littleCount(12);
-			q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
-			q.time = Time();//时间
-			replace(q);
-			q.arr3 = []
-			  q.arr4 = []
-		}, function(){
-			for(var t = 0;t<3;t++){
-				oneNum(10);
-			}
-			q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
-			q.time = Time();//时间
-			replace2(q);
-			q.arr3 = []
-			 q.arr4 = []
-		}, function(){
-			for(var t = 0;t<3;t++){
-				oneNum(10);
-			}
-			q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
-			q.time = Time();//时间
-			replace2(q);
-			q.arr3 = []
-			  q.arr4 = []
-		},function(){
-			for(var t = 0;t<7;t++){
-				count(30);
-			}
-			q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
-			q.time = Time();//时间
-			replace(q);
-			q.arr3 = []
-			  q.arr4 = []
-		}, function(){
-			for(var t = 0;t<7;t++){
-				oneNum(10);
-			}
-			q.num = q.arr3.join('') + q.arr4.join('');//记录字符串
-			q.time = Time();//时间
-			replace2(q);
-			q.arr3 = []
-			  q.arr4 = []
-		}]
-	for (var i = 0; i < 5; i++) {
-		var t = Math.floor(Math.random()*6);
-		methods[t]();
-	}
+
+	$('body').delegate('.list>b','tap',function(e){
+		// $('#btn_submit').on('tap',function(){
+		var t = $('.list>b').indexOf(this);
+		$ele = $('.list>b').eq(t).get(0);	
+		var text = document.getElementById("copy");
+		text.value = main.shake[t];
+		text.select();
+		document.execCommand("Copy");
+		if(event.clipboardData){
+		return event.clipboardData.setData("text/plain", value);
+		}else if(window.clipboardData){
+		return window.clipboardData.setData("text", value);
+		}
+		// window.clipboardData.setData("Text",clipBoardContent);
+	})
+
+	$('.btn_group>.clone_btn').on('tap',function(){
+		if(q.onOff){
+			var text = document.getElementById("copy");
+			text.value = main.shake[0]
+			text.select();
+			document.execCommand("Copy");
+		}
+	})
 	$('.swiper-slide').height($("body").height()-$("header").height())//让先按界面排版
 	var topB = Math.floor($("footer").offset().top)
 	var picB = Math.floor($(".btn_group").offset().top +$("btn_group").height()-$("header").height()/4); 
 	if(topB<picB){//如果界面放不下重新生成
 		$('.swiper-slide').height(picB + $("footer").height()+$("header").height());
+		$("footer").css({
+			top: picB,
+			position:'relative'
+		});
+	} else {
 		$("footer").css({
 			top: picB,
 			position:'relative'
@@ -898,6 +1170,7 @@ Zepto(function($){
 	        scrollbarDraggable:true,
 	        watchSlidesProgress : true,
         });
-
+	
+	
 
 });

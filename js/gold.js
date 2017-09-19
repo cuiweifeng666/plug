@@ -819,11 +819,15 @@ Zepto(function($){
 	       						 if( move.target[i].top <= move.fillArray[i].y){
 	       							// move.fillArray[i].x = move.target[i].left;
 	       							// move.fillArray[i].y = move.target[i].top;
-	       							move.text();
+	       							move.text(move.target[i]);
 	       							// move.remove.push(move.target[i]);
+	       							
 	       							move.target.remove(i);
+	       							move.target.sel.x = 0;
+	       							move.target.sel.y = 0;
+	       							move.remove.push(move.target.sel);
 	       							move.fillArray.remove(i);
-	       							move.remove.push(move.target.sel);	       							
+	       								       							
 	       							ctx1.drawImage(move.img, move.remove[(move.remove.length-1)].left, move.remove[(move.remove.length-1)].top ,10 ,10);
 	       							// move.fillArray[i].move = false;
 	       							//金币开始往获奖位置走
@@ -831,6 +835,7 @@ Zepto(function($){
 		       						ctx.drawImage(move.img, move.fillArray[i].x, move.fillArray[i].y ,10 ,10);
 		       						move.fillArray[i].x += move.speed[i].x;
 		       						move.fillArray[i].y += move.speed[i].y;
+		       						// console.log(move.fillArray)
 		       						}
        						}//单纯的进场撒金币动画
        						if(move.back === 1){
@@ -976,14 +981,14 @@ Zepto(function($){
                if(computer&&(computer.back == 0||computer.back == -1)){
               	 computer.userCount(userArr);
                }
-               setTimeout(function(){
-               	computer.target=computer.fillArray =computer.remove;
-               	computer.backMoney();
-               	console.log(computer);
-               	ctx1.clearRect(0,0,$(window).width(),$(window).height());
-	       		computer.back = 1;
-	       		play.state = 1;
-               },3000)
+          //      setTimeout(function(){
+          //      	computer.target=computer.fillArray =computer.remove;
+          //      	computer.backMoney();
+          //      	console.log(computer);
+          //      	ctx1.clearRect(0,0,$(window).width(),$(window).height());
+	       		// computer.back = 1;
+	       		// play.state = 1;
+          //      },3000)
      //           setTimeout(function(){
      //           		computer.winArea = {main:4,area:5}
      //           		computer.aggregation();

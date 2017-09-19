@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
      <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <script type="text/javascript" src="../js/zepto.js"></script>
+    <!-- <script type="text/javascript" src="../js/ZeroClipboard.js"></script> -->
     <script type="text/javascript" src="../js/SaveDatas.js"></script>
     <script type="text/javascript" src="../js/swiper.min.js"></script>
     <script>
@@ -41,32 +42,34 @@
  <body>
     <header class="head-first-text">
             <div class="head-back">
-                    <span class="back"></span>
+                <span class="back"></span>
             </div>
            摇奖游戏
       </header>
+      <input type="text" name="" id="copy">
+      <div id="biaoios" style=";position: absolute;right:0;opacity: 0" ></div> 
       <div id="navBar" class="clearfix">
                 <div class="bg"></div>
                 <a href="javascript:;" class="fl sphere active">
-                    <img src="../img/ssq.png" class="fl" />
+                    <img src="../imgs/ssq.png" class="fl" />
                 </a>
                 <a href="javascript:;" class="fl lotto">
-                    <img src="../img/dlt.png" class="fl" />
+                    <img src="../imgs/dlt.png" class="fl" />
                 </a>
                 <a href="javascript:;" class="fl max">
-                    <img src="../img/fcsd.png" class="fl" />
+                    <img src="../imgs/fcsd.png" class="fl" />
                 </a>
                 <a href="javascript:;" class="fl array">
-                    <img src="../img/pls.png" class="fl" />
+                    <img src="../imgs/pls.png" class="fl" />
                 </a>
                 <a href="javascript:;" class="fl lecai">
-                    <img src="../img/qlc.png" class="fl" />
+                    <img src="../imgs/qlc.png" class="fl" />
                 </a>
                 <a href="javascript:;" class="fl qixing">
-                    <img src="../img/qxc.png" class="fl" />
+                    <img src="../imgs/qxc.png" class="fl" />
                 </a>
             </div>
- 	<img src="../img/ima.jpg" class="ima" />
+ 	  <img src="../imgs/ima.jpg" class="ima" />
        <div class="swiper-container swiper-container2 ch" >
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -74,18 +77,25 @@
          	<canvas id="circle"></canvas>
             <!-- <canvas id="cir"></canvas> -->
             <div class="moveGroup">
-                <img src="" id="winNumber0" class="circle1" />
+               <!--  <img src="" id="winNumber0" class="circle1" />
                 <img src="" id="winNumber1" class="circle1" />
                 <img src="" id="winNumber2" class="circle1" />
                 <img src="" id="winNumber3" class="circle1" />
                 <img src="" id="winNumber4" class="circle1" />
                 <img src="" id="winNumber5" class="circle1" />
-                <img src="" id="winNumber6" class="circle1" />
-                
+                <img src="" id="winNumber6" class="circle1" /> -->
+                <canvas id="img0" class="te"></canvas>
+               <canvas id="img1" class="te"></canvas>
+               <canvas id="img2" class="te"></canvas>
+               <canvas id="img3" class="te"></canvas>
+               <canvas id="img4" class="te"></canvas>
+               <canvas id="img5" class="te"></canvas>
+               <canvas id="img6" class="te"></canvas>
+               
             </div>
          	<section>
          	
-         	<img src="../img/befault.png" id="" class="beautiful" />
+         	<img src="../imgs/befault.png" id="" class="beautiful" />
          	<div class="btn_group clearfix">
          		<b class="fl shake_btn">自动摇奖</b>
          		<b class="fl clone_btn">复制号码</b>
@@ -94,15 +104,14 @@
          	<footer>
          		<div class="footer-bg"></div>
          		<ul>
-         			<li class="list clearfix">
+         			<!-- <li class="list clearfix">
          				<div class="win fl">
          					
          				</div>
                         <b class="fr">复制号码</b>
          				<p class="fr">自动摇奖<i>14:00</i></p>
-         				
-         			</li>
-         			<li class="list clearfix">
+         			</li> -->
+         			<!-- <li class="list clearfix">
          				<div class="win fl">
          					
          				</div>
@@ -131,7 +140,7 @@
          				</div>
          				<b class="fr">复制号码</b>
                         <p class="fr">自动摇奖<i>14:00</i></p>
-         			</li>
+         			</li> -->
          		</ul>
          	</footer>
             </div>
